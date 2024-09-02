@@ -5,7 +5,7 @@ title: cv
 nav: true
 nav_order: 5
 cv_pdf: example_pdf.pdf
-description: Acá podrás encontrar una versión actualizada de mi Curriculum Vitae, así como una explicación más detallada de cada experiencia.
+description: On this page, you will find my one-page resume (available in .pdf) as well as a more complete and detailed description of my experience.
 toc:
   sidebar: left
 ---
