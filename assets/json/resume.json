@@ -9,20 +9,10 @@
     "summary": "",
     "location": ""
     "profiles": [
-      {
-        "network": "Twitter",
-        "username": "sebastian_manzi",
-        "url": "https://x.com/sebastian_manzi"
-      },
 	{
         "network": "LinkedIn",
         "username": "manzisebastian",
         "url": "https://www.linkedin.com/in/manzisebastian/"
-      },
-	{
-        "network": "Github",
-        "username": "manzisebastian",
-        "url": "https://github.com/manzisebastian"
       }
     ]
   },
