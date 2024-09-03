@@ -19,15 +19,12 @@
   "education": [
     {
       "institution": "University of Buenos Aires (UBA)",
-      "location": "",
       "url": "https://www.economicas.uba.ar/",
       "area": "Economics",
       "studyType": "Bachelor",
-      "summary": "Lorem ipsum",
+      "summary": "Thesis (pending): Debt, leverage and pro-ciclicality: a sector-disaggregated analysis\nAverage: 8.41/10.-",
       "startDate": "2019-03",
-      "endDate": "2024-07",
-      "score": "8.41",
-      "courses": ["Thesis (pending): Debt, leverage and pro-ciclicality: a sector-disaggregated analysis"]
+      "endDate": "2024-07"
     }
   ],
   "research": [
