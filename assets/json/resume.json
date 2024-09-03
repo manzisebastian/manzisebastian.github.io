@@ -1,5 +1,5 @@
 {
-  "General information": {
+  "general information": {
     "name": "Sebastián L. Manzi",
     "label": "",
     "image": "",
@@ -16,7 +16,7 @@
       }
     ]
   },
-  "Education": [
+  "education": [
     {
       "institution": "University of Buenos Aires (UBA)",
       "location": "Buenos Aires, Argentina",
@@ -29,7 +29,7 @@
       "courses": ["Thesis (pending): Debt, leverage and pro-ciclicality: a sector-disaggregated analysis"]
     }
   ],
-  "Research": [
+  "research": [
     {
       "name": "Institute for Advanced Study, Princeton University",
       "position": "Professor of Theoretical Physics",
@@ -49,7 +49,7 @@
       "highlights": ["Relativity"]
     }
   ],
-  "Teaching experience": [
+  "teaching experience": [
     {
       "organization": "People's Climate March",
       "location": "Zurich, Switzerland",
@@ -137,7 +137,7 @@
       "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
     }
   ],
-  "Skills": [
+  "skills": [
     {
       "name": "Physics",
       "level": "Master",
@@ -152,7 +152,7 @@
       ]
     }
   ],
-  "Languages": [
+  "languages": [
     {
       "language": "German",
       "fluency": "Native speaker",
@@ -164,7 +164,7 @@
       "icon": ""
     }
   ],
-  "Interests": [
+  "interests": [
     {
       "name": "Physics",
       "icon": "fa-solid fa-tag",
@@ -190,7 +190,7 @@
       "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
     }
   ],
-  "Side projects": [
+  "side projects": [
     {
       "name": "Quantum Computing",
       "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
