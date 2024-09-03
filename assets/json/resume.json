@@ -18,24 +18,22 @@
   },
   "education": [
     {
-      "institution": "University of Buenos Aires (UBA)",
+      "institution": "School of Economic Sciences - University of Buenos Aires (FCE - UBA)",
       "url": "https://www.economicas.uba.ar/",
-      "area": "Economics",
-      "studyType": "Bachelor",
-      "summary": "Thesis (pending): Debt, leverage and pro-ciclicality: a sector-disaggregated analysis\nAverage: 8.41/10.-",
+      "studyType": "Bachelor of Economics",
+      "summary": "Thesis (pending): Debt, leverage and pro-ciclicality: a sector-disaggregated analysis<br>Average: 8.41/10.-",
       "startDate": "2019-03",
       "endDate": "2024-07"
     }
   ],
   "research": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
+      "name": "Interdisciplinary Institute of Political Economy (IIEP - UBA - CONICET)",
+      "position": "Research scholar",
+      "url": "https://iiep.economicas.uba.ar/integrantes/manzi-sebastian/",
+      "startDate": "2023-06-01",
+      "summary": "I am currently as",
+      "highlights": ["#LLM"]
     },
     {
       "name": "Institute for Advanced Study, Princeton University (bis)",
