@@ -19,10 +19,11 @@
   "education": [
     {
       "institution": "University of Buenos Aires (UBA)",
-      "location": "Buenos Aires, Argentina",
+      "location": "",
       "url": "https://www.economicas.uba.ar/",
       "area": "Economics",
       "studyType": "Bachelor",
+      "summary": "Lorem ipsum",
       "startDate": "2019-03",
       "endDate": "2024-07",
       "score": "8.41",
