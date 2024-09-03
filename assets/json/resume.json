@@ -1,5 +1,5 @@
 {
-  "General information": {
+  "basic": {
     "name": "Sebastián L. Manzi",
     "label": "",
     "image": "",
@@ -29,7 +29,7 @@
       "courses": ["Thesis (pending): Debt, leverage and pro-ciclicality: a sector-disaggregated analysis"]
     }
   ],
-  "works": [
+  "work": [
     {
       "name": "Institute for Advanced Study, Princeton University",
       "position": "Professor of Theoretical Physics",
