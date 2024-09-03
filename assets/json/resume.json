@@ -1,5 +1,5 @@
 {
-  "general_information": {
+  "information": {
     "name": "Sebastián L. Manzi",
     "label": "",
     "image": "",
@@ -49,7 +49,7 @@
       "highlights": ["Relativity"]
     }
   ],
-  "teaching_experience": [
+  "teaching": [
     {
       "organization": "People's Climate March",
       "location": "Zurich, Switzerland",
