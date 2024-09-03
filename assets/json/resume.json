@@ -1,5 +1,5 @@
 {
-  "general information": {
+  "general_information": {
     "name": "Sebastián L. Manzi",
     "label": "",
     "image": "",
@@ -49,7 +49,7 @@
       "highlights": ["Relativity"]
     }
   ],
-  "teaching experience": [
+  "teaching_experience": [
     {
       "organization": "People's Climate March",
       "location": "Zurich, Switzerland",
@@ -190,7 +190,7 @@
       "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
     }
   ],
-  "side projects": [
+  "side_projects": [
     {
       "name": "Quantum Computing",
       "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
