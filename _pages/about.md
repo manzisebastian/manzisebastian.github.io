@@ -24,6 +24,8 @@ My name is Sebastián and I'm a recent Economics graduate with a passion for res
 
 I enjoy programming both in Python and R, and have worked on a variety of data science projects, ranging from economic data analysis to geospatial data science. More about this can be found in my [projects page](https://manzisebastian.github.io/projects/).
 
+<!-- I recently started a new [blog](https://manzisebastian.github.io/blog/) section in which I non-periodically write about topics that I consider interesting: from urban economics all the way to the externalities of having a dog. -->
+
 In this website, you'll find more about my work, interests, and the next steps in my academic and professional journey.
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
