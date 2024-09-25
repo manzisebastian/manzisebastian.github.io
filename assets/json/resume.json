@@ -88,7 +88,8 @@
         "Macroeconomics",
         "Public finance",
         "Applied economics",
-        "Urban Economics & Spatial econometrics"
+        "Urban Economics",
+        "Spatial econometrics"
       ]
     },
     {
@@ -97,7 +98,8 @@
       "keywords": [
         "Data analysis & visualization",
         "Geo-databases",
-        "Large Language Models (LLMs) & Natural Language Processing (NLP)",
+        "Large Language Models (LLMs)",
+        "Natural Language Processing (NLP)",
         "Web scraping"
       ]
     }
