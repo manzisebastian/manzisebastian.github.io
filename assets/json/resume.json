@@ -36,7 +36,7 @@
       "name": "Independent -- joint with Damián Pierri (PhD., Universidad de San Andrés)",
       "position": "Research assistant (RA)",
       "startDate": "2022-04-01",
-      "summary": "Actively contributing to projects related to macroeconomics and empirical applications.<br>"
+      "summary": "Actively contributing to projects related to macroeconomics and empirical applications."
     }
   ],
   "teaching": [
@@ -68,40 +68,38 @@
   ],
   "languages": [
     {
-      "language": "German",
+      "language": "Spanish",
       "fluency": "Native speaker",
-      "icon": ""
     },
     {
       "language": "English",
-      "fluency": "Fluent",
-      "icon": ""
+      "fluency": "Advanced (CEFR C2)",
+    },
+    {
+      "language": "French",
+      "fluency": "Intermediate (CEFR B1)",
     }
   ],
   "interests": [
     {
-      "name": "Physics",
+      "name": "Economics",
       "icon": "fa-solid fa-tag",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Macroeconomics",
+        "Public finance",
+        "Applied economics",
+        "Urban Economics & Spatial econometrics"
       ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
     },
     {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "name": "Programming & Data",
+      "icon": "fa-solid fa-tag",
+      "keywords": [
+        "Data analysis & visualization",
+        "Geo-databases",
+        "Large Language Models (LLMs) & Natural Language Processing (NLP)",
+        "Web scraping"
+      ]
     }
   ],
   "projects": [
