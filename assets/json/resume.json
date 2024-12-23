@@ -95,12 +95,12 @@
   ],
   "projects": [
     {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
+      "name": "BCRA_bot",
+      "summary": "I developed a Twitter bot that tweets daily updates of Argentina's monetary statistics, together with weekly and monthly analyses.<br>Originally, data was extracted using web scraping and leveraging third-party APIs. Beginning in 2024, data is gathered using the Central Bank of Argentina (BCRA)'s official API.<br>The bot is hosted in Google Cloud Platform, and run with Google Cloud Scheduler.<br><br>Due to Twitter's policy changes regarding bots, it may sporadically go offline.",
+      "highlights": ["Macroeconomic Analysis", "Monetary statistics", "Money market"],
+      "startDate": "2022-07",
+      "endDate": "",
+      "url": "https://x.com/BCRA_bot"
     }
   ]
 }
