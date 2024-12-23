@@ -20,12 +20,9 @@
           <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ content.summary }}</h6>
           <ul class="items">
             {% for item in content.highlights %}
-            <tr>
-              <td></td>
-              <td class="list-group-name">
-                <b>{{ item }}</b>
-              </td>
-            </tr>
+             <li>
+                <span class="list-group-name">{{ item }}</span>
+              </li>
           {% endfor %}
           </ul>
         </div>
