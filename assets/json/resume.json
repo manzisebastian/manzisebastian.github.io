@@ -1,6 +1,6 @@
 {
   "information": {
-    "name": "Sebastián L. Manzi",
+    "name": "Sebastián Leandro Manzi",
     "image": "",
     "email": "manzisebastian00@gmail.com",
     "phone": "",
@@ -118,9 +118,17 @@
       "url": "https://x.com/BCRA_bot"
     },
     {
-      "name": "EcoBici_CABA",
+      "name": "EcoBici",
       "summary": "I conducted a comprehensive data analysis of EcoBici, the public bike-sharing program of Buenos Aires, uncovering fascinating patterns hidden within over 16 million individual rides.<br>The first goal of the project was to find patterns in user behavior and trip characteristics—exploring factors like trip duration, time of day, weekdays vs. weekends, and seasonal trends—to understand how, when, and why people rely on this service.<br>Later on, the project evolved to include an impact evaluation approach. The next step? Assessing how improved cycling infrastructure could boost daily EcoBici usage, paving the way for smarter urban mobility solutions.",
       "highlights": ["TransportEconomics", "Cycling", "UrbanEconomics"],
+      "startDate": "",
+      "endDate": "",
+      "url": "https://x.com/BCRA_bot"
+    },
+    {
+      "name": "Ma-py-tas",
+      "summary": "Since 2020, I’ve immersed myself in the world of geospatial data analytics, creating (perhaps a few too many) maps along the way. The topics I’ve explored are diverse, ranging from the locations of barbecues and blooming jacarandás in Buenos Aires to Argentina’s vast hydrocarbon reservoirs.<br>This project brings together an almost-complete collection of these maps, each one a snapshot of data-driven storytelling through geography.",
+      "highlights": ["GeoData", "Maps", "Python"],
       "startDate": "",
       "endDate": "",
       "url": "https://x.com/BCRA_bot"
