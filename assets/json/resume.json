@@ -116,6 +116,14 @@
       "startDate": "2022-07",
       "endDate": "",
       "url": "https://x.com/BCRA_bot"
+    },
+    {
+      "name": "EcoBici_CABA",
+      "summary": "I conducted a comprehensive data analysis of EcoBici, the public bike-sharing program of Buenos Aires, uncovering fascinating patterns hidden within over 16 million individual rides.<br>The first goal of the project was to find patterns in user behavior and trip characteristics—exploring factors like trip duration, time of day, weekdays vs. weekends, and seasonal trends—to understand how, when, and why people rely on this service.<br>Later on, the project evolved to include an impact evaluation approach. The next step? Assessing how improved cycling infrastructure could boost daily EcoBici usage, paving the way for smarter urban mobility solutions.",
+      "highlights": ["TransportEconomics", "Cycling", "UrbanEconomics"],
+      "startDate": "",
+      "endDate": "",
+      "url": "https://x.com/BCRA_bot"
     }
   ]
 }
