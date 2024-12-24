@@ -114,7 +114,7 @@
   "projects": [
     {
       "name": "BCRA_bot",
-      "summary": "I <span style='display: inline-block; background-color: #f1f1f1; color: black; padding: 5px 10px; border-radius: 10px; margin-right: 5px;'>AWS</span> a Twitter bot (<a href='https://x.com/BCRA_bot'>@BCRA_bot</a>) that tweets daily updates of Argentina's monetary statistics, together with weekly and monthly analyses.<br>Originally, data was extracted using web scraping and leveraging third-party APIs. Beginning in 2024, data is gathered using the Central Bank of Argentina (BCRA)'s official API.<br>The bot is hosted in Google Cloud Platform, and run with Google Cloud Scheduler.<br><br>Due to Twitter's policy changes regarding bots, it may sporadically go offline.",
+      "summary": "I <span style='display: inline-block; background-color: #00369f; color: white; padding: 5px 10px; border-radius: 10px; margin-right: 5px;'>AWS</span> a Twitter bot (<a href='https://x.com/BCRA_bot'>@BCRA_bot</a>) that tweets daily updates of Argentina's monetary statistics, together with weekly and monthly analyses.<br>Originally, data was extracted using web scraping and leveraging third-party APIs. Beginning in 2024, data is gathered using the Central Bank of Argentina (BCRA)'s official API.<br>The bot is hosted in Google Cloud Platform, and run with Google Cloud Scheduler.<br><br>Due to Twitter's policy changes regarding bots, it may sporadically go offline.",
       "highlights": ["MacroeconomicAnalysis", "MonetaryStatistics", "MoneyMarket"],
       "url": "https://x.com/BCRA_bot"
     },
