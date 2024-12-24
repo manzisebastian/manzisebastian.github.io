@@ -5,7 +5,7 @@ permalink: /projects/
 description: This is my collection of data projects. Most
 nav: true
 nav_order: 3
-display_categories: [work, fun]
+display_categories: [econ, non-econ]
 horizontal: false
 ---
 
