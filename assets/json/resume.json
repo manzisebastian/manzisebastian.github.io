@@ -69,21 +69,6 @@
       "fluency": "Basic"
     }
   ],
-  "skills": [
-    {
-      "name": "Physics",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
   "interests": [
     {
       "name": "Economics",
@@ -108,6 +93,24 @@
       ]
     }
   ],
+  "programming": [
+    {
+      "language": "Spanish",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Advanced (CEFR C2)"
+    },
+    {
+      "language": "French",
+      "fluency": "Intermediate (CEFR B1)"
+    },
+    {
+      "language": "Latin",
+      "fluency": "Basic"
+    }
+  ],
   "projects": [
     {
       "name": "BCRA_bot",
@@ -127,7 +130,7 @@
     },
     {
       "name": "Ma-py-tas",
-      "summary": "Since 2020, I’ve immersed myself in the world of geospatial data analytics, creating (perhaps a few too many) maps along the way. The topics I’ve explored are diverse, ranging from the locations of barbecues and blooming jacarandás in Buenos Aires to Argentina’s vast hydrocarbon reservoirs.<br>This project brings together an almost-complete collection of these maps, each one a snapshot of data-driven storytelling through geography.",
+      "summary": "Since 2020, I’ve immersed myself in the world of geospatial data analytics, creating (perhaps a few too many) maps along the way. The topics I’ve explored are diverse, ranging from the locations of barbecues and blooming <a href='https://en.wikipedia.org/wiki/Jacaranda'>jacarandás</a> in Buenos Aires to Argentina’s vast hydrocarbon reservoirs.<br>This project brings together an almost-complete collection of these maps, each one a snapshot of data-driven storytelling through geography.",
       "highlights": ["GeoData", "Maps", "Python"],
       "startDate": "",
       "endDate": "",
