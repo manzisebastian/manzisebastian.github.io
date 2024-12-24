@@ -95,20 +95,20 @@
   ],
   "programming": [
     {
-      "language": "Spanish",
-      "fluency": "Native speaker"
+      "program": "Python",
+      "level": "Advanced"
     },
     {
-      "language": "English",
-      "fluency": "Advanced (CEFR C2)"
+      "program": "R",
+      "level": "Intermediate"
     },
     {
-      "language": "French",
-      "fluency": "Intermediate (CEFR B1)"
+      "program": "STATA",
+      "level": "Intermediate"
     },
     {
-      "language": "Latin",
-      "fluency": "Basic"
+      "program": "LaTeX",
+      "level": "Advanced"
     }
   ],
   "projects": [
