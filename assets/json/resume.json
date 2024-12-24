@@ -116,24 +116,18 @@
       "name": "BCRA_bot",
       "summary": "I developed a Twitter bot (<a href='https://x.com/BCRA_bot'>@BCRA_bot</a>) that tweets daily updates of Argentina's monetary statistics, together with weekly and monthly analyses.<br>Originally, data was extracted using web scraping and leveraging third-party APIs. Beginning in 2024, data is gathered using the Central Bank of Argentina (BCRA)'s official API.<br>The bot is hosted in Google Cloud Platform, and run with Google Cloud Scheduler.<br><br>Due to Twitter's policy changes regarding bots, it may sporadically go offline.",
       "highlights": ["MacroeconomicAnalysis", "MonetaryStatistics", "MoneyMarket"],
-      "startDate": "2022-07",
-      "endDate": "",
       "url": "https://x.com/BCRA_bot"
     },
     {
       "name": "EcoBici",
       "summary": "I conducted a comprehensive data analysis of EcoBici, the public bike-sharing program of Buenos Aires, uncovering fascinating patterns hidden within over 16 million individual rides.<br>The first goal of the project was to find patterns in user behavior and trip characteristics—exploring factors like trip duration, time of day, weekdays vs. weekends, and seasonal trends—to understand how, when, and why people rely on this service.<br>Later on, the project evolved to include an impact evaluation approach. The next step? Assessing how improved cycling infrastructure could boost daily EcoBici usage, paving the way for smarter urban mobility solutions.",
       "highlights": ["TransportEconomics", "Cycling", "UrbanEconomics"],
-      "startDate": "",
-      "endDate": "",
       "url": "https://x.com/BCRA_bot"
     },
     {
       "name": "Ma-py-tas",
       "summary": "Since 2020, I’ve immersed myself in the world of geospatial data analytics, creating (perhaps a few too many) maps along the way. The topics I’ve explored are diverse, ranging from the locations of barbecues and blooming <a href='https://en.wikipedia.org/wiki/Jacaranda'>jacarandás</a> in Buenos Aires to Argentina’s vast hydrocarbon reservoirs.<br>This project brings together an almost-complete collection of these maps, each one a snapshot of data-driven storytelling through geography.",
       "highlights": ["GeoData", "Maps", "Python"],
-      "startDate": "",
-      "endDate": "",
       "url": "https://x.com/BCRA_bot"
     }
   ]
