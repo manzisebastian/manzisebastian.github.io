@@ -59,14 +59,6 @@
     {
       "language": "English",
       "fluency": "Advanced (CEFR C2)"
-    },
-    {
-      "language": "French",
-      "fluency": "Intermediate (CEFR B1)"
-    },
-    {
-      "language": "Latin",
-      "fluency": "Basic"
     }
   ],
   "interests": [
@@ -114,19 +106,19 @@
   "projects": [
     {
       "name": "BCRA_bot",
-      "summary": "I developed a <strong style='color:#00369f'>Twitter bot</strong> (<a href='https://x.com/BCRA_bot'>@BCRA_bot</a>) that tweets <strong style='color:#00369f'>daily updates</strong> of Argentina's monetary statistics, together with weekly and monthly analyses.<br>Originally, data was extracted using web scraping and leveraging third-party APIs. Beginning in 2024, data is gathered using the Central Bank of Argentina (BCRA)'s official API.<br>The bot is hosted in Google Cloud Platform, and run with Google Cloud Scheduler.<br><br>Due to Twitter's policy changes regarding bots, it may sporadically go offline.",
+      "summary": "I developed a <strong style='color:#0076df'>Twitter bot</strong> (<a href='https://x.com/BCRA_bot'>@BCRA_bot</a>) that tweets <strong style='color:#0076df'>daily updates</strong> of Argentina's monetary statistics, together with weekly and monthly analyses.<br>Originally, data was extracted using web scraping and leveraging third-party APIs. Beginning in 2024, data is gathered using the Central Bank of Argentina (BCRA)'s official API.<br>The bot is hosted in Google Cloud Platform, and run with Google Cloud Scheduler.<br><br>Due to Twitter's policy changes regarding bots, it may sporadically go offline.",
       "highlights": ["MacroeconomicAnalysis", "MonetaryStatistics", "MoneyMarket"],
       "url": "https://x.com/BCRA_bot"
     },
     {
       "name": "EcoBici",
-      "summary": "I conducted a comprehensive data analysis of EcoBici, the <strong style='color:#00369f'>public bike-sharing program</strong> of Buenos Aires, uncovering fascinating patterns hidden within over 16 million individual rides.<br>The first goal of the project was to find <strong style='color:#00369f'>patterns</strong> in user behavior and trip characteristics—exploring factors like trip duration, time of day, weekdays vs. weekends, and seasonal trends—to understand how, when, and why people rely on this service.<br>Later on, the project evolved to include an <strong style='color:#00369f'>impact evaluation</strong> approach. The next step? Assessing how improved cycling infrastructure could boost daily EcoBici usage, paving the way for smarter urban mobility solutions.",
+      "summary": "I conducted a comprehensive data analysis of EcoBici, the <strong style='color:#0076df'>public bike-sharing program</strong> of Buenos Aires, uncovering fascinating patterns hidden within over 16 million individual rides.<br>The first goal of the project was to find <strong style='color:#0076df'>patterns</strong> in user behavior and trip characteristics—exploring factors like trip duration, time of day, weekdays vs. weekends, and seasonal trends—to understand how, when, and why people rely on this service.<br>Later on, the project evolved to include an <strong style='color:#0076df'>impact evaluation</strong> approach. The next step? Assessing how improved cycling infrastructure could boost daily EcoBici usage, paving the way for smarter urban mobility solutions.",
       "highlights": ["TransportEconomics", "Cycling", "UrbanEconomics"],
       "url": "https://x.com/BCRA_bot"
     },
     {
       "name": "Ma-py-tas",
-      "summary": "Since 2020, I’ve immersed myself in the world of <strong style='color:#00369f'>geospatial data analytics</strong>, creating (perhaps a few too many) maps along the way. The topics I’ve explored are <strong style='color:#00369f'>data-driven storytelling</strong> through geography.",
+      "summary": "Since 2020, I’ve immersed myself in the world of <strong style='color:#0076df'>geospatial data analytics</strong>, creating (perhaps a few too many) maps along the way. The topics I’ve explored are <strong style='color:#0076df'>diverse</strong>, ranging from the locations of barbecues and blooming <a href='https://en.wikipedia.org/wiki/Jacaranda'>jacarandás</a> in Buenos Aires to Argentina’s vast hydrocarbon reservoirs.<br>This project brings together an almost-complete collection of these maps, each one a snapshot of <strong style='color:#0076df'>data-driven storytelling</strong> through geography.",
       "highlights": ["GeoData", "Maps", "Python"],
       "url": "https://x.com/BCRA_bot"
     }
