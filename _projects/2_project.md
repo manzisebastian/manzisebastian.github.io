@@ -4,7 +4,7 @@ title: energy
 description: analyzing energy economics data
 img: assets/img/Energy_project.jpg
 importance: 2
-category: econ
+# category: econ
 ---
 
 Every project has a beautiful feature showcase page.
