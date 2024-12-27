@@ -1,9 +1,9 @@
 ---
 layout: page
-title: project 7
-description: with background image
+title: Econ
+description: economics is what economists do
 img: assets/img/4.jpg
-importance: 1
+importance: 2
 # category: non-econ
 related_publications: true
 ---
