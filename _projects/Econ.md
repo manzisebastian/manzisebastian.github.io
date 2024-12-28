@@ -8,12 +8,13 @@ importance: 2
 related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+Just as Ma-py-tas showcases years of mapping across diverse topics, this collection represents another long-term journey. However, this time, the focus is narrower, as every project here has a common thread: Economics. From intricate graphs to insightful analyses, these works reflect my desire to explore the patterns and stories behind economic data.
 
-<iframe src="/assets/html/fig_1.html" width="1500" height="750" frameborder="0" style="overflow: hidden;"></iframe>
+<h1> dsfasf
 
+
+
+<div align="center"><iframe src="/assets/html/projects/Econ/fig_1.html" width="1500" height="750" frameborder="0" style="overflow: hidden;"></iframe></div>
 
 
 To give your project a background in the portfolio page, just add the img tag to the front matter like so:
