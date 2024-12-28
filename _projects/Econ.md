@@ -10,7 +10,7 @@ related_publications: true
 
 Just as Ma-py-tas showcases years of mapping across diverse topics, this collection represents another long-term journey. However, this time, the focus is narrower, as every project here has a common thread: Economics. From intricate graphs to insightful analyses, these works reflect my desire to explore the patterns and stories behind economic data.
 
-<h1> dsfasf
+<h2> Econ
 
 
 
