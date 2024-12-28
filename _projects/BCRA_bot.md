@@ -9,7 +9,7 @@ importance: 1
 
 <a href='https://x.com/BCRA_bot'>@BCRA_bot</a> is a Twitter bot that tweets daily updates of Argentina's monetary statistics, with data of the Central Bank of Argentina (BCRA).
 
-The Github repo for this project is <a href='github.com/manzisebastian/BCRA_bot'>manzisebastian/BCRA_bot</a>.
+The Github repo for this project can be found at <a href='https://github.com/manzisebastian/BCRA_bot'>manzisebastian/BCRA_bot</a>.
 
 This project started with a simple `import requests` way back in november 2021, while testing a third-party API called <a href='https://estadisticasbcra.com/'>Estadísticas BCRA</a> to gather key monetary metrics. The very first goal was only to create a heatmap of daily changes of Foreign exchange reserves (which I did, and can be accessed here).
 

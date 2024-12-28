@@ -118,7 +118,7 @@
     },
     {
       "name": "Ma-py-tas",
-      "summary": "Since 2020, I’ve immersed myself in the world of <strong style='color:#0076df'>geospatial data analytics</strong>, creating (perhaps a few too many) maps along the way. The topics I’ve explored are <strong style='color:#0076df'>diverse</strong>, ranging from the locations of barbecues and blooming <a href='https://en.wikipedia.org/wiki/Jacaranda'>jacarandás</a> in Buenos Aires to Argentina’s vast hydrocarbon reservoirs.<br>This project brings together an almost-complete collection of these maps, each one a snapshot of <strong style='color:#0076df'>data-driven storytelling</strong> through geography.",
+      "summary": "Since 2020, I’ve immersed myself in the world of <strong style='color:#0076df'>geospatial data analytics</strong>, creating (perhaps a few too many) maps along the way. The topics I’ve explored are <strong style='color:#0076df'>diverse</strong>, ranging from the locations of barbecues and blooming <a href='https://en.wikipedia.org/wiki/Jacaranda'>jacarandás</a> in Buenos Aires to Argentina’s vast hydrocarbon reservoirs.<br>This project brings together a non-exhaustive collection of these maps, each one a snapshot of <strong style='color:#0076df'>data-driven storytelling</strong> through geography.",
       "highlights": ["GeoData", "Maps", "Python"],
       "url": "https://x.com/BCRA_bot"
     }
