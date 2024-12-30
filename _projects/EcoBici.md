@@ -19,7 +19,7 @@ Below, you can see the general map for the 5000 most popular rides, with no rest
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets\img\projects\ecobici\map_1.png" class="img-fluid" %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/ecobici/map_1.png" class="img-fluid" %}
     </div>
 </div>
 <div class="caption">
