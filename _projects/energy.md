@@ -3,7 +3,7 @@ layout: page
 title: energy
 description: analyzing energy economics data
 img: assets/img/Energy_project.jpg
-importance: 3
+importance: 5
 # category: econ
 ---
 

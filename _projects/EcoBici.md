@@ -3,7 +3,7 @@ layout: page
 title: EcoBici
 description: cycling as a way of life
 img: assets/img/Ecobici_image.jpg
-importance: 3
+importance: 4
 # category: non-econ
 ---
 
