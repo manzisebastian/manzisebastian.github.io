@@ -41,14 +41,10 @@
   ],
   "teaching": [
     {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "name": "School of Economic Sciences - University of Buenos Aires (FCE - UBA)",
+      "position": "Undergraduate Teaching Assistant",
+      "startDate": "2022-04-01",
+      "summary": "Courses: <ul> <li>Macroeconomics II -- 03/2024 - now</li><li>Mathematics for Economists -- 12/2022 - 07/2024</li><li>Macroeconomics I -- 03/2021 - now</li>"
     }
   ],
   "languages": [
@@ -107,20 +103,22 @@
     {
       "name": "BCRA_bot",
       "summary": "I developed a <strong style='color:#0076df'>Twitter bot</strong> (<a href='https://x.com/BCRA_bot'>@BCRA_bot</a>) that tweets <strong style='color:#0076df'>daily updates</strong> of Argentina's monetary statistics, together with weekly and monthly analyses. Data is gathered using the Central Bank of Argentina (BCRA)'s official API.<br>The bot is hosted in Google Cloud Platform, and run with Google Cloud Scheduler.<br><br>Due to Twitter's policy changes regarding bots, it may sporadically go offline.",
-      "highlights": ["MacroeconomicAnalysis", "MonetaryStatistics", "MoneyMarket"],
-      "url": "https://x.com/BCRA_bot"
+      "url": "https://manzisebastian.github.io/projects/BCRA_bot/"
     },
     {
       "name": "EcoBici",
       "summary": "I conducted a comprehensive data analysis of EcoBici, the <strong style='color:#0076df'>public bike-sharing program</strong> of Buenos Aires. The project is now turning into an <strong style='color:#0076df'>impact evaluation</strong> approach.",
-      "highlights": ["TransportEconomics", "Cycling", "UrbanEconomics"],
-      "url": "https://x.com/BCRA_bot"
+      "url": "https://manzisebastian.github.io/projects/EcoBici/"
     },
     {
       "name": "Ma-py-tas",
       "summary": "As a <strong style='color:#0076df'>geospatial data science</strong> project, I create maps of really diverse topics.",
-      "highlights": ["GeoData", "Maps", "Python"],
-      "url": "https://x.com/BCRA_bot"
+      "url": "https://manzisebastian.github.io/projects/Mapytas/"
+    },
+    {
+      "name": "Econ",
+      "summary": "Creating insightful analyses of <strong style='color:#0076df'>economic data</strong>.",
+      "url": "https://manzisebastian.github.io/projects/Mapytas/"
     }
   ]
 }
