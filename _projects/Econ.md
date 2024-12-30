@@ -21,11 +21,11 @@ Everyday, at around 16:00 Argentina time, people (mostly economists and Economic
 
 The debate about Argentina's fiscal performance is a hot topic in both academic and public discourse. The following two charts aim to provide measurable insights of some economic variables that are crucial when it comes to assessing fiscal challenges: the difference between primary and fiscal balance, and the composition of the latter.
 
-<!-- <div align="center"><iframe src="/assets/html/projects/Econ/fig_1.html" width="1500" height="750" frameborder="0" style="overflow: hidden;"></iframe></div> -->
+<div align="center"><iframe src="/assets/html/projects/Econ/fiscal_1.html" width="850" height="850" frameborder="0" scrolling="no" style="overflow: hidden;"></iframe></div>
 
 In particular, the fiscal balance can be disaggregated into the economic and capital result, as shows the following chart.
 
-<!-- <div align="center"><iframe src="/assets/html/projects/Econ/fig_2.html" width="1500" height="750" frameborder="0" style="overflow: hidden;"></iframe></div> -->
+<div align="center"><iframe src="/assets/html/projects/Econ/fiscal_2.html" width="850" height="850" frameborder="0" scrolling="no" style="overflow: hidden;"></iframe></div>
 
 As a side note, this project was originally uploaded to [Alphacast](https://www.alphacast.io/datasets/fiscal-argentina-onp-government-budget-quarterly-15391) back in 2022, although the code used in that project (much more basic and not API-integrated) was not published.
 
