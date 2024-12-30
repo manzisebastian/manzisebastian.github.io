@@ -21,7 +21,7 @@ Everyday, at around 16:00 Argentina time, people (mostly economists and Economic
 
 The debate about Argentina's fiscal performance is a hot topic in both academic and public discourse. The following two charts aim to provide measurable insights of some economic variables that are crucial when it comes to assessing fiscal challenges: the difference between primary and fiscal balance, and the composition of the latter.
 
-<div align="center"><iframe src="/assets/html/projects/Econ/fig_1.html" width="1500" height="750" frameborder="0" scrolling="no" style="overflow: hidden;"></iframe></div>
+<!-- <div align="center"><iframe src="/assets/html/projects/Econ/fig_1.html" width="1500" height="750" frameborder="0" style="overflow: hidden;"></iframe></div> -->
 
 In particular, the fiscal balance can be disaggregated into the economic and capital result, as shows the following chart.
 
@@ -34,8 +34,8 @@ As a side note, this project was originally uploaded to [Alphacast](https://www.
 The Federal Budget (<i>el Presupuesto</i>) is often considered the mother of all laws, as it is a detailed description of all government resources and expenditures. In this ongoing project, I am analyzing the key questions of the budget: who spends?, in what? & which means are being used?
 
 My plan is to build an interactive visualization that answers those questions directly while ensuring that data is presented in an understandable and appealing way. For that purpose, I am extensively using new visualization techniques and interactive features. The following Sankey diagram is a snippet of this project: a graphic analysis of the 2024 Federal Budget.
-<!--
-<div align="center"><iframe src="/assets/html/projects/Econ/sankey_presup.html" width="1500" height="750" frameborder="0" style="overflow: hidden;"></iframe></div> -->
+
+<div align="center"><iframe src="/assets/html/projects/Econ/sankey_presup.html" width="1000" height="1500" frameborder="0" style="overflow: hidden;"></iframe></div>
 
 <h2>homeownership</h2>
 
