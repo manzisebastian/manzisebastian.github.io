@@ -19,7 +19,7 @@ After a few attempts, the first version of the bot was launched in July 2022. It
 
 The code experienced minor changes and kept adding features (such as weekly and monthly analyses and graphs) until 2024, when the BCRA launched its own <a href='https://www.bcra.gob.ar/Catalogo/apis.asp?fileName=principales-variables-v3&sectionName=Estad%EDsticas'>official API</a>, allowing the bot to be 100% reliant on it.
 
-As of december 2024, the bot is still running and continously adding new features. Below, you can find a sample tweet.
+As of December 2024, the bot is still running and continously adding new features. Below, you can find a sample tweet.
 
 <blockquote class="twitter-tweet"><p lang="es" dir="ltr">-- Componentes Base Monetaria --<br><br>La base monetaria es de $28.372B.<br>Composición:<br>- Circulante monetario: $19.3459B (68.19%)<br> - Billetes y monedas: $17244.2510B (89136.68%)<br> - Efectivo en ent. fin.: $2,101,601M (10.86%)<br>- Depósitos en CC del BCRA: $9.0261B (31.81%)</p>&mdash; BCRA_bot (@BCRA_bot) <a href="https://twitter.com/BCRA_bot/status/1872757011349229689?ref_src=twsrc%5Etfw">December 27, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
