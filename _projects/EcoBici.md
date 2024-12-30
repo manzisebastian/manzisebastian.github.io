@@ -44,6 +44,8 @@ Are there significant geographic differences between <i>modes</i> of usage? For 
 
 A more thorough analysis on rides characteristics and differences, including histograms, heatmaps and origin-destination statistics, is available on request.
 
-Later on, this project evolved to include an impact evaluation approach. The next step? Assessing how improved cycling infrastructure could boost daily EcoBici usage, paving the way for smarter urban mobility solutions. Given scarce data availability on cycle lanes construction in Buenos Aires.
+Later on, this project evolved to include an impact evaluation approach. The next step? Assessing how improved cycling infrastructure could boost daily EcoBici usage, paving the way for smarter urban mobility solutions.
+
+This project is temporarily suspended due to scarce data availability on cycle lanes construction in Buenos Aires.
 
 <u>Note:</u> Credits to Vaimoo for the image that illustrates this project's front cover.

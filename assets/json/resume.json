@@ -30,13 +30,13 @@
       "name": "Interdisciplinary Institute of Political Economy (IIEP - UBA - CONICET)",
       "position": "Research scholar",
       "startDate": "2023-06-01",
-      "summary": "Currently assisting in projects leveraging unstructured data and Large Language Models (LLMs) to conduct sentiment analysis, with the aim of developing innovative tools for predicting economic upheavals."
+      "summary": "Currently assisting in projects leveraging unstructured text data and Large Language Models (LLMs) to extract inflation expectations.<br>Recently assisted in gathering information for the fine-tuning process of the LLM, which then is transformed into a quantitative indicator through Natural Language Inference (NLI)."
     },
     {
       "name": "Independent -- joint with Damián Pierri (PhD., Universidad de San Andrés)",
       "position": "Research assistant (RA)",
       "startDate": "2022-04-01",
-      "summary": "Actively contributing to projects related to macroeconomics and empirical applications."
+      "summary": "Actively contributing to projects related to macroeconomics and empirical applications.<br>Projects in which I collaborated as research assistant: <ul> <li>[working] - External borrowing and endogenous growth</li><li>[2023] - <a href='https://ideas.repec.org/p/cte/werepe/36164.html'>An ergodic theory of sovereign default</a></li>"
     }
   ],
   "teaching": [
@@ -106,7 +106,7 @@
   "projects": [
     {
       "name": "BCRA_bot",
-      "summary": "I developed a <strong style='color:#0076df'>Twitter bot</strong> (<a href='https://x.com/BCRA_bot'>@BCRA_bot</a>) that tweets <strong style='color:#0076df'>daily updates</strong> of Argentina's monetary statistics, together with weekly and monthly analyses.<br>Data is gathered using the Central Bank of Argentina (BCRA)'s official API.<br>The bot is hosted in Google Cloud Platform, and run with Google Cloud Scheduler.<br><br>Due to Twitter's policy changes regarding bots, it may sporadically go offline.",
+      "summary": "I developed a <strong style='color:#0076df'>Twitter bot</strong> (<a href='https://x.com/BCRA_bot'>@BCRA_bot</a>) that tweets <strong style='color:#0076df'>daily updates</strong> of Argentina's monetary statistics, together with weekly and monthly analyses. Data is gathered using the Central Bank of Argentina (BCRA)'s official API.<br>The bot is hosted in Google Cloud Platform, and run with Google Cloud Scheduler.<br><br>Due to Twitter's policy changes regarding bots, it may sporadically go offline.",
       "highlights": ["MacroeconomicAnalysis", "MonetaryStatistics", "MoneyMarket"],
       "url": "https://x.com/BCRA_bot"
     },
