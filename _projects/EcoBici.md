@@ -33,7 +33,7 @@ Are there significant geographic differences between <i>modes</i> of usage? For 
         {% include figure.liquid loading="eager" path="assets/img/projects/ecobici/map_2.png" class="img-fluid" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/projects/energy/map_3.png" class="img-fluid" %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/ecobici/map_3.png" class="img-fluid" %}
     </div>
 </div>
 <div class="caption">
