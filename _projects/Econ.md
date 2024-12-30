@@ -2,7 +2,7 @@
 layout: page
 title: Econ
 description: economics is what economists do
-img: assets/img/4.jpg
+img: assets/img/econ_image.jpg
 importance: 2
 # category: non-econ
 related_publications: true
@@ -12,80 +12,45 @@ Just as Ma-py-tas showcases years of mapping across diverse topics, this collect
 
 The Github repo for this project can be found at <a href='https://github.com/manzisebastian/Econ'>manzisebastian/Econ</a>.
 
+<h2>reserves</h2>
+
+Everyday, at around 16:00 Argentina time, people (mostly economists and Economics students) crowd into the Central Bank of Argentina's (BCRA) official Twitter account (<a href='https://x.com/BancoCentral_AR'>@BancoCentral_AR</a>) anxious to know the daily change in the Foreign Exchange Reserve stock. Using the API of the BCRA, I gathered data for these daily changes from January 1997, and plotted them into the following interactive heatmap. One can distinguish at a glance bad days—dark red ones— from good days—dark blue ones—.
+
+<div align="center"><iframe src="/assets/html/projects/Econ/fig_var_RRII.html" width="1000" height="1500" frameborder="0" style="overflow: hidden;"></iframe></div>
+
 <h2> fiscal </h2>
 
-The debate about Argentina's fiscal performance is a hot topic in both academic and public discourse. This project aims to provide measurable insights of some economic variables that are crucial when it comes to assessing fiscal challenges., exploring how fiscal deficits and surpluses evolve over time.
+The debate about Argentina's fiscal performance is a hot topic in both academic and public discourse. The following two charts aim to provide measurable insights of some economic variables that are crucial when it comes to assessing fiscal challenges: the difference between primary and fiscal balance, and the composition of the latter.
 
-I summarized 
+<!-- <div align="center"><iframe src="/assets/html/projects/Econ/fig_1.html" width="1500" height="750" frameborder="0" style="overflow: hidden;"></iframe></div> -->
 
-<div align="center"><iframe src="/assets/html/projects/Econ/fig_1.html" width="1500" height="750" frameborder="0" style="overflow: hidden;"></iframe></div>
+In particular, the fiscal balance can be disaggregated into the economic and capital result, as shows the following chart.
 
-As a side note, this project was originally uploaded to [Alphacast](https://www.alphacast.io/datasets/fiscal-argentina-onp-government-budget-quarterly-15391) in 2022, although the code used in that project (much more basic and not API-integrated) was not published.
+<!-- <div align="center"><iframe src="/assets/html/projects/Econ/fig_2.html" width="1500" height="750" frameborder="0" style="overflow: hidden;"></iframe></div> -->
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+As a side note, this project was originally uploaded to [Alphacast](https://www.alphacast.io/datasets/fiscal-argentina-onp-government-budget-quarterly-15391) back in 2022, although the code used in that project (much more basic and not API-integrated) was not published.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+<h2>budget</h2>
+
+The Federal Budget (<i>el Presupuesto</i>) is often considered the mother of all laws, as it is a detailed description of all government resources and expenditures. In this ongoing project, I am analyzing the key questions of the budget: who spends?, in what? & which means are being used?
+
+My plan is to build an interactive visualization that answers those questions directly while ensuring that data is presented in an understandable and appealing way. For that purpose, I am extensively using new visualization techniques and interactive features. The following Sankey diagram is a snippet of this project: a graphic analysis of the 2024 Federal Budget.
+<!--
+<div align="center"><iframe src="/assets/html/projects/Econ/sankey_presup.html" width="1500" height="750" frameborder="0" style="overflow: hidden;"></iframe></div> -->
+
+<h2>homeownership</h2>
+
+Back in May 2024, two economists at the Federal Reserve, Daniel Dias and Joao Duarte, published a [note](https://www.federalreserve.gov/econres/notes/feds-notes/estimating-the-importance-of-monetary-policy-shocks-for-variation-in-the-u-s-homeownership-rate-20240503.html) in the FEDS Notes, in which they showed that monetary policy shocks had an effect over the homeownership rate in the United States.
+
+Together with a colleague, we embarked in a project in order to get estimates for Argentina. Even though the project is still in preliminary phase, we used available data for other projects we had in mind. In particular, the following visualization made extensive use of [\{eph\}](https://cran.r-project.org/web/packages/eph/), an R package that provides Argentina's Permanent Household Survey (EPH) microdata. Using variables related to type of tenure of household, we plotted estimates for the homeownership rate in Argentina from 2003Q3 to 2022Q4.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/econ/homeownership.jpg" class="img-fluid" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+    Argentina's homeownership rate remains approximately stable in around 70%.
 </div>
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}

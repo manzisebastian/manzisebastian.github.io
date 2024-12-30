@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description: This is my collection of projects. Each of them is linked to its corresponding Github repository.
+description: This is my collection of projects. Each of them is linked to its corresponding Github repository. This section combines projects written in English and in Spanish.
 nav: true
 nav_order: 3
 horizontal: false
