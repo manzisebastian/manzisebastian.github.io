@@ -10,12 +10,17 @@ related_publications: true
 
 Just as Ma-py-tas showcases years of mapping across diverse topics, this collection represents another long-term journey. However, this time, the focus is narrower, as every project here has a common thread: Economics. From intricate graphs to insightful analyses, these works reflect my desire to explore the patterns and stories behind economic data.
 
-<h2> Econ
+The Github repo for this project can be found at <a href='https://github.com/manzisebastian/Econ'>manzisebastian/Econ</a>.
 
+<h2> fiscal </h2>
 
+The debate about Argentina's fiscal performance is a hot topic in both academic and public discourse. This project aims to provide measurable insights of some economic variables that are crucial when it comes to assessing fiscal challenges., exploring how fiscal deficits and surpluses evolve over time.
+
+I summarized 
 
 <div align="center"><iframe src="/assets/html/projects/Econ/fig_1.html" width="1500" height="750" frameborder="0" style="overflow: hidden;"></iframe></div>
 
+As a side note, this project was originally uploaded to [Alphacast](https://www.alphacast.io/datasets/fiscal-argentina-onp-government-budget-quarterly-15391) in 2022, although the code used in that project (much more basic and not API-integrated) was not published.
 
 To give your project a background in the portfolio page, just add the img tag to the front matter like so:
 
