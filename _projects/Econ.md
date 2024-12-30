@@ -5,7 +5,6 @@ description: economics is what economists do
 img: assets/img/econ_image.jpg
 importance: 2
 # category: non-econ
-related_publications: true
 ---
 
 Just as Ma-py-tas showcases years of mapping across diverse topics, this collection represents another long-term journey. However, this time, the focus is narrower, as every project here has a common thread: Economics. From intricate graphs to insightful analyses, these works reflect my desire to explore the patterns and stories behind economic data.
@@ -22,7 +21,7 @@ Everyday, at around 16:00 Argentina time, people (mostly economists and Economic
 
 The debate about Argentina's fiscal performance is a hot topic in both academic and public discourse. The following two charts aim to provide measurable insights of some economic variables that are crucial when it comes to assessing fiscal challenges: the difference between primary and fiscal balance, and the composition of the latter.
 
-<!-- <div align="center"><iframe src="/assets/html/projects/Econ/fig_1.html" width="1500" height="750" frameborder="0" style="overflow: hidden;"></iframe></div> -->
+<div align="center"><iframe src="/assets/html/projects/Econ/fig_1.html" width="1500" height="750" frameborder="0" scrolling="no" style="overflow: hidden;"></iframe></div>
 
 In particular, the fiscal balance can be disaggregated into the economic and capital result, as shows the following chart.
 
