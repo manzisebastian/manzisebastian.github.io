@@ -16,7 +16,7 @@ The Github repo for this project can be found at <a href='https://github.com/man
 
 Everyday, at around 16:00 Argentina time, people (mostly economists and Economics students) crowd into the Central Bank of Argentina's (BCRA) official Twitter account (<a href='https://x.com/BancoCentral_AR'>@BancoCentral_AR</a>) anxious to know the daily change in the Foreign Exchange Reserve stock. Using the API of the BCRA, I gathered data for these daily changes from January 1997, and plotted them into the following interactive heatmap. One can distinguish at a glance bad days—dark red ones— from good days—dark blue ones—.
 
-<div align="center"><iframe src="/assets/html/projects/Econ/fig_var_RRII.html" width="1000" height="1500" frameborder="0" style="overflow: hidden;"></iframe></div>
+<div align="center"><iframe src="/assets/html/projects/Econ/fig_var_RRII.html" width="1000" height="1500" frameborder="0" scrolling="no" style="overflow: hidden;"></iframe></div>
 
 <h2> fiscal </h2>
 
