@@ -35,7 +35,7 @@ The Federal Budget (<i>el Presupuesto</i>) is often considered the mother of all
 
 My plan is to build an interactive visualization that answers those questions directly while ensuring that data is presented in an understandable and appealing way. For that purpose, I am extensively using new visualization techniques and interactive features. The following Sankey diagram is a snippet of this project: a graphic analysis of the 2024 Federal Budget.
 
-<div align="center"><iframe src="/assets/html/projects/Econ/sankey_presup.html" width="1000" height="1500" frameborder="0" style="overflow: hidden;"></iframe></div>
+<div align="center"><iframe src="/assets/html/projects/Econ/sankey_presup.html" width="1000" height="1500" frameborder="0" scrolling="no" style="overflow: hidden;"></iframe></div>
 
 <h2>homeownership</h2>
 
