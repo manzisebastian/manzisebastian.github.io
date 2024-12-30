@@ -19,10 +19,10 @@ Since the project focused on static visualizations for publication in PDF format
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/projects/energy/fig1.png" title="fig1" class="img" %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/energy/fig1.png" class="img-fluid" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/projects/energy/fig2.png" title="fig2" class="img" %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/energy/fig2.png" class="img-fluid" %}
     </div>
 </div>
 <div class="caption">
@@ -30,10 +30,10 @@ Since the project focused on static visualizations for publication in PDF format
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/projects/energy/fig3.png"%}
+        {% include figure.liquid loading="eager" path="assets/img/projects/energy/fig3.png" class="img-fluid" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/projects/energy/fig4.png"%}
+        {% include figure.liquid loading="eager" path="assets/img/projects/energy/fig4.png" class="img-fluid" %}
     </div>
 </div>
 <div class="caption">

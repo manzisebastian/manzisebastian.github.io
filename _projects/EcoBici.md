@@ -1,46 +1,29 @@
 ---
 layout: page
-title: project 4
+title: EcoBici
 description: another without an image
-img:
+img: assets/img/Ecobici_image.jpg
 importance: 3
 # category: non-econ
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+I've always been interested in urban economics and mobility. Particularly, smarter ways of commuting are the cornerstone of public policies regarding mobility. How do cities organize themselves in a more efficient way? How can we take into account the negative externalities caused by inefficient means of transport? Is enhancing public transport enough, or do we need a <i>cultural change</i>? 
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+All these questions come to my mind frequently. No wonder that I am constantly consuming and sharing data about mobility (and, sometimes, analyzing it!). This project started with a clear goal: assessing how, when, and why people use Ecobici, the public bike-sharing program of Buenos Aires.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+In this project, I analyzed data over 16 million individual rides of Ecobici from 2019 to 2023 to uncover fascinating patterns around usage characteristics regarding trip duration, time of day, weekdays vs. weekends, and seasonal trends.
+
+I also leveraged on geographic data (in particular, latitudes and longitudes for the origin and destinations of rides) to study patterns of most popular rides. Given that data for the exact route of each ride is not available, each ride is plotted as a straight line over the map. No news that mapping was the part of the project I enjoyed the most.
+
+Below, you can see the general map for the 5000 most popular rides, with no restrictions on days and times.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets\img\projects\ecobici\map_1.png" class="img-fluid" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+    As can be seen, most of the top 5000 rides have origins and destinations within the northern part of the City of Buenos Aires.
 </div>
 
 You can also put regular text between your rows of images.
@@ -78,3 +61,5 @@ Here's the code for the last row of images above:
 ```
 
 {% endraw %}
+
+<p> Credits to Vaimoo for the image that illustrates this project's front cover.</p>
