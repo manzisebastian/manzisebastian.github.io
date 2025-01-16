@@ -20,11 +20,11 @@ social: true # includes social icons at the bottom of the page
 
 Hello! Welcome to my personal website.
 
-My name is Sebastián and I'm a recent Economics graduate with a passion for research and data analysis. With experience in research assistance and plans to pursue a master's degree in Economics, I am eager to deepen my expertise in the field.
+My name is Sebastián and I'm a recent Economics graduate with a passion for research and data analysis. With experience in research assistance and plans to pursue a master's degree in Economics in the near future, I am eager to deepen my expertise in the field.
 
 I enjoy programming both in Python and R, and have worked on a variety of data science projects, ranging from economic data analysis to geospatial data science. More about this can be found in my [projects page](https://manzisebastian.github.io/projects/).
 
-<!-- I recently started a new [blog](https://manzisebastian.github.io/blog/) section in which I non-periodically write about topics that I consider interesting: from urban economics all the way to the externalities of having a dog. -->
+<!-- I've recently launched a [blog section](https://manzisebastian.github.io/blog/) where I occasionally write about topics that catch my interest. It's my little corner for sharing ideas and random thoughts that pop up while working with data—and a way to make sure I don't forget them. -->
 
 In this website, you'll find more about my work, interests, and the next steps in my academic and professional journey.
 
