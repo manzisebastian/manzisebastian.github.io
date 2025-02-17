@@ -1,20 +1,18 @@
 <ul class="card-text font-weight-light list-group list-group-flush">
-  {% for category_dict in data["experience"] %}
-    {% for category, experiences in category_dict.items() %}
-      <li class="list-group-item">
-        <h5 class="font-weight-bold">{{ category }}</h5>
-        <ul class="items" style="list-style-type: none; padding-left: 1rem;">
-          {% for content in experiences %}
-            <li>
-              <div class="d-flex justify-content-between">
-                <h6 class="font-weight-bold">- {{ content.name }}</h6>
-                <span class="text-muted">{{ content.date }}</span>
-              </div>
-              <p style="font-size: 0.95rem; margin-left: 1rem;">{{ content.summary }}</p>
-            </li>
-          {% endfor %}
-        </ul>
-      </li>
-    {% endfor %}
+  {% for category_obj in data["experience"] %}
+    <li class="list-group-item">
+      <h5 class="font-weight-bold">{{ category_obj.category }}</h5>
+      <ul class="items" style="list-style-type: none; padding-left: 1rem;">
+        {% for content in category_obj.experiences %}
+          <li>
+            <div class="d-flex justify-content-between">
+              <h6 class="font-weight-bold">- {{ content.name }}</h6>
+              <span class="text-muted">{{ content.date }}</span>
+            </div>
+            <p style="font-size: 0.95rem; margin-left: 1rem;">{{ content.summary }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    </li>
   {% endfor %}
 </ul>

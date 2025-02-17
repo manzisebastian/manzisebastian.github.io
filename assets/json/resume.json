@@ -129,30 +129,34 @@
     }
   ],
   "experience": [
-    {"category 1": [
-      {
-        "name": "experience 1 - category 1",
-        "summary": "summary of experience 1 - category 1",
-        "date": "01/2025 - 02/2025"
-      },
-      {
-        "name": "experience 2 - category 1",
-        "summary": "summary of experience 2 - category 1",
-        "date": "01/2025 - 02/2025"
-      }
+    {
+      "category": "Category 1",
+      "experiences": [
+        {
+          "name": "experience 1 - category 1",
+          "summary": "summary of experience 1 - category 1",
+          "date": "01/2025 - 02/2025"
+        },
+        {
+          "name": "experience 2 - category 1",
+          "summary": "summary of experience 2 - category 1",
+          "date": "01/2025 - 02/2025"
+        }
       ]
     },
-    {"category 2": [
-      {
-        "name": "experience 1 - category 2",
-        "summary": "summary of experience 1 - category 2",
-        "date": "01/2025 - 02/2025"
-      },
-      {
-        "name": "experience 2 - category 2",
-        "summary": "summary of experience 2 - category 2",
-        "date": "01/2025 - 02/2025"
-      }
+    {
+      "category": "Category 2",
+      "experiences": [
+        {
+          "name": "experience 1 - category 2",
+          "summary": "summary of experience 1 - category 2",
+          "date": "01/2025 - 02/2025"
+        },
+        {
+          "name": "experience 2 - category 2",
+          "summary": "summary of experience 2 - category 2",
+          "date": "01/2025 - 02/2025"
+        }
       ]
     }
   ]
