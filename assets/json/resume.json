@@ -18,14 +18,14 @@
   "experience": [
     {
       "category": "Academic - research & data",
-      "work": [
+      "jobs": [
         {
-          "name": "Research intern",
+          "position": "Research intern",
           "date": "2025-01-01",
           "summary": "Currently assisting in projects leveraging unstructured text data and Large Language Models (LLMs) to extract inflation expectations.<br>Recently assisted in gathering information for the fine-tuning process of the LLM, which then is transformed into a quantitative indicator through Natural Language Inference (NLI).<br>Work under the coordination of José Daniel Aromí (Ph.D., University of Maryland)."
         },
         {
-          "name": "work 2",
+          "position": "work 2",
           "date": "2025-01-15",
           "summary": "Summary of work 2"
         }
@@ -33,14 +33,14 @@
     },
     {
       "category": "Non-academic",
-      "work": [
+      "jobs": [
         {
-          "name": "work 1",
+          "position": "work 1",
           "date": "2025-01-01",
           "summary": "Summary of work 1"
         },
         {
-          "name": "work 2",
+          "position": "work 2",
           "date": "2025-01-15",
           "summary": "Summary of work 2"
         }
@@ -48,14 +48,14 @@
     },
     {
       "category": "Teaching",
-      "work": [
+      "jobs": [
         {
-          "name": "work 1",
+          "position": "work 1",
           "date": "2025-01-01",
           "summary": "Summary of work 1"
         },
         {
-          "name": "work 2",
+          "position": "work 2",
           "date": "2025-01-15",
           "summary": "Summary of work 2"
         }
