@@ -15,38 +15,44 @@
       }
     ]
   },
-  "experience": {
-    "category 1": [
-      {
-        "name": "experience 1 - category 1",
-        "summary": "summary"
-      },
-      {
-        "name": "experience 2 - category 1",
-        "summary": "summary"
-      }
-    ],
-    "category 2": [
-      {
-        "name": "experience 1 - category 2",
-        "summary": "summary"
-      },
-      {
-        "name": "experience 2 - category 2",
-        "summary": "summary"
-      }
-    ],
-    "category 3": [
-      {
-        "name": "experience 1 - category 3",
-        "summary": "summary"
-      },
-      {
-        "name": "experience 2 - category 3",
-        "summary": "summary"
-      }
-    ]
-  },
+  "experience": [
+    {
+      "category 1": [
+        {
+          "name": "experience 1 - category 1",
+          "summary": "summary"
+        },
+        {
+          "name": "experience 2 - category 1",
+          "summary": "summary"
+        }
+      ]
+    },
+    {
+      "category 2": [
+        {
+          "name": "experience 1 - category 2",
+          "summary": "summary"
+        },
+        {
+          "name": "experience 2 - category 2",
+          "summary": "summary"
+        }
+      ]
+    },
+    {
+      "category 3": [
+        {
+          "name": "experience 1 - category 3",
+          "summary": "summary"
+        },
+        {
+          "name": "experience 2 - category 3",
+          "summary": "summary"
+        }
+      ]
+    }
+  ],
   "education": [
     {
       "institution": "School of Economic Sciences - University of Buenos Aires (FCE - UBA)",
