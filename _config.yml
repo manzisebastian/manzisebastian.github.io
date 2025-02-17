@@ -636,9 +636,8 @@ jekyll_get_json:
 jsonresume:
   - information
   - education
-  - research
-  - teaching
   - projects
+  - experience
   # - volunteer
   # - awards
   # - certificates
@@ -646,5 +645,4 @@ jsonresume:
   - languages
   - programming
   - interests
-  - experience
   # - references

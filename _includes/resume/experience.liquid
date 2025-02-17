@@ -4,8 +4,8 @@
       <h5 class="font-weight-bold" style="color: #0076df;">{{ category_obj.category }}</h5>
       <ul class="items" style="list-style-type: none; padding-left: 1rem;">
         {% for content in category_obj.experiences %}
-          <li>
-            <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0">
+          <li class="w-100">
+            <div class="w-100">
                 <h6 class="title font-weight-bold ml-1 ml-md-4">{{ content.position }}</h6>
                 <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ content.name }}</h6>
                 <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ content.summary }}</h6>
