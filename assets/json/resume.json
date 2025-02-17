@@ -130,28 +130,42 @@
   ],
   "experience": [
     {
-      "category": "Category 1",
+      "category": "Academic - research & data",
       "experiences": [
         {
-          "name": "experience 1 - category 1",
-          "summary": "summary of experience 1 - category 1"
+          "position": "Research intern",
+          "name": "Interdisciplinary Institute of Political Economy (IIEP - UBA - CONICET)",
+          "summary": "Currently assisting in projects leveraging unstructured text data and Large Language Models (LLMs) to extract inflation expectations.<br>Recently assisted in gathering information for the fine-tuning process of the LLM, which then is transformed into a quantitative indicator through Natural Language Inference (NLI).<br>Work under the coordination of José Daniel Aromí (Ph.D., University of Maryland)."
         },
         {
-          "name": "experience 2 - category 1",
-          "summary": "summary of experience 2 - category 1"
+          "position": "Research Assistant (RA)",
+          "name": "Independent - assisting Damián Pierri (PhD., University of San Andrés)",
+          "summary": "Actively contributing to projects related to macroeconomics and empirical applications.<br>Projects in which I collaborated as research assistant: <ul> <li>[working] - External borrowing and endogenous growth</li><li>[2023] - <a href='https://ideas.repec.org/p/cte/werepe/36164.html'>An ergodic theory of sovereign default</a></li>"
+        },
+        {
+          "position": "Research & Data Visualization Assistant",
+          "name": "Universidad Nacional de La Matanza",
+          "summary": "I developed and managed the entire data cycle, from extraction and processing to analysis and visualization, for a monthly publication of key indicators in energy economics."
         }
       ]
     },
     {
-      "category": "Category 2",
+      "category": "Non-academic",
       "experiences": [
         {
-          "name": "experience 1 - category 2",
-          "summary": "summary of experience 1 - category 2"
-        },
+          "position": "Data Analyst",
+          "name": "Freelance (through online platforms)",
+          "summary": "I conducted small-and-medium sized data analysis projects for different clients, mainly using Excel and Python."
+        }
+      ]
+    },
+    {
+      "category": "Teaching",
+      "experiences": [
         {
-          "name": "experience 2 - category 2",
-          "summary": "summary of experience 2 - category 2"
+          "position": "Undergraduate Teaching Assistant",
+          "name": "School of Economic Sciences - University of Buenos Aires (FCE - UBA)",
+          "summary": "Courses: <ul> <li>Macroeconomics II<span style='float:right;'>03/2024 - now</span></li><li>Mathematics for Economists<span style='float:right;'>12/2022 - 07/2024</span></li><li>Macroeconomics I<span style='float:right;'>03/2021 - now</span></li>"
         }
       ]
     }

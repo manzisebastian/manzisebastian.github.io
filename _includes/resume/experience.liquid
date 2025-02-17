@@ -1,14 +1,15 @@
 <ul class="card-text font-weight-light list-group list-group-flush">
   {% for category_obj in data[1] %}
     <li class="list-group-item">
-      <h5 class="font-weight-bold">{{ category_obj.category }}</h5>
+      <h5 class="font-weight-bold" style="color: #0076df;">{{ category_obj.category }}</h5>
       <ul class="items" style="list-style-type: none; padding-left: 1rem;">
         {% for content in category_obj.experiences %}
           <li>
             <div class="row">
               <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0">
                 <div class="d-flex justify-content-between">
-                  <h6 class="font-weight-bold ml-1 ml-md-4">- {{ content.name }}</h6>
+                  <h6 class="font-weight-bold ml-1 ml-md-4">- {{ content.position }}</h6>
+                  <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ content.name }}</h6>
                 </div>
                 <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ content.summary }}</h6>
               </div>
