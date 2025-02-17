@@ -7,13 +7,15 @@
           <li class="w-100">
             <div class="w-100">
                 <div class="w-100 d-flex justify-content-between ml-1 ml-md-4">
-                  <h6 class="title font-weight-bold ml-1 ml-md-4">{{ content.position }}</h6>
-                  <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; color: #0076df;">{{ content.date }}</h6>
+                  <h6 class="title font-weight-bold">{{ content.position }}</h6>
+                  <h6 style="font-size: 0.95rem; color: #0076df;">{{ content.date }}</h6>
                 </div>
                 <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ content.name }}</h6>
                 <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ content.summary }}</h6>
             </div>
-            <hr style="width: 66%; margin: 10px auto; border: 1px solid #ccc;">
+            {% if loop.index < category_obj.experiences|length %}
+              <hr style="width: 30%; margin: 10px auto; border: 1px solid #ccc;">
+            {% endif %}
           </li>
         {% endfor %}
       </ul>
