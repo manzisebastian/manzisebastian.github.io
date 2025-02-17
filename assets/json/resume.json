@@ -15,44 +15,6 @@
       }
     ]
   },
-  "experience": [
-    {
-      "category 1": [
-        {
-          "name": "experience 1 - category 1",
-          "summary": "summary"
-        },
-        {
-          "name": "experience 2 - category 1",
-          "summary": "summary"
-        }
-      ]
-    },
-    {
-      "category 2": [
-        {
-          "name": "experience 1 - category 2",
-          "summary": "summary"
-        },
-        {
-          "name": "experience 2 - category 2",
-          "summary": "summary"
-        }
-      ]
-    },
-    {
-      "category 3": [
-        {
-          "name": "experience 1 - category 3",
-          "summary": "summary"
-        },
-        {
-          "name": "experience 2 - category 3",
-          "summary": "summary"
-        }
-      ]
-    }
-  ],
   "education": [
     {
       "institution": "School of Economic Sciences - University of Buenos Aires (FCE - UBA)",
@@ -164,6 +126,24 @@
       "name": "Econ",
       "summary": "I conducted multiple data analyses of <strong style='color:#0076df'>economic data</strong>, whether in the form of personal side-projects or by-products of ongoing research. This is a collection of a tiny fraction of those analyses.",
       "url": "https://manzisebastian.github.io/projects/Econ/"
+    }
+  ],
+  "experience": [
+    {
+      "name": "experience 1",
+      "summary": "summary of experience 1"
+    },
+    {
+      "name": "experience 2",
+      "summary": "summary of experience 2"
+    },
+    {
+      "name": "experience 3",
+      "summary": "summary of experience 3"
+    },
+    {
+      "name": "experience 4",
+      "summary": "summary of experience 4"
     }
   ]
 }
