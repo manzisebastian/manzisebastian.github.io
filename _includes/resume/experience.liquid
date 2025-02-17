@@ -1,21 +1,20 @@
 <ul class="card-text font-weight-light list-group list-group-flush">
-  {% for content in data[1] %}
-    <li class="list-group-item">
-      <div class="row">
-        <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0">
-          <h6 class="title font-weight-bold ml-1 ml-md-4">
-            {{ content.name }}
-          </h6>
-          <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ content.summary }}</h6>
-          <ul class="items" style="list-style-type: none; font-size: 0.95rem; padding-left: 1.25rem; margin: 0;">
-            {% for item in content.highlights %}
-              <li>
-                <span class="item" style="color: #0076df;">#{{ item }}</span>
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
-    </li>
+  {% for category_dict in data["experience"] %}
+    {% for category, experiences in category_dict.items() %}
+      <li class="list-group-item">
+        <h5 class="font-weight-bold">{{ category }}</h5>
+        <ul class="items" style="list-style-type: none; padding-left: 1rem;">
+          {% for content in experiences %}
+            <li>
+              <div class="d-flex justify-content-between">
+                <h6 class="font-weight-bold">- {{ content.name }}</h6>
+                <span class="text-muted">{{ content.date }}</span>
+              </div>
+              <p style="font-size: 0.95rem; margin-left: 1rem;">{{ content.summary }}</p>
+            </li>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
   {% endfor %}
 </ul>
