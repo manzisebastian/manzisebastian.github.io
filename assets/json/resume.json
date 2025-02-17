@@ -19,36 +19,30 @@
     "category 1": [
       {
         "name": "experience 1 - category 1",
-        "date": "2025",
         "summary": "summary"
       },
       {
         "name": "experience 2 - category 1",
-        "date": "2025",
         "summary": "summary"
       }
     ],
     "category 2": [
       {
         "name": "experience 1 - category 2",
-        "date": "2025",
         "summary": "summary"
       },
       {
         "name": "experience 2 - category 2",
-        "date": "2025",
         "summary": "summary"
       }
     ],
     "category 3": [
       {
         "name": "experience 1 - category 3",
-        "date": "2025",
         "summary": "summary"
       },
       {
         "name": "experience 2 - category 3",
-        "date": "2025",
         "summary": "summary"
       }
     ]
