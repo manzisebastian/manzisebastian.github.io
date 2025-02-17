@@ -5,11 +5,15 @@
       <ul class="items" style="list-style-type: none; padding-left: 1rem;">
         {% for content in category_obj.experiences %}
           <li>
-            <div class="d-flex justify-content-between">
-              <h6 class="font-weight-bold">- {{ content.name }}</h6>
-              <span class="text-muted">{{ content.date }}</span>
+            <div class="row">
+              <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0">
+                <div class="d-flex justify-content-between">
+                  <h6 class="font-weight-bold ml-1 ml-md-4">- {{ content.name }}</h6>
+                  <span class="text-muted">{{ content.date }}</span>
+                </div>
+                <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ content.summary }}</h6>
+              </div>
             </div>
-            <p style="font-size: 0.95rem; margin-left: 1rem;">{{ content.summary }}</p>
           </li>
         {% endfor %}
       </ul>
