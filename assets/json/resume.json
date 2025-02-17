@@ -5,7 +5,7 @@
     "email": "manzisebastian00@gmail.com",
     "phone": "",
     "url": "https://manzisebastian.github.io",
-    "summary": "I’m a recent Economics graduate with interests in research, programming and data.",
+    "summary": "Economics graduate with a strong analytical background and experience in research, data analysis, and programming (Python & R). My main interests lie at the intersection of data science and economics, and I am seeking opportunities in this field.",
     "location": {},
     "profiles": [
 	{
@@ -15,6 +15,53 @@
       }
     ]
   },
+  "experience": [
+    {
+      "category": "Academic - research & data",
+      "work": [
+        {
+          "name": "work 1",
+          "date": "2025-01-01",
+          "summary": "Summary of work 1"
+        },
+        {
+          "name": "work 2",
+          "date": "2025-01-15",
+          "summary": "Summary of work 2"
+        }
+      ]
+    },
+    {
+      "category": "Non-academic",
+      "work": [
+        {
+          "name": "work 1",
+          "date": "2025-01-01",
+          "summary": "Summary of work 1"
+        },
+        {
+          "name": "work 2",
+          "date": "2025-01-15",
+          "summary": "Summary of work 2"
+        }
+      ]
+    },
+    {
+      "category": "Teaching",
+      "work": [
+        {
+          "name": "work 1",
+          "date": "2025-01-01",
+          "summary": "Summary of work 1"
+        },
+        {
+          "name": "work 2",
+          "date": "2025-01-15",
+          "summary": "Summary of work 2"
+        }
+      ]
+    }
+  ],
   "education": [
     {
       "institution": "School of Economic Sciences - University of Buenos Aires (FCE - UBA)",

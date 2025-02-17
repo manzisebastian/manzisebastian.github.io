@@ -18,20 +18,18 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Hello! Welcome to my personal website.
+Hello! Welcome to my personal website 👋
 
-My name is Sebastián and I'm a recent Economics graduate with a passion for research and data analysis. With experience in research assistance and plans to pursue a master's degree in Economics in the near future, I am eager to deepen my expertise in the field.
+My name is Sebastián and I am an Economics graduate with strong quantitative skills and experience in research, data analysis and programming. 
 
-I enjoy programming both in Python and R, and have worked on a variety of data science projects, ranging from economic data analysis to geospatial data science. More about this can be found in my [projects page](https://manzisebastian.github.io/projects/).
+I am proficient in Python and R, and have worked on various data science projects, ranging from economic data analysis to geospatial data science. You can interactively explore more about my work on my [projects page](https://manzisebastian.github.io/projects/).
 
-<!-- I've recently launched a [blog section](https://manzisebastian.github.io/blog/) where I occasionally write about topics that catch my interest. It's my little corner for sharing ideas and random thoughts that pop up while working with data—and a way to make sure I don't forget them. -->
+I'm passionate about the intersection of data, economics, and programming, leveraging analytical and computational tools to extract insights. Additionally, I am taking my first steps into Machine Learning, Deep Learning, and AI to expand my analytical capabilities.
 
-In this website, you'll find more about my work, interests, and the next steps in my academic and professional journey.
+<!-- I've recently launched a [blog section](https://manzisebastian.github.io/blog/) where I occasionally write about topics that catch my interest. It's my little corner for sharing ideas and random thoughts that pop up while working with data—and a way to make sure I don't forget them.  -->
 
-Feel free to reach out using any of the channels linked through the icons below.
+I'm currently seeking new professional opportunities in economics and data analysis/science, where I can apply my analytical skills and expertise.
 
-<!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+On this website, you'll find more about my work, interests, and the next steps in my academic and professional journey.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
+Feel free to reach out using any of the channels linked below! 📩
