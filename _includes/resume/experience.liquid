@@ -1,18 +1,18 @@
 <ul class="card-text font-weight-light list-group list-group-flush">
-  {% for content in data[1] %}
+  {% for category, experiences in data["experience"].items() %}
     <li class="list-group-item">
-        <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0">
-          <h6 class="title font-weight-bold ml-1 ml-md-4" style="color: #0076df;">{{ content.category }}</h6>
-          <ul class="items" style="list-style-type: none; font-size: 0.95rem; padding-left: 1.25rem; margin: 0;">
-            {% for item in content.jobs %}
-              <li style="display: flex; justify-content: space-between;">
-                <span class="item" style="font-weight: bold;">- {{ item.position }}</span>
-                <span class="date" style="text-align: right;">{{ item.date }}</span>
-              </li>
-              <li style="padding-left: 1.5rem; font-size: 0.9rem;">{{ item.summary }}</li>
-            {% endfor %}
-          </ul>
-        </div>
+      <h5 class="font-weight-bold">{{ category }}</h5>
+      <ul class="items" style="list-style-type: none; padding-left: 1rem;">
+        {% for content in experiences %}
+          <li>
+            <div class="d-flex justify-content-between">
+              <h6 class="font-weight-bold">- {{ content.name }}</h6>
+              <span class="text-muted">{{ content.date }}</span>
+            </div>
+            <p style="font-size: 0.95rem; margin-left: 1rem;">{{ content.summary }}</p>
+          </li>
+        {% endfor %}
+      </ul>
     </li>
   {% endfor %}
 </ul>

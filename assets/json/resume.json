@@ -15,53 +15,49 @@
       }
     ]
   },
-  "experience": [
+  "experience":
     {
-      "category": "Academic - research & data",
-      "jobs": [
+      "category 1": [
         {
-          "position": "Research intern",
-          "date": "2025-01-01",
-          "summary": "Currently assisting in projects leveraging unstructured text data and Large Language Models (LLMs) to extract inflation expectations.<br>Recently assisted in gathering information for the fine-tuning process of the LLM, which then is transformed into a quantitative indicator through Natural Language Inference (NLI).<br>Work under the coordination of José Daniel Aromí (Ph.D., University of Maryland)."
+          "name": "experience 1 - category 1",
+          "date": "2025",
+          "summary": "summary"
         },
         {
-          "position": "work 2",
-          "date": "2025-01-15",
-          "summary": "Summary of work 2"
+          "name": "experience 2 - category 1",
+          "date": "2025",
+          "summary": "summary"
         }
-      ]
+      ] 
     },
     {
-      "category": "Non-academic",
-      "jobs": [
+      "category 2": [
         {
-          "position": "work 1",
-          "date": "2025-01-01",
-          "summary": "Summary of work 1"
+          "name": "experience 1 - category 2",
+          "date": "2025",
+          "summary": "summary"
         },
         {
-          "position": "work 2",
-          "date": "2025-01-15",
-          "summary": "Summary of work 2"
+          "name": "experience 2 - category 2",
+          "date": "2025",
+          "summary": "summary"
         }
-      ]
+      ] 
     },
     {
-      "category": "Teaching",
-      "jobs": [
+      "category 3": [
         {
-          "position": "work 1",
-          "date": "2025-01-01",
-          "summary": "Summary of work 1"
+          "name": "experience 1 - category 3",
+          "date": "2025",
+          "summary": "summary"
         },
         {
-          "position": "work 2",
-          "date": "2025-01-15",
-          "summary": "Summary of work 2"
+          "name": "experience 2 - category 3",
+          "date": "2025",
+          "summary": "summary"
         }
-      ]
-    }
-  ],
+      ] 
+    },
   "education": [
     {
       "institution": "School of Economic Sciences - University of Buenos Aires (FCE - UBA)",
