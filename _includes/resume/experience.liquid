@@ -3,8 +3,9 @@
     <li class="list-group-item">
       <h5 class="font-weight-bold" style="color: #0076df;">{{ category_obj.category }}</h5>
       <ul class="items" style="list-style-type: disc; padding-left: 1rem;">
+        {% set last_index = category_obj.experiences|length - 1 %}
         {% for content in category_obj.experiences %}
-          <li class="w-100">
+          <li class="w-100" style="margin-bottom: {% if loop.index0 < last_index %}20px{% else %}0px{% endif %};">
             <div class="w-100">
                 <div class="w-100 d-flex justify-content-between ml-1 ml-md-4">
                   <h6 class="title font-weight-bold">{{ content.position }}</h6>
@@ -13,9 +14,6 @@
                 <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ content.name }}</h6>
                 <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ content.summary }}</h6>
             </div>
-            {% if loop.index < category_obj.experiences|length %}
-              <hr style="width: 30%; margin: 10px auto; border: 1px solid #ccc;">
-            {% endif %}
           </li>
         {% endfor %}
       </ul>

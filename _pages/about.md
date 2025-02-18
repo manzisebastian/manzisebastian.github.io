@@ -24,7 +24,7 @@ My name is Sebastián and I am an Economics graduate with strong quantitative sk
 
 I am proficient in Python and R, and have worked on various data science projects, ranging from economic data analysis to geospatial data science. You can interactively explore more about my work on my [projects page](https://manzisebastian.github.io/projects/).
 
-I'm passionate about the intersection of data, economics, and programming, leveraging analytical and computational tools to extract insights. Additionally, I am taking my first steps into Machine Learning, Deep Learning, and AI to expand my analytical capabilities.
+I'm passionate about the intersection of data, economics, and programming, leveraging analytical and computational tools to uncover meaningful insights. Additionally, I am taking my first steps into Machine Learning, Deep Learning, and AI to expand my toolbox of methods for understanding complex data.
 
 <!-- I've recently launched a [blog section](https://manzisebastian.github.io/blog/) where I occasionally write about topics that catch my interest. It's my little corner for sharing ideas and random thoughts that pop up while working with data—and a way to make sure I don't forget them.  -->
 
