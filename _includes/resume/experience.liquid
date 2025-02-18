@@ -2,7 +2,7 @@
   {% for category_obj in data[1] %}
     <li class="list-group-item">
       <h5 class="font-weight-bold" style="color: #0076df;">{{ category_obj.category }}</h5>
-      <ul class="items" style="list-style-type: disc; padding-left: 0.5rem;">
+      <ul class="items" style="list-style-type: disc; ">
         {% for content in category_obj.experiences %}
           <li class="w-100" style="margin-bottom: 20px;">
             <div class="w-100">
