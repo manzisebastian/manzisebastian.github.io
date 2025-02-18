@@ -3,7 +3,6 @@
     <li class="list-group-item">
       <h5 class="font-weight-bold" style="color: #0076df;">{{ category_obj.category }}</h5>
       <ul class="items" style="list-style-type: disc; padding-left: 1rem;">
-        {% set last_index = category_obj.experiences|length - 1 %}
         {% for content in category_obj.experiences %}
           <li class="w-100" style="margin-bottom: 20px;">
             <div class="w-100">
