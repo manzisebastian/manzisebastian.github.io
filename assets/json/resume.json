@@ -25,13 +25,13 @@
           "position": "Research intern",
           "name": "Interdisciplinary Institute of Political Economy (IIEP - UBA - CONICET)",
           "date": "06/2023 - now",
-          "summary": "Currently assisting in projects leveraging unstructured text data and Large Language Models (LLMs) to extract inflation expectations.<br>Recently assisted in gathering information for the fine-tuning process of the LLM, which then is transformed into a quantitative indicator through Natural Language Inference (NLI).<br>Work under the coordination of José Daniel Aromí (Ph.D., University of Maryland)."
+          "summary": "I assist in research projects that aim to extract U.S. inflation expectations from 'the market' (a pool of U.S. firms), through the use of synthetic surveys completed using Machine Learning techniques.<br>I work as a part of a research team, where my tasks focuses on building databases, developing and reviewing code, and participating in the fine-tuning process of the models.<br>My work is supervised by José Daniel Aromí (Ph.D., University of Maryland)."
         },
         {
           "position": "Research Assistant (RA)",
           "name": "Independent - assisting Damián Pierri (Ph.D., University of San Andrés)",
           "date": "04/2022 - now (on demand)",
-          "summary": "Actively contributing to projects related to macroeconomics and empirical applications.<br>Projects in which I collaborated as research assistant: <ul> <li>[working] - External borrowing and endogenous growth</li><li>[2023] - <a href='https://ideas.repec.org/p/cte/werepe/36164.html'>An ergodic theory of sovereign default</a></li>"
+          "summary": "I actively contribute to the collection, processing, and analysis of data for multiple academic articles in the field of macroeconomics (dynamic models, growth models, fiscal policy, etc.).<br>My work is supervised by Damián Pierri (Ph.D., Universidad de San Andrés).<br><br>Projects in which I collaborated as research assistant: <ul><li>[2024-25] - <a href='https://rednie.eco.unc.edu.ar/files/DT/353.pdf'>External Debt Dynamics in an Endogenous Growth Model</a><</li><li>[2023] - <a href='https://ideas.repec.org/p/cte/werepe/36164.html'>An ergodic theory of sovereign default</a></li>"
         },
         {
           "position": "Research & Data Visualization Assistant",
@@ -48,7 +48,7 @@
           "position": "Data Analyst",
           "name": "Freelance (through online platforms)",
           "date": "2022 (on demand)",
-          "summary": "I conducted small-and-medium sized data analysis projects for different clients, mainly using Excel and Python."
+          "summary": "I carried out data analysis and visualization projects for international clients (Chile, USA). Used Excel, Python, and R."
         }
       ]
     },
