@@ -2,8 +2,9 @@
 layout: page
 title: projects
 permalink: /projects/
-description: This is my collection of projects. Each of them is linked to its corresponding Github repository. This section combines projects written in English and in Spanish. Projects marked with * are ongoing.
+description: This is my collection of projects. Each of them is linked to its corresponding Github repository. This section combines projects written in English and in Spanish.
 nav: true
+display_categories: [completed, ongoing]
 nav_order: 3
 horizontal: false
 ---
