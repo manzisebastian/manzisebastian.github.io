@@ -23,7 +23,7 @@ Obviamente, esto lleva tiempo...algo que me está faltando últimamente. Por eso
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/projects/Discursos/Mafalda.jpg" class="img-fluid" %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/Discursos/mafalda.jpg" class="img-fluid" %}
     </div>
 </div>
 
