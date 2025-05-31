@@ -45,6 +45,18 @@
       "category": "Non-academic",
       "experiences": [
         {
+          "position": "Decision Analytics Associates (DAA)",
+          "name": "ZS (management consulting)",
+          "date": "[incoming] 06/2025",
+          "summary": "Offer accepted; employment begins June 2025.<br>As DAA at ZS -within the scope of the Insights & Analytics team-, the main task of the job is to support clients in addressing complex business challenges through data."
+        },
+        {
+          "position": "Freelance Geospatial Data Analyst",
+          "name": "[NDA protected] through consulting firm",
+          "date": "04/2025 - 05/2025",
+          "summary": "I worked as a freelance Geospatial Data Analyst for a client in the Telecommunications industry through a specialized consulting firm, under a Non-Disclosure Agreement.<br>My work focused on analyzing and visualizing spatial data for real-world applications, particularly using basic network theory concepts and visualizations. Other type of visualizations, such as heatmaps to identify hotspots or underserved areas, were also part of the tasks to complete.<br>I primarily used R (and its most common libraries for spatial analysis) but I relied on other tools -such as ArcGIS and Python- as a backup.<br><u>Note:</u>: due to the nature of the project, detailed information is protected by the NDA. However, I am currently working on a (<a href='https://manzisebastian.github.io/projects/network_theory/'>mock project</a>) using similar techniques as the ones I used for this job, but this time with public and randomized data. I am happy to discuss the technologies and approaches I used in a general context."
+        },
+        {
           "position": "Data Analyst",
           "name": "Freelance (through online platforms)",
           "date": "2022 (on demand)",
@@ -119,11 +131,32 @@
       "level": "Intermediate"
     },
     {
+      "program": "SQL",
+      "level": "Intermediate"
+    },
+    {
+      "program": "Tableau",
+      "level": "Basic-intermediate"
+    },
+    {
+      "program": "Power BI",
+      "level": "Basic-intermediate"
+    },
+    {
+      "program": "Office",
+      "level": "Advanced"
+    },
+    {
       "program": "LaTeX",
       "level": "Advanced"
     }
   ],
   "projects": [
+    {
+      "name": "Econ",
+      "summary": "I conducted multiple data analyses of <strong style='color:#0076df'>economic data</strong>, whether in the form of personal side-projects or by-products of ongoing research. This is a collection of a tiny fraction of those analyses.",
+      "url": "https://manzisebastian.github.io/projects/Econ/"
+    },
     {
       "name": "BCRA_bot",
       "summary": "I developed a <strong style='color:#0076df'>Twitter bot</strong> (<a href='https://x.com/BCRA_bot'>@BCRA_bot</a>) that tweets <strong style='color:#0076df'>daily updates</strong> of Argentina's monetary statistics, together with weekly and monthly analyses. Data is gathered using the Central Bank of Argentina (BCRA)'s official API.<br>The bot is hosted in Google Cloud Platform, and run with Google Cloud Scheduler.",
@@ -138,11 +171,6 @@
       "name": "Ma-py-tas",
       "summary": "Along the years, I created multiple maps as part of a <strong style='color:#0076df'>geospatial data science</strong> project I proposed to myself. The topics included are <strong style='color:#0076df'>diverse</strong>, and so are the formats of data: from a simple GeoJSON to web scraping latitudes and longitudes, and everything in between.",
       "url": "https://manzisebastian.github.io/projects/Mapytas/"
-    },
-    {
-      "name": "Econ",
-      "summary": "I conducted multiple data analyses of <strong style='color:#0076df'>economic data</strong>, whether in the form of personal side-projects or by-products of ongoing research. This is a collection of a tiny fraction of those analyses.",
-      "url": "https://manzisebastian.github.io/projects/Econ/"
     }
   ]
 }

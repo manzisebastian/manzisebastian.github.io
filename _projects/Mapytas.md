@@ -4,7 +4,7 @@ title: Ma-py-tas
 description: a hopefully interesting potpourri 
 img: assets/img/mapytas_image.jpg
 importance: 3
-# category: non-econ
+category: completed
 ---
 
 This project is more like a <i>Matryoshka doll</i> of projects I worked on, creating (perhaps a few too many) maps along the way. The topics I’ve explored are diverse, ranging from the locations of barbecues and blooming jacarandás in Buenos Aires to Argentina’s vast hydrocarbon reservoirs.
