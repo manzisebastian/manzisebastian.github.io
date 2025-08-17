@@ -2,7 +2,7 @@
 layout: page
 title: Lab_MC
 description: enseñando Python+Math
-img: assets/img/LabMC.jpg"
+img: assets/img/LabMC.jpg
 importance: 2
 category: ongoing
 ---
