@@ -3,7 +3,7 @@ layout: page
 title: networks
 description: nodes, edges & more
 img: assets/img/Network_theory_image.jpg
-importance: 2
+importance: 3
 category: ongoing
 ---
 
@@ -13,6 +13,10 @@ That is why I decided to start this project with a clear and simple goal: to rev
 
 To respect the NDA I signed, this project intentionally explores topics outside the scope of Telecommunications. Instead, I focus on areas that I feel more comfortable working in, and where network theory can offer equally interesting insights: urban mobility, pollution and global trade connectivity.
 
-Please note that this is currently an ongoing project.
+<h2>urban mobility</h2>
 
-While the GitHub repository for this project is currently private, I will make it public upon completion.
+This first sub-project is all about modelling the public transportation network of Buenos Aires using R.
+
+Bus, <i>subte</i> (underground metro) and trains. Stops of each mean of transport are represented as nodes, while the edges are the routes (weighted by frequency and/or travel time).
+
+I used a Louvain community detection algorithm to identify mobility sub-clusters (this is, zones with tight internal connections but sparse external ones).

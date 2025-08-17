@@ -3,7 +3,7 @@ layout: page
 title: Propiedata
 description: scrapeando propiedades
 img: assets/img/Propiedata_image.jpg
-importance: 3
+importance: 4
 category: ongoing
 ---
 

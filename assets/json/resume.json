@@ -5,14 +5,14 @@
     "email": "manzisebastian00@gmail.com",
     "phone": "",
     "url": "https://manzisebastian.github.io",
-    "summary": "Economics graduate with a strong analytical background and experience in research, data analysis, and programming (Python & R). My main interests lie at the intersection of data science and economics, and I am seeking opportunities in this field.",
+    "summary": "Economics graduate with a strong analytical background and experience in research, data analysis, and programming (Python & R). My main interests lie at the intersection of data science and economics, and I am constantly seeking opportunities in this field.",
     "location": "Buenos Aires, Argentina"
   },
   "education": [
     {
       "institution": "School of Economic Sciences - University of Buenos Aires (FCE - UBA)",
       "url": "https://www.economicas.uba.ar/",
-      "studyType": "Bachelor of Economics",
+      "studyType": "Bachelor of Science in Economics",
       "summary": "Thesis: Debt, leverage and pro-ciclicality: a sector-disaggregated analysis<br><br>Average: 8.45/10.-",
       "date": "03/2019 - 10/2024"
     }
@@ -46,9 +46,9 @@
       "experiences": [
         {
           "position": "Decision Analytics Associates (DAA)",
-          "name": "ZS (management consulting)",
-          "date": "[incoming] 06/2025",
-          "summary": "Offer accepted; employment begins June 2025.<br>As DAA at ZS -within the scope of the Insights & Analytics team-, the main task of the job is to support clients in addressing complex business challenges through data."
+          "name": "ZS (consulting)",
+          "date": "06/2025 - now",
+          "summary": "At ZS, I perform advanced data analysis and drive process automation and optimization for clients in the pharmaceutical sector.<br>Using Python, SQL, or both in combination, I work with large datasets to design business solutions that enhance operational efficiency and significantly reduce execution times, leading to faster, more reliable deliveries.<br>Currently, I am focusing on optimizing ETL pipelines, aiming to achieve much more in considerably less time."
         },
         {
           "position": "Freelance Geospatial Data Analyst",
@@ -70,7 +70,7 @@
         {
           "position": "Undergraduate Teaching Assistant",
           "name": "School of Economic Sciences - University of Buenos Aires (FCE - UBA)",
-          "summary": "Courses: <ul> <li>Macroeconomics II<span style='float:right;'>03/2024 - now</span></li><li>Mathematics for Economists<span style='float:right;'>12/2022 - 07/2024</span></li><li>Macroeconomics I<span style='float:right;'>03/2021 - now</span></li>"
+          "summary": "Courses: <ul> <li>Quantitative Methods Laboratory for Management<span style='float:right;'>08/2025 - now</span></li><li>Macroeconomics II<span style='float:right;'>03/2024 - now</span></li><li>Mathematics for Economists<span style='float:right;'>12/2022 - 07/2024</span></li><li>Macroeconomics I<span style='float:right;'>03/2021 - now</span></li>"
         }
       ]
     }
