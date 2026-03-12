@@ -1,10 +1,11 @@
 ---
 layout: page
 title: Discursos
-description: Words, words, words.
+description: NLP analysis of political speeches
 img: assets/img/Discursos_image.jpg
 importance: 1
 category: ongoing
+tags: [Python, NLP, ML, text analysis]
 ---
 
 Welcome to my first Machine-Learning-related project!

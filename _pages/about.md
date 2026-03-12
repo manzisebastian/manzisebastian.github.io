@@ -2,34 +2,19 @@
 layout: about
 title: about
 permalink: /
-subtitle: economics | data | research
+subtitle: Economist · Data Scientist · Researcher
 
-# profile:
-#   align: right
-#   image: prof_pic.jpg
-#   image_circular: false # crops the image to make it circular
-#   more_info: >
-#     <p>555 your office number</p>
-#     <p>123 your address street</p>
-#     <p>Your City, State 12345</p>
-
-news: false # includes a list of news items
-selected_papers: false # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+news: false
+selected_papers: false
+social: true
 ---
 
-Hello! Welcome to my personal website 👋
+I'm an economist and data scientist based in Buenos Aires, working at the intersection of **quantitative analysis**, **applied economics**, and **programming**.
 
-My name is Sebastián and I am an Economics graduate with strong quantitative skills and experience in research, data analysis and programming. 
+Currently a **Decision Analytics Associate at ZS**, where I design data-driven solutions and optimize ETL pipelines for pharmaceutical industry clients using Python and SQL. I also teach quantitative methods, macroeconomics, and mathematics at the **University of Buenos Aires (UBA)**.
 
-I am proficient in Python and R, and have worked on various data science projects, ranging from economic data analysis to geospatial data science. You can interactively explore more about my work on my [projects page](https://manzisebastian.github.io/projects/).
+My research background spans inflation expectations via machine learning (IIEP–UBA–CONICET), macroeconomic modelling, and geospatial data analysis. I hold a BSc in Economics from UBA (GPA 8.45/10), where my thesis examined debt dynamics and pro-cyclicality using sector-disaggregated data.
 
-I'm passionate about the intersection of data, economics, and programming, leveraging analytical and computational tools to uncover meaningful insights. Additionally, I am taking my first steps into Machine Learning, Deep Learning, and AI to expand my toolbox of methods for understanding complex data.
+On this site you'll find projects spanning economic data pipelines, interactive visualizations, geospatial analysis, and applied research — all built with real data and real questions in mind.
 
-<!-- I've recently launched a [blog section](https://manzisebastian.github.io/blog/) where I occasionally write about topics that catch my interest. It's my little corner for sharing ideas and random thoughts that pop up while working with data—and a way to make sure I don't forget them.  -->
-
-I'm currently seeking new professional opportunities in economics and data analysis/science, where I can apply my analytical skills and expertise.
-
-On this website, you'll find more about my work, interests, and the next steps in my academic and professional journey.
-
-Feel free to reach out using any of the channels linked below! 📩
+Feel free to reach out through any of the channels below.

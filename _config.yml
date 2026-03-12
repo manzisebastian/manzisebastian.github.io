@@ -8,11 +8,10 @@ middle_name: L.
 last_name: Manzi
 email: manzisebastian00@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  Economist & Data Scientist based in Buenos Aires. Working at the intersection of quantitative analysis, applied economics, and data science.
 footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
+keywords: economics, data science, data analysis, Python, R, econometrics, geospatial, research, Buenos Aires, portfolio
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 📊 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -488,7 +487,7 @@ third_party_libraries:
     version: "5.5.0"
   google_fonts:
     url:
-      fonts: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
+      fonts: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
   highlightjs:
     integrity:
       css:

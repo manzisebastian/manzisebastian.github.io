@@ -11,8 +11,44 @@ layout: default
         {{ site.title }}
       {% endif %}
     </h1>
-    <p class="desc">{{ page.subtitle }}</p>
+    <p class="desc" id="hero-subtitle">{{ page.subtitle }}</p>
   </header>
+
+  <!-- Skill tags -->
+  <div class="skill-tags">
+    <span class="skill-tag">Python</span>
+    <span class="skill-tag">R</span>
+    <span class="skill-tag">SQL</span>
+    <span class="skill-tag">STATA</span>
+    <span class="skill-tag">Plotly</span>
+    <span class="skill-tag">Leaflet</span>
+    <span class="skill-tag">Econometrics</span>
+    <span class="skill-tag">NLP</span>
+    <span class="skill-tag">LaTeX</span>
+  </div>
+
+  <!-- Quick stats -->
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <span class="hero-stat-number">9+</span>
+      <span class="hero-stat-label">projects</span>
+    </div>
+    <div class="hero-stat-divider"></div>
+    <div class="hero-stat">
+      <span class="hero-stat-number">4+</span>
+      <span class="hero-stat-label">years with data</span>
+    </div>
+    <div class="hero-stat-divider"></div>
+    <div class="hero-stat">
+      <span class="hero-stat-number">2</span>
+      <span class="hero-stat-label">research positions</span>
+    </div>
+    <div class="hero-stat-divider"></div>
+    <div class="hero-stat">
+      <span class="hero-stat-number">4</span>
+      <span class="hero-stat-label">courses taught</span>
+    </div>
+  </div>
 
   <article>
     {% if page.profile %}
@@ -22,8 +58,7 @@ layout: default
           {% if page.profile.image_circular %}
             {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
           {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
+            {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
           {% endif %}
           {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
       30vw, 95vw"{% endcapture %}
@@ -68,7 +103,6 @@ layout: default
     {% if page.social %}
       <div class="social">
         <div class="contact-icons">{% include social.liquid %}</div>
-
         <div class="contact-note">{{ site.contact_note }}</div>
       </div>
     {% endif %}

@@ -1,10 +1,11 @@
 ---
 layout: page
 title: Lab_MC
-description: enseñando Python+Math
+description: teaching Python, math & quantitative methods at UBA
 img: assets/img/LabMC.jpg
 importance: 2
 category: ongoing
+tags: [Python, Jupyter, teaching, UBA]
 ---
 
 En agosto de 2025 comencé a dar clases en la materia <i>Laboratorio de Métodos Cuantitativos aplicados a la Gestión</i> para la nueva <a href='https://www.economicas.uba.ar/carreras/analisis-datos/'>Tecnicatura en Análisis de Datos</a> de la Universidad de Buenos Aires.

@@ -1,10 +1,11 @@
 ---
 layout: page
 title: Propiedata
-description: scrapeando propiedades
+description: real estate data scraping & market analysis
 img: assets/img/Propiedata_image.jpg
 importance: 4
 category: ongoing
+tags: [Python, web scraping, data analysis]
 ---
 
 En el ajedrez, *las blancas* mueven primero; siempre se dijo que esto hace que tengan una ventaja inherente a ganar la partida.

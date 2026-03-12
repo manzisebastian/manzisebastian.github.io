@@ -14,9 +14,19 @@
       <div class="card-body">
         <h2 class="card-title">{{ project.title }}</h2>
         <p class="card-text">{{ project.description }}</p>
-        <div class="row ml-1 mr-1 p-0">
+        {% if project.tags %}
+          <div class="project-tags">
+            {% for tag in project.tags %}
+              <span class="project-tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+        <div class="row ml-1 mr-1 p-0 mt-2">
+          {% if project.category %}
+            <span class="project-status status-{{ project.category }}">{{ project.category }}</span>
+          {% endif %}
           {% if project.github %}
-            <div class="github-icon">
+            <div class="github-icon ml-auto">
               <div class="icon" data-toggle="tooltip" title="Code Repository">
                 <a href="{{ project.github }}"><i class="fa-brands fa-github gh-icon"></i></a>
               </div>

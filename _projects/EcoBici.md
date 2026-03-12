@@ -1,10 +1,11 @@
 ---
 layout: page
 title: EcoBici
-description: cycling as a way of life
+description: urban mobility analysis & impact evaluation
 img: assets/img/Ecobici_image.jpg
 importance: 4
 category: completed
+tags: [Python, Plotly, Leaflet, urban economics]
 ---
 
 I've always been interested in urban economics and mobility. Particularly, smarter ways of commuting are the cornerstone of public policies regarding mobility. How do cities organize themselves in a more efficient way? How can we take into account the negative externalities caused by inefficient means of transport? Is enhancing public transport enough, or do we need a <i>cultural change</i>? 

@@ -1,10 +1,11 @@
 ---
 layout: page
 title: networks
-description: nodes, edges & more
+description: network theory applied to geospatial & telecom data
 img: assets/img/Network_theory_image.jpg
 importance: 3
 category: ongoing
+tags: [R, Python, network theory, geospatial, ArcGIS]
 ---
 
 Over the course of a month and a half, I had the opportunity to work as a Geospatial Data Analyst (GDA) on a project that applied network theory to the field of Telecommunications. Although this domain was new to me, I quickly became fascinated by network-based approaches to understanding complex systems.

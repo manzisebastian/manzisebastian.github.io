@@ -1,10 +1,11 @@
 ---
 layout: page
 title: energy
-description: analyzing energy economics data
+description: energy economics data analysis & visualization
 img: assets/img/Energy_project.jpg
 importance: 5
 category: completed
+tags: [Python, R, data viz, energy economics]
 ---
 
 Back in 2022, I had the exciting opportunity to collaborate in a data visualization project for the <i>Universidad de La Matanza</i>, being my very first steps in analyzing data.

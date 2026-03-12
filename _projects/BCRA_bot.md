@@ -5,6 +5,7 @@ description: a Twitter bot for economists
 img: assets/img/BCRA_image.jpg
 importance: 1
 category: completed
+tags: [Python, API, automation, GCP]
 ---
 
 <a href='https://x.com/BCRA_bot'>@BCRA_bot</a> is a Twitter bot that tweets daily updates of Argentina's monetary statistics, with data of the Central Bank of Argentina (BCRA).
