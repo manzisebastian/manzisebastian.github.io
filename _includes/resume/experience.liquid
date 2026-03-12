@@ -1,16 +1,16 @@
 <ul class="card-text font-weight-light list-group list-group-flush">
   {% for category_obj in data[1] %}
     <li class="list-group-item">
-      <h5 class="font-weight-bold" style="color: #0076df;">{{ category_obj.category }}</h5>
-      <ul class="items" style="list-style-type: disc; ">
+      <h5 class="font-weight-bold" style="color: var(--global-theme-color);">{{ category_obj.category }}</h5>
+      <ul class="items" style="list-style-type: disc;">
         {% for content in category_obj.experiences %}
           <li class="w-100" style="margin-bottom: 20px;">
             <div class="w-100">
-                <h6 class="title font-weight-bold ml-1 ml-md-4">{{ content.position }}</h6>
-                <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; color: #00369f;">{{ content.location }}</h6>
-                <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; color: #0076df;">{{ content.date }}</h6>
-                <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ content.name }}</h6>
-                <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ content.summary }}</h6>
+              <h6 class="title font-weight-bold ml-1 ml-md-4">{{ content.position }}</h6>
+              <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; color: var(--global-text-color-light);">{{ content.location }}</h6>
+              <h6 class="ml-1 ml-md-4" style="font-size: 0.875rem; color: var(--global-theme-color); font-weight: 500;">{{ content.date }}</h6>
+              <h6 class="ml-1 ml-md-4" style="font-size: 0.9rem; font-style: italic; font-weight: 400;">{{ content.name }}</h6>
+              <p class="ml-1 ml-md-4 mt-1" style="font-size: 0.875rem; font-weight: 400; line-height: 1.6; color: var(--global-text-color);">{{ content.summary }}</p>
             </div>
           </li>
         {% endfor %}
