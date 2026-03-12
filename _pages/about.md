@@ -4,11 +4,10 @@ title: about
 permalink: /
 subtitle: Economist · Data Scientist · Researcher
 
-# Uncomment the block below once you add prof_pic.jpg to assets/img/
-# profile:
-#   align: right
-#   image: prof_pic.jpg
-#   image_circular: true
+profile:
+  align: right
+  image: prof_pic.jpg
+  image_circular: true
 
 news: false
 selected_papers: false
