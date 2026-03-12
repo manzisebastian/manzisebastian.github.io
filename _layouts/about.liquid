@@ -1,101 +1,114 @@
 ---
 layout: default
 ---
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }} {{ site.middle_name }}
-        {{ site.last_name }}</span>
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </h1>
-    <p class="desc" id="hero-subtitle">{{ page.subtitle }}</p>
-  </header>
+<div class="post about-page">
 
-  <!-- Skill tags -->
-  <div class="skill-tags">
-    <span class="skill-tag">Python</span>
-    <span class="skill-tag">R</span>
-    <span class="skill-tag">SQL</span>
-    <span class="skill-tag">STATA</span>
-    <span class="skill-tag">Plotly</span>
-    <span class="skill-tag">Leaflet</span>
-    <span class="skill-tag">Econometrics</span>
-    <span class="skill-tag">NLP</span>
-    <span class="skill-tag">LaTeX</span>
-  </div>
+  <!-- ═══════════════════════════════════════════════════════════════ HERO -->
+  <section class="hero-section">
+    <div class="hero-inner">
 
-  <!-- Quick stats -->
-  <div class="hero-stats">
-    <div class="hero-stat">
-      <span class="hero-stat-number">9+</span>
-      <span class="hero-stat-label">projects</span>
-    </div>
-    <div class="hero-stat-divider"></div>
-    <div class="hero-stat">
-      <span class="hero-stat-number">4+</span>
-      <span class="hero-stat-label">years with data</span>
-    </div>
-    <div class="hero-stat-divider"></div>
-    <div class="hero-stat">
-      <span class="hero-stat-number">2</span>
-      <span class="hero-stat-label">research positions</span>
-    </div>
-    <div class="hero-stat-divider"></div>
-    <div class="hero-stat">
-      <span class="hero-stat-number">4</span>
-      <span class="hero-stat-label">courses taught</span>
-    </div>
-  </div>
+      <div class="hero-text">
+        <h1 class="hero-name">
+          {% if site.title == 'blank' %}
+            {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}
+          {% else %}
+            {{ site.title }}
+          {% endif %}
+        </h1>
+        <p class="hero-subtitle">{{ page.subtitle }}</p>
+        <p class="hero-tagline">
+          Working at the intersection of quantitative economics,<br class="d-none d-md-inline">
+          data science, and applied research.
+        </p>
+        <div class="hero-ctas">
+          <a href="{{ '/projects/' | relative_url }}" class="hero-btn hero-btn-primary">
+            projects
+          </a>
+          <a href="{{ '/cv/' | relative_url }}" class="hero-btn hero-btn-ghost">
+            curriculum vitae
+          </a>
+          <a href="/assets/pdf/Sebasti%C3%A1n%20L.%20Manzi%20-%20Resume.pdf" class="hero-btn hero-btn-ghost" target="_blank" rel="noopener">
+            <i class="fa-solid fa-download fa-xs"></i>&nbsp;resume
+          </a>
+        </div>
+      </div>
 
-  <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
+      {% if page.profile and page.profile.image %}
+        <div class="hero-photo">
           {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
           {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+            {% assign profile_image_class = 'hero-profile-img rounded-circle' %}
           {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
+            {% assign profile_image_class = 'hero-profile-img' %}
           {% endif %}
-          {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
           {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+            include figure.liquid loading="eager" path=profile_image_path
+            class=profile_image_class sizes="200px" alt="Profile photo"
             cache_bust=true
           %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
-      </div>
-    {% endif %}
+        </div>
+      {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
+    </div><!-- /.hero-inner -->
+
+    <!-- Stats bar -->
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-number">9+</span>
+        <span class="hero-stat-label">projects</span>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-number">4+</span>
+        <span class="hero-stat-label">years with data</span>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-number">2</span>
+        <span class="hero-stat-label">research positions</span>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-number">4</span>
+        <span class="hero-stat-label">courses taught</span>
+      </div>
+    </div>
+
+    <!-- Skill tags -->
+    <div class="skill-tags">
+      <span class="skill-tag">Python</span>
+      <span class="skill-tag">R</span>
+      <span class="skill-tag">SQL</span>
+      <span class="skill-tag">STATA</span>
+      <span class="skill-tag">Plotly</span>
+      <span class="skill-tag">Leaflet</span>
+      <span class="skill-tag">Econometrics</span>
+      <span class="skill-tag">NLP</span>
+      <span class="skill-tag">LaTeX</span>
+    </div>
+
+  </section><!-- /.hero-section -->
+
+  <!-- ═══════════════════════════════════════════════════════════════ BIO -->
+  <article class="bio-section">
+
+    <div class="clearfix bio-content">{{ content }}</div>
 
     <!-- News -->
     {% if page.news and site.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
+      <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a></h2>
       {% include news.liquid limit=true %}
     {% endif %}
 
     <!-- Latest posts -->
     {% if site.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
+      <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a></h2>
       {% include latest_posts.liquid %}
     {% endif %}
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
+      <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a></h2>
       {% include selected_papers.liquid %}
     {% endif %}
 
@@ -110,5 +123,7 @@ layout: default
     {% if site.newsletter.enabled and site.footer_fixed %}
       {% include scripts/newsletter.liquid center=true %}
     {% endif %}
-  </article>
-</div>
+
+  </article><!-- /.bio-section -->
+
+</div><!-- /.post -->

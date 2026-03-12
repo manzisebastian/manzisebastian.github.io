@@ -2,26 +2,7 @@
  * Styles for the base elements of the theme.
  ******************************************************************************/
 
-// Typography
-
-body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-size: 1rem;
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-}
-
-code, pre, kbd, samp, .monospace {
-  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
-  font-size: 0.875em;
-}
+// Typography — font-family declared in _custom.scss
 
 p,
 h1,
