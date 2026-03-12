@@ -79,6 +79,17 @@ code, pre, kbd, samp, .monospace {
   min-width: 0;
 }
 
+// ─── Hero greeting ────────────────────────────────────────────────────────────
+
+.hero-greeting {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--global-text-color-light);
+  letter-spacing: 0.03em;
+  margin-bottom: 0.5rem;
+}
+
 // ─── Hero name ────────────────────────────────────────────────────────────────
 
 .hero-name {
@@ -529,17 +540,17 @@ footer.sticky-bottom .container {
   margin-top: 2rem;
 }
 
-// ─── Scroll-reveal animation ──────────────────────────────────────────────────
+// ─── Typewriter cursor ────────────────────────────────────────────────────────
 
-.reveal {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.45s ease, transform 0.45s ease;
+.typewriter-active {
+  border-right: 2px solid var(--global-theme-color);
+  animation: cursor-blink 0.65s step-end infinite;
+  padding-right: 2px;
+}
 
-  &.revealed {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@keyframes cursor-blink {
+  0%, 100% { border-right-color: var(--global-theme-color); }
+  50%       { border-right-color: transparent; }
 }
 
 // ─── CV refinements ───────────────────────────────────────────────────────────

@@ -8,6 +8,7 @@ layout: default
     <div class="hero-inner">
 
       <div class="hero-text">
+        <p class="hero-greeting">Hi! I'm Seba.</p>
         <h1 class="hero-name">
           {% if site.title == 'blank' %}
             {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}
@@ -15,7 +16,7 @@ layout: default
             {{ site.title }}
           {% endif %}
         </h1>
-        <p class="hero-subtitle">{{ page.subtitle }}</p>
+        <p class="hero-subtitle" id="hero-subtitle" data-text="{{ page.subtitle }}"></p>
         <p class="hero-tagline">
           Working at the intersection of quantitative economics,<br class="d-none d-md-inline">
           data science, and applied research.
@@ -127,3 +128,24 @@ layout: default
   </article><!-- /.bio-section -->
 
 </div><!-- /.post -->
+
+<script>
+(function () {
+  var el = document.getElementById('hero-subtitle');
+  if (!el) return;
+  var text = el.getAttribute('data-text') || '';
+  var i = 0;
+  var speed = 38;
+  el.classList.add('typewriter-active');
+  function type() {
+    if (i < text.length) {
+      el.textContent += text.charAt(i);
+      i++;
+      setTimeout(type, speed);
+    } else {
+      el.classList.remove('typewriter-active');
+    }
+  }
+  setTimeout(type, 300);
+})();
+</script>
