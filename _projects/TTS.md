@@ -378,7 +378,7 @@ Where `+` shows up as an arithmetic operator in the same block, I review it by h
 
 ### Python literals in narrative text
 
-Leave `"the list [1, 2, 3]"` in a script and the model may read the punctuation aloud: "corchete uno coma dos coma tres corchete". The rule is that code literals get verbalized before they reach narrative text — "the list with values one, two, and three". The check looks for anything resembling a Python container, function call or assignment appearing outside a `[code_walkthrough]` section.
+Leave `"the list [1, 2, 3]"` in a script and the model may read the punctuation aloud: "corchete uno coma dos coma tres corchete". The rule is that code literals get verbalized before they reach narrative text — "the list with values one, two, and three". The check looks for anything resembling a Python container, function call or assignment.
 
 ---
 
