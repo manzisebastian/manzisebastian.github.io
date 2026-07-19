@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Clonar mi voz para automatizar mis clases
+title: Entrené una IA para automatizar mis clases
 date: 2026-07-18
 description: cómo entrené un modelo TTS con mi propia voz para generar videos de clases a partir de notebooks
 tags: TTS ML voz Python docencia
