@@ -48,7 +48,7 @@
           "position": "Decision Analytics Associates (DAA)",
           "name": "ZS (consulting)",
           "date": "06/2025 - now",
-          "summary": "At ZS, I perform advanced data analysis and drive process automation and optimization for clients in the pharmaceutical sector.<br>Using Python, SQL, or both in combination, I work with large datasets to design business solutions that enhance operational efficiency and significantly reduce execution times, leading to faster, more reliable deliveries.<br>Currently, I am focusing on optimizing ETL pipelines, aiming to achieve much more in considerably less time."
+          "summary": "At ZS, I specialize in data analytics, automation, and process optimization for complex business environments, with a focus on pharmaceutical-sector analytics.<br>My work centers on transforming high-volume commercial, operational, and de-identified patient-level datasets into reliable, structured, and decision-ready outputs. I combine Python, SQL, and analytical thinking to build reproducible workflows that improve data quality, reduce manual intervention, and strengthen the traceability of critical business processes.<br>I contributed to the automation of a complex end-to-end analytics workflow, reducing processing time from approximately one month to one week while materially improving output reliability. By replacing manual, error-prone steps with reproducible logic and validation layers, the process became faster, more transparent, and substantially less dependent on downstream restatements.<br>Beyond analysis, I focus on designing systems that make analytics faster, safer, and more scalable. This includes standardizing fragmented data sources, improving workflow governance, and creating analytical outputs that support reporting, simulation, strategic planning, and data-driven business decisions."
         },
         {
           "position": "Freelance Geospatial Data Analyst",
@@ -70,7 +70,7 @@
         {
           "position": "Undergraduate Teaching Assistant",
           "name": "School of Economic Sciences - University of Buenos Aires (FCE - UBA)",
-          "summary": "Courses: <ul> <li>Quantitative Methods Laboratory for Management<span style='float:right;'>08/2025 - now</span></li><li>Macroeconomics II<span style='float:right;'>03/2024 - now</span></li><li>Mathematics for Economists<span style='float:right;'>12/2022 - 07/2024</span></li><li>Macroeconomics I<span style='float:right;'>03/2021 - now</span></li>"
+          "summary": "Courses: <ul> <li>Quantitative Methods Laboratory for Management<span style='float:right;'>08/2025 - now</span></li><li>Macroeconomics II<span style='float:right;'>03/2024 - now</span></li><li>Mathematics for Economists<span style='float:right;'>12/2022 - 07/2024</span></li><li>Macroeconomics I<span style='float:right;'>03/2021 - 07/2026</span></li>"
         }
       ]
     }
@@ -156,6 +156,11 @@
       "name": "Econ",
       "summary": "I conducted multiple data analyses of <strong style='color:#0076df'>economic data</strong>, whether in the form of personal side-projects or by-products of ongoing research. This is a collection of a tiny fraction of those analyses.",
       "url": "https://manzisebastian.github.io/projects/Econ/"
+    },
+    {
+      "name": "TTS",
+      "summary": "I built a fully <strong style='color:#0076df'>local voice-cloning pipeline</strong> that turns Jupyter notebooks into synchronized lecture videos, narrated by a <strong style='color:#0076df'>fine-tuned clone of my own voice</strong>. It combines a fine-tuned <strong style='color:#0076df'>XTTS v2</strong> model, an automated JupyterLab session driven by Playwright and the Jupyter kernel WebSocket protocol, and inline timestamp synchronization. Ten numbered scripts, no external API calls at run time.",
+      "url": "https://manzisebastian.github.io/projects/TTS/"
     },
     {
       "name": "BCRA_bot",

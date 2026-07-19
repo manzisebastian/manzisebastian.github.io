@@ -131,8 +131,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: data_blog # blog_name will be displayed in your blog page
-blog_description: my
+blog_name: blog # blog_name will be displayed in your blog page
+blog_description: un pequeño espacio donde escribo notas sobre datos, economía y las cosas que construyo
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -303,8 +303,8 @@ jekyll-archives:
     tag: "/blog/tag/:name/"
     category: "/blog/category/:name/"
 
-display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
-display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
+display_tags: ["TTS", "ML", "Python"] # these tags will be displayed on the front page of your blog
+display_categories: ["proyectos"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
