@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://manzisebastian.github.io//feed.xml" rel="self" type="application/atom+xml"/><link href="https://manzisebastian.github.io//" rel="alternate" type="text/html" hreflang="en"/><updated>2026-03-12T19:22:11+00:00</updated><id>https://manzisebastian.github.io//feed.xml</id><title type="html">blank</title><subtitle>Economist &amp; Data Scientist based in Buenos Aires. Working at the intersection of quantitative analysis, applied economics, and data science. </subtitle><entry><title type="html">a post with tabs</title><link href="https://manzisebastian.github.io//blog/2024/tabs/" rel="alternate" type="text/html" title="a post with tabs"/><published>2024-05-01T00:32:13+00:00</published><updated>2024-05-01T00:32:13+00:00</updated><id>https://manzisebastian.github.io//blog/2024/tabs</id><content type="html" xml:base="https://manzisebastian.github.io//blog/2024/tabs/"><![CDATA[<p>This is how a post with <a href="https://github.com/Ovski4/jekyll-tabs">tabs</a> looks like. Note that the tabs could be used for different purposes, not only for code.</p> <h2 id="first-tabs">First tabs</h2> <p>To add tabs, use the following syntax:</p> <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">{%</span><span class="w"> </span><span class="nt">tabs</span><span class="w"> </span><span class="nv">group-name</span><span class="w"> </span><span class="cp">%}</span>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://manzisebastian.github.io//feed.xml" rel="self" type="application/atom+xml"/><link href="https://manzisebastian.github.io//" rel="alternate" type="text/html" hreflang="en"/><updated>2026-07-19T15:42:58+00:00</updated><id>https://manzisebastian.github.io//feed.xml</id><title type="html">blank</title><subtitle>Economist &amp; Data Scientist based in Buenos Aires. Working at the intersection of quantitative analysis, applied economics, and data science. </subtitle><entry><title type="html">Clonar mi voz para automatizar mis clases</title><link href="https://manzisebastian.github.io//blog/2026/clonar-voz-clases/" rel="alternate" type="text/html" title="Clonar mi voz para automatizar mis clases"/><published>2026-07-18T00:00:00+00:00</published><updated>2026-07-18T00:00:00+00:00</updated><id>https://manzisebastian.github.io//blog/2026/clonar-voz-clases</id><content type="html" xml:base="https://manzisebastian.github.io//blog/2026/clonar-voz-clases/"><![CDATA[<p><em>Esta es una versión bajada a tierra de un post más técnico que escribí: encontralo <a href="/projects/TTS/">acá</a> (en inglés).</em></p> <p>Desde 2025 doy un curso que mezcla matemática, economía y Python: el <em>Laboratorio de Métodos Cuantitativos aplicados a la Gestión</em>, dentro de una Tecnicatura en Análisis de Datos de la UBA.</p> <p>Dar clases es una de las actividades que más me gusta. El problema es el tiempo. Un cuatrimestre son 12 o 13 clases asincrónicas, unas 22 horas netas. Parece poco, pero soy perfeccionista: terminaba grabando cada clase tres o cuatro veces por una pronunciación torcida, una frase que se perdía a mitad de la explicación, algunos “ehm”. Entre grabación, edición y exportación, 20 horas de clase me costaban unas 60. Imposible escalarlo.</p> <p>Así que me pregunté si era posible automatizarlo. La intención no era “grabarlo una vez y olvidarme”, sino poder actualizar una clase sin volver a grabarme y mantener el material al día sin el cuello de botella del audio.</p> <p>El material base ya existía: junto a un equipo de ayudantes habíamos construido una base de notebooks de Jupyter con código ejecutable, ejemplos numéricos, explicaciones y gráficos. El problema es que un notebook no es una clase. Para que sea una clase, alguien tiene que explicarlo.</p> <p>Este post es sobre ese intento: lo que funcionó, lo que no, y las decisiones que tomé en el camino.</p> <hr/> <h2 id="por-qué-un-modelo-propio">Por qué un modelo propio</h2> <p>Lo primero que evalué fue usar un servicio de <em>text-to-speech</em> existente. Básicamente, es un servicio que permite pasar de texto a discurso narrado, con una voz que puede ser predeterminada o con personalización.</p> <p>Probé Google, Azure, ElevenLabs. Todos tienen APIs razonables y algunos tienen clonación de voz. El resultado era funcional pero no me cerraba del todo.</p> <p>Una clase universitaria no es <em>solo</em> una locución. Cuando un docente explica, hay un ritmo: el <em>tempo</em> se ralentiza antes de un punto importante, hay una pausa después de mostrar el código para que el estudiante lo procese, el tono cambia cuando se señala un error común. Es <em>como si</em> <strong>actuaras</strong>, no como si hablaras. Los TTS genéricos producen narración correcta pero llana, y en un contexto pedagógico esa diferencia afecta cómo se recibe la información.</p> <p>Hubo dos factores más.</p> <p>Uno, la privacidad: los servicios con clonación requieren subir muestras de audio a servidores externos, con ToS poco claros. Mi voz, en cantidad suficiente para clonarla con buena fidelidad, quedaría procesándose en infraestructura que no controlo. Un poco por objeción paranoica y otro poco por el contexto académico, decidí trabajar exclusivamente en local.</p> <p>Dos, el costo: sintetizar decenas de horas y regenerar partes cada vez que el material cambia hace que el costo por carácter se acumule rápido. Con un modelo propio, el costo marginal de re-sintetizar una clase es básicamente electricidad.</p> <p>Conclusión: decidí entrenar un modelo propio.</p> <hr/> <h2 id="el-modelo-de-voz">El modelo de voz</h2> <p>Tenía las clases asincrónicas grabadas de la iteración anterior: unas 20 horas de audio neto, en el mismo contexto académico que quería clonar y sin interrupciones. Le sumé lecturas de textos variados e incluso audios de WhatsApp, que le agregan naturalidad y <em>prosodia</em> (palabra que aprendí por este proyecto).</p> <p>Esas ~22 horas pasaron por un pipeline de preparación: detección de voz activa para quedarme con los segmentos de habla real, recorte en fragmentos de tres a diez segundos, y transcripción con Whisper. El resultado fue un dataset de pares audio-texto para hacer <em>fine-tuning</em> de XTTS v2, un modelo TTS <em>open-source</em>.</p> <p>El entrenamiento corrió en mi GPU local, una RTX 4060 con 8 GB de VRAM. Eso es suficiente aunque no sobrado para entrenar un modelo de síntesis de voz, y requirió algunas decisiones técnicas para que fuera viable: precisión reducida, batch de una sola muestra, acumulación de gradientes para simular batches más grandes, etc.</p> <p>No es el setup ideal, pero A) funciona y B) es lo que mi bolsillo permite.</p> <p>En inferencia el modelo recibe además un clip de referencia de voz que condiciona el estilo. Con el mismo modelo base y distintos clips se obtienen registros perceptiblemente diferentes.</p> <p>Los primeros resultados fueron decididamente malos: voz robótica, con un ruido característico al final de las frases, como si el modelo no supiera cómo terminar. Ajusté el learning rate, corrí de nuevo, y otra vez. Cada ciclo tardaba entre cuatro y ocho horas. Después de varios intentos empezó a sonar como una voz real: no idéntica a la mía, pero con el registro y la cadencia correctos. Todavía <em>alucina</em> en frases muy largas (&gt;239 caracteres) o con puntuación inusual, algo que compenso con un <em>Quality Check</em> extenso de los scripts.</p> <hr/> <h2 id="los-guiones">Los guiones</h2> <p>Un modelo que sintetiza texto natural no sirve de nada si el texto que le das es el contenido crudo del notebook. Leer en voz alta una celda de Python tal como está escrita -nombres de variables, paréntesis, comentarios con numeral- sería una vergüenza. Lo mismo con fórmulas en LaTeX.</p> <p>Un guion de clase tiene que hacer cosas que el notebook no hace: introducir cada sección antes de mostrarla, explicar qué va a hacer el código antes de que se vea, señalar dónde prestar atención, advertir errores comunes, conectar lo anterior con lo que viene. Esa estructura narrativa hay que construirla a propósito.</p> <p>El primer paso es un mapa conceptual de la clase, generado directamente a partir del notebook: qué conceptos introduce, en qué secuencia, cuáles merecen énfasis, qué errores vale la pena anticipar. El LLM recibe ese mapa como contexto para generar el guion, lo que reduce alucinaciones y saltos de continuidad.</p> <p>Para los 67 notebooks desarrollé un formato específico, con marcadores que el sintetizador interpreta. Exactamente <em>como si</em> fuera un guion de teatro:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[introduction]
+Hola a todos. Mi nombre es Sebastián. Bienvenidos a la clase 1 del Laboratorio de Métodos Cuantitativos aplicados a la Gestión.
+
+[cell:0]
+[transition]
+Este curso pertenece a la Tecnicatura Universitaria en Gestión y Análisis de Datos en Organizaciones, de la Facultad de Ciencias Económicas de la UBA.
+
+[pause 0.5s]
+
+[cell:1]
+[explanation]
+Antes de arrancar, repasemos qué vamos a lograr en esta clase.
+</code></pre></div></div> <p>Los marcadores de sección -<code class="language-plaintext highlighter-rouge">introduction</code>, <code class="language-plaintext highlighter-rouge">explanation</code>, <code class="language-plaintext highlighter-rouge">key_point</code>, <code class="language-plaintext highlighter-rouge">warning</code>, <code class="language-plaintext highlighter-rouge">example</code>, 12 en total- le indican al sintetizador a qué velocidad hablar, con qué temperatura de muestreo y con qué clip de referencia. Sirven para que la voz cambie según el contexto: más lenta y deliberada en los puntos clave, más fluida en las explicaciones, más marcada en las advertencias. Siempre un modelo, pero con múltiples registros.</p> <p>Los <code class="language-plaintext highlighter-rouge">[cell:N]</code> tienen además un rol técnico clave: registran en qué segundo del audio empieza la narración de cada celda.</p> <p>Cada guion se revisa manualmente antes de sintetizar. Hay errores que no se detectan automáticamente, así que combino checks por script con revisión humana.</p> <hr/> <h2 id="sincronizar-audio-y-video">Sincronizar audio y video</h2> <p>El problema técnico más interesante fue este. El audio se genera primero; la grabación de pantalla corre después. El objetivo es que cuando el narrador explica la celda 3, el video muestre <em>exactamente</em> la celda 3 (no la celda 2, ni un scroll a destiempo).</p> <p>La primera intuición fue alinear fonéticamente el audio después de grabar. La descarté rápido: agrega un paso de procesamiento por clase, es frágil si el narrador no menciona explícitamente cada celda, y suma complejidad sin necesidad.</p> <p>La solución que usé es más simple. Durante la síntesis, cada vez que el sintetizador procesa un <code class="language-plaintext highlighter-rouge">[cell:N]</code> registra el offset de audio acumulado. Sale un archivo de timestamps -celda 0 en el segundo 8.4, celda 1 en el 47.8, celda 2 en el 89.2- gratis, como subproducto de la síntesis.</p> <p>Con esos timestamps y los tiempos de ejecución medidos de cada celda se construye un script de eventos: en el segundo 47.8 hacer scroll a la celda 1 y ejecutarla, esperar a que termine, en el 89.2 pasar a la siguiente. Playwright reproduce esos eventos sobre JupyterLab mientras graba la pantalla, y FFmpeg combina el video con el audio TTS.</p> <p>Una notita: no pretendía sincronización <em>frame-perfect</em>: en secciones largas o con código lento puede haber un desfase de alrededor de un segundo. ¿Me molesta? Sí. Pero para videos educativos es más que aceptable, y sobre todo es completamente reproducible: mismo guion y mismo notebook, mismo resultado.</p> <hr/> <h2 id="qué-aprendí">Qué aprendí</h2> <p>La arquitectura por etapas independientes fue la decisión más valiosa del proyecto, y fue deliberada desde el principio justamente porque sabía que me iba a encontrar con problemas. Cuando descubrí que el script de grabación dependía de una API de JupyterLab que no funciona en modo headless, pude reescribir solo ese componente sin tocar el modelo, los guiones ni la síntesis.</p> <p>Del otro lado: la parte que más tiempo consume es editorial, no técnica. Y está bien que así sea. Revisar 67 guiones, encontrar errores del LLM, llevar registro, pensar qué validaciones faltan, detectar qué clases cambiaron y hay que regenerar. Ese trabajo existe independientemente de cuán bien funcione el pipeline. El sistema elimina la grabación manual, no la supervisión humana, que en educación es fundamental.</p> <p>El modelo de voz también tiene límites que no resolví del todo. Reduje los problemas en frases largas pero no los eliminé, y fuera de este entorno seguramente falle. Con más datos de entrenamiento probablemente mejore; queda para más adelante.</p> <hr/> <p>El pipeline está operativo: el 100% de las clases tiene el video terminado.</p> <p>Se habla mucho -a veces demasiado- de IA en educación, y casi siempre desde el lado del alumno: mejores materiales, mejores herramientas, chatbots. Sin quitarle al alumno el protagonismo, este proyecto la usa también como asistente de docencia.</p> <p>El código, los scripts y ejemplos de guiones están <a href="https://github.com/manzisebastian/tts-lecture-pipeline">en GitHub</a>.</p>]]></content><author><name></name></author><category term="proyectos"/><category term="TTS"/><category term="ML"/><category term="voz"/><category term="Python"/><category term="docencia"/><summary type="html"><![CDATA[cómo entrené un modelo TTS con mi propia voz para generar videos de clases a partir de notebooks]]></summary></entry><entry><title type="html">a post with tabs</title><link href="https://manzisebastian.github.io//blog/2024/tabs/" rel="alternate" type="text/html" title="a post with tabs"/><published>2024-05-01T00:32:13+00:00</published><updated>2024-05-01T00:32:13+00:00</updated><id>https://manzisebastian.github.io//blog/2024/tabs</id><content type="html" xml:base="https://manzisebastian.github.io//blog/2024/tabs/"><![CDATA[<p>This is how a post with <a href="https://github.com/Ovski4/jekyll-tabs">tabs</a> looks like. Note that the tabs could be used for different purposes, not only for code.</p> <h2 id="first-tabs">First tabs</h2> <p>To add tabs, use the following syntax:</p> <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">{%</span><span class="w"> </span><span class="nt">tabs</span><span class="w"> </span><span class="nv">group-name</span><span class="w"> </span><span class="cp">%}</span>
 
 <span class="cp">{%</span><span class="w"> </span><span class="nt">tab</span><span class="w"> </span><span class="nv">group-name</span><span class="w"> </span><span class="nv">tab-name-1</span><span class="w"> </span><span class="cp">%}</span>
 
@@ -13,16 +25,16 @@ Content 2
 <span class="cp">{%</span><span class="w"> </span><span class="nt">endtab</span><span class="w"> </span><span class="cp">%}</span>
 
 <span class="cp">{%</span><span class="w"> </span><span class="nt">endtabs</span><span class="w"> </span><span class="cp">%}</span>
-</code></pre></div></div> <p>With this you can generate visualizations like:</p> <ul id="log" class="tab" data-tab="7c163c38-0ae5-4763-a909-73987365171c" data-name="log"> <li class="active" id="log-php"> <a href="#">php </a> </li> <li id="log-js"> <a href="#">js </a> </li> <li id="log-ruby"> <a href="#">ruby </a> </li> </ul> <ul class="tab-content" id="7c163c38-0ae5-4763-a909-73987365171c" data-name="log"> <li class="active"> <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">var_dump</span><span class="p">(</span><span class="s1">'hello'</span><span class="p">);</span>
+</code></pre></div></div> <p>With this you can generate visualizations like:</p> <ul id="log" class="tab" data-tab="3ca719ef-e5ee-4377-b9f6-8473e664d245" data-name="log"> <li class="active" id="log-php"> <a href="#">php </a> </li> <li id="log-js"> <a href="#">js </a> </li> <li id="log-ruby"> <a href="#">ruby </a> </li> </ul> <ul class="tab-content" id="3ca719ef-e5ee-4377-b9f6-8473e664d245" data-name="log"> <li class="active"> <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">var_dump</span><span class="p">(</span><span class="s1">'hello'</span><span class="p">);</span>
 </code></pre></div></div> </li> <li> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">hello</span><span class="dl">"</span><span class="p">);</span>
 </code></pre></div></div> </li> <li> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">pputs</span> <span class="dl">'</span><span class="s1">hello</span><span class="dl">'</span>
-</code></pre></div></div> </li> </ul> <h2 id="another-example">Another example</h2> <ul id="data-struct" class="tab" data-tab="cfad3424-0b26-4860-8e93-8eb7a6ded643" data-name="data-struct"> <li class="active" id="data-struct-yaml"> <a href="#">yaml </a> </li> <li id="data-struct-json"> <a href="#">json </a> </li> </ul> <ul class="tab-content" id="cfad3424-0b26-4860-8e93-8eb7a6ded643" data-name="data-struct"> <li class="active"> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">hello</span><span class="pi">:</span>
+</code></pre></div></div> </li> </ul> <h2 id="another-example">Another example</h2> <ul id="data-struct" class="tab" data-tab="2d972685-9e26-4986-9464-71de13103958" data-name="data-struct"> <li class="active" id="data-struct-yaml"> <a href="#">yaml </a> </li> <li id="data-struct-json"> <a href="#">json </a> </li> </ul> <ul class="tab-content" id="2d972685-9e26-4986-9464-71de13103958" data-name="data-struct"> <li class="active"> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">hello</span><span class="pi">:</span>
   <span class="pi">-</span> <span class="s2">"</span><span class="s">whatsup"</span>
   <span class="pi">-</span> <span class="s2">"</span><span class="s">hi"</span>
 </code></pre></div></div> </li> <li> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"hello"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"whatsup"</span><span class="p">,</span><span class="w"> </span><span class="s2">"hi"</span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div></div> </li> </ul> <h2 id="tabs-for-something-else">Tabs for something else</h2> <ul id="something-else" class="tab" data-tab="0f00e7b7-828a-49f0-92fa-31de3a251819" data-name="something-else"> <li class="active" id="something-else-text"> <a href="#">text </a> </li> <li id="something-else-quote"> <a href="#">quote </a> </li> <li id="something-else-list"> <a href="#">list </a> </li> </ul> <ul class="tab-content" id="0f00e7b7-828a-49f0-92fa-31de3a251819" data-name="something-else"> <li class="active"> <p>Regular text</p> </li> <li> <blockquote> <p>A quote</p> </blockquote> </li> <li> <p>Hipster list</p> <ul> <li>brunch</li> <li>fixie</li> <li>raybans</li> <li>messenger bag</li> </ul> </li> </ul>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is what included tabs in a post could look like]]></summary></entry><entry><title type="html">a post with typograms</title><link href="https://manzisebastian.github.io//blog/2024/typograms/" rel="alternate" type="text/html" title="a post with typograms"/><published>2024-04-29T23:36:10+00:00</published><updated>2024-04-29T23:36:10+00:00</updated><id>https://manzisebastian.github.io//blog/2024/typograms</id><content type="html" xml:base="https://manzisebastian.github.io//blog/2024/typograms/"><![CDATA[<p>This is an example post with some <a href="https://github.com/google/typograms/">typograms</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">typograms
+</span></code></pre></div></div> </li> </ul> <h2 id="tabs-for-something-else">Tabs for something else</h2> <ul id="something-else" class="tab" data-tab="1a30e1d2-8c69-4e34-8f60-1afb4f80ff8d" data-name="something-else"> <li class="active" id="something-else-text"> <a href="#">text </a> </li> <li id="something-else-quote"> <a href="#">quote </a> </li> <li id="something-else-list"> <a href="#">list </a> </li> </ul> <ul class="tab-content" id="1a30e1d2-8c69-4e34-8f60-1afb4f80ff8d" data-name="something-else"> <li class="active"> <p>Regular text</p> </li> <li> <blockquote> <p>A quote</p> </blockquote> </li> <li> <p>Hipster list</p> <ul> <li>brunch</li> <li>fixie</li> <li>raybans</li> <li>messenger bag</li> </ul> </li> </ul>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is what included tabs in a post could look like]]></summary></entry><entry><title type="html">a post with typograms</title><link href="https://manzisebastian.github.io//blog/2024/typograms/" rel="alternate" type="text/html" title="a post with typograms"/><published>2024-04-29T23:36:10+00:00</published><updated>2024-04-29T23:36:10+00:00</updated><id>https://manzisebastian.github.io//blog/2024/typograms</id><content type="html" xml:base="https://manzisebastian.github.io//blog/2024/typograms/"><![CDATA[<p>This is an example post with some <a href="https://github.com/google/typograms/">typograms</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">typograms
 </span><span class="sb">+----+
 |    |---&gt; My first diagram!
 +----+</span>
@@ -774,162 +786,4 @@ index 3bb754ac..a34839c0 100644
     }
   ]
 }
-</code></pre> <p>Note that this library offer support for both light and dark themes. You can switch between them using the theme switcher in the top right corner of the page.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="charts"/><summary type="html"><![CDATA[this is what included echarts code could look like]]></summary></entry><entry><title type="html">a post with chart.js</title><link href="https://manzisebastian.github.io//blog/2024/chartjs/" rel="alternate" type="text/html" title="a post with chart.js"/><published>2024-01-26T01:04:00+00:00</published><updated>2024-01-26T01:04:00+00:00</updated><id>https://manzisebastian.github.io//blog/2024/chartjs</id><content type="html" xml:base="https://manzisebastian.github.io//blog/2024/chartjs/"><![CDATA[<p>This is an example post with some <a href="https://www.chartjs.org/">chart.js</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">chartjs
-</span><span class="sb">{
-  "type": "line",
-  "data": {
-    "labels": [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July"
-    ],
-    "datasets": [
-      {
-        "label": "# of bugs",
-        "fill": false,
-        "lineTension": 0.1,
-        "backgroundColor": "rgba(75,192,192,0.4)",
-        "borderColor": "rgba(75,192,192,1)",
-        "borderCapStyle": "butt",
-        "borderDash": [],
-        "borderDashOffset": 0,
-        "borderJoinStyle": "miter",
-        "pointBorderColor": "rgba(75,192,192,1)",
-        "pointBackgroundColor": "#fff",
-        "pointBorderWidth": 1,
-        "pointHoverRadius": 5,
-        "pointHoverBackgroundColor": "rgba(75,192,192,1)",
-        "pointHoverBorderColor": "rgba(220,220,220,1)",
-        "pointHoverBorderWidth": 2,
-        "pointRadius": 1,
-        "pointHitRadius": 10,
-        "data": [
-          65,
-          59,
-          80,
-          81,
-          56,
-          55,
-          40
-        ],
-        "spanGaps": false
-      }
-    ]
-  },
-  "options": {}
-}</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>This is how it looks like:</p> <pre><code class="language-chartjs">{
-  "type": "line",
-  "data": {
-    "labels": [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July"
-    ],
-    "datasets": [
-      {
-        "label": "# of bugs",
-        "fill": false,
-        "lineTension": 0.1,
-        "backgroundColor": "rgba(75,192,192,0.4)",
-        "borderColor": "rgba(75,192,192,1)",
-        "borderCapStyle": "butt",
-        "borderDash": [],
-        "borderDashOffset": 0,
-        "borderJoinStyle": "miter",
-        "pointBorderColor": "rgba(75,192,192,1)",
-        "pointBackgroundColor": "#fff",
-        "pointBorderWidth": 1,
-        "pointHoverRadius": 5,
-        "pointHoverBackgroundColor": "rgba(75,192,192,1)",
-        "pointHoverBorderColor": "rgba(220,220,220,1)",
-        "pointHoverBorderWidth": 2,
-        "pointRadius": 1,
-        "pointHitRadius": 10,
-        "data": [
-          65,
-          59,
-          80,
-          81,
-          56,
-          55,
-          40
-        ],
-        "spanGaps": false
-      }
-    ]
-  },
-  "options": {}
-}
-</code></pre> <p>Also another example chart.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">chartjs
-</span><span class="sb">{
-  "type": "doughnut",
-  "data": {
-    "labels": [
-      "Red",
-      "Blue",
-      "Yellow"
-    ],
-    "datasets": [
-      {
-        "data": [
-          300,
-          50,
-          100
-        ],
-        "backgroundColor": [
-          "#FF6384",
-          "#36A2EB",
-          "#FFCE56"
-        ],
-        "hoverBackgroundColor": [
-          "#FF6384",
-          "#36A2EB",
-          "#FFCE56"
-        ]
-      }
-    ]
-  },
-  "options": {}
-}</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>Which generates:</p> <pre><code class="language-chartjs">{
-  "type": "doughnut",
-  "data": {
-    "labels": [
-      "Red",
-      "Blue",
-      "Yellow"
-    ],
-    "datasets": [
-      {
-        "data": [
-          300,
-          50,
-          100
-        ],
-        "backgroundColor": [
-          "#FF6384",
-          "#36A2EB",
-          "#FFCE56"
-        ],
-        "hoverBackgroundColor": [
-          "#FF6384",
-          "#36A2EB",
-          "#FFCE56"
-        ]
-      }
-    ]
-  },
-  "options": {}
-}
-</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="charts"/><summary type="html"><![CDATA[this is what included chart.js code could look like]]></summary></entry></feed>
+</code></pre> <p>Note that this library offer support for both light and dark themes. You can switch between them using the theme switcher in the top right corner of the page.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="charts"/><summary type="html"><![CDATA[this is what included echarts code could look like]]></summary></entry></feed>
