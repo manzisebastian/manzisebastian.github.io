@@ -86,26 +86,16 @@ layout: default
       <h2 class="home-section-title">selected projects</h2>
       <a class="home-section-link" href="{{ '/projects/' | relative_url }}">view all →</a>
     </div>
-    {% assign featured_projects = site.projects | where_exp: "p", "p.category != 'deprecated'" | sort: "importance" %}
+    {% assign featured_titles = "TTS,Econ,Ma-py-tas" | split: "," %}
     <div class="projects home-projects">
       <div class="row row-cols-1 row-cols-md-3">
-        {% for project in featured_projects limit: 3 %}
-          {% include projects.liquid %}
+        {% for t in featured_titles %}
+          {% assign project = site.projects | where: "title", t | first %}
+          {% if project %}{% include projects.liquid %}{% endif %}
         {% endfor %}
       </div>
     </div>
   </section>
-
-  <!-- ═══════════════════════════════════════════════════ LATEST POSTS -->
-  {% if site.latest_posts.enabled and site.posts.size > 0 %}
-    <section class="home-section" id="writing">
-      <div class="home-section-head">
-        <h2 class="home-section-title">latest posts</h2>
-        <a class="home-section-link" href="{{ '/blog/' | relative_url }}">view all →</a>
-      </div>
-      {% include latest_posts.liquid %}
-    </section>
-  {% endif %}
 
   <!-- ═══════════════════════════════════════════════════ SELECTED PAPERS -->
   {% if page.selected_papers %}
@@ -131,7 +121,8 @@ layout: default
         media, weighing in on them.
       </li>
       <li>
-        <strong>Racing fan.</strong> If you can't find me working, you'll find me at the
+        <strong>Huge Racing fan</strong> 🩵🤍 — a passion I follow with my whole family.
+        If you can't find me working, you'll find me at the
         <a href="https://en.wikipedia.org/wiki/Estadio_Presidente_Perón" target="_blank" rel="noopener">Cilindro de Avellaneda</a>.
       </li>
       <li>

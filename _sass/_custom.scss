@@ -176,6 +176,19 @@ code, pre, kbd, samp, .monospace {
   }
 }
 
+// CV download buttons — both identical, no visual hierarchy (pick either)
+.hero-btn-cv {
+  background: var(--global-code-bg-color);
+  color: var(--global-text-color) !important;
+  border: 1.5px solid var(--global-divider-color);
+
+  &:hover {
+    transform: translateY(-1px);
+    border-color: var(--global-theme-color);
+    color: var(--global-theme-color) !important;
+  }
+}
+
 // ─── Profile photo in hero ────────────────────────────────────────────────────
 
 .hero-photo {
@@ -433,10 +446,9 @@ code, pre, kbd, samp, .monospace {
     }
 
     &.status-deprecated {
-      background-color: transparent;
-      color: var(--global-text-color-light);
-      border: 1px dashed var(--global-divider-color);
-      opacity: 0.85;
+      background-color: rgba(232, 89, 12, 0.1);
+      color: #E8590C;
+      border: 1px solid rgba(232, 89, 12, 0.3);
     }
   }
 
@@ -792,6 +804,12 @@ html[data-theme="dark"] {
   .project-status.status-ongoing {
     background-color: rgba(78, 205, 196, 0.12);
     color: #4ECDC4;
+  }
+
+  .project-status.status-deprecated {
+    background-color: rgba(255, 146, 43, 0.14);
+    color: #FF922B;
+    border-color: rgba(255, 146, 43, 0.35);
   }
 
   .projects .card.hoverable:hover {

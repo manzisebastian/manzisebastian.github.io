@@ -8,6 +8,8 @@ category: deprecated
 tags: [Python, API, automation, GCP]
 ---
 
+> **Note:** this project is no longer active — the end of Twitter/X's free API took it offline. It's being succeeded by **[bcra-lab](/projects/bcra-lab/)**.
+
 <a href='https://x.com/BCRA_bot'>@BCRA_bot</a> is a Twitter bot that tweets daily updates of Argentina's monetary statistics, with data of the Central Bank of Argentina (BCRA).
 
 The Github repo for this project can be found at <a href='https://github.com/manzisebastian/BCRA_bot'>manzisebastian/BCRA_bot</a>.
