@@ -58,7 +58,6 @@ code, pre, kbd, samp, .monospace {
 
 // Everything inside the hero sits above the dot grid
 .hero-inner,
-.hero-stats,
 .skill-tags {
   position: relative;
   z-index: 1;
@@ -209,68 +208,6 @@ code, pre, kbd, samp, .monospace {
 @media (max-width: 576px) {
   .hero-photo {
     display: none; // hide on mobile — text takes priority
-  }
-}
-
-// ─── Hero stats bar ───────────────────────────────────────────────────────────
-
-.hero-stats {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0;
-  row-gap: 0.5rem;
-  padding: 0.9rem 0;
-  border-top: 1px solid var(--global-divider-color);
-  border-bottom: 1px solid var(--global-divider-color);
-  margin-bottom: 1.25rem;
-}
-
-.hero-stat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 1.5rem;
-
-  &:first-child {
-    padding-left: 0;
-  }
-
-  .hero-stat-number {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--global-theme-color);
-    line-height: 1;
-  }
-
-  .hero-stat-label {
-    font-size: 0.68rem;
-    font-weight: 400;
-    color: var(--global-text-color-light);
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
-    margin-top: 0.2rem;
-    white-space: nowrap;
-  }
-}
-
-.hero-stat-divider {
-  width: 1px;
-  height: 2rem;
-  background-color: var(--global-divider-color);
-  flex-shrink: 0;
-}
-
-@media (max-width: 576px) {
-  .hero-stats {
-    justify-content: flex-start;
-  }
-
-  .hero-stat {
-    padding: 0 1rem;
-
-    &:first-child { padding-left: 0; }
   }
 }
 
@@ -431,18 +368,28 @@ code, pre, kbd, samp, .monospace {
     }
   }
 
+  // Compact cards — smaller thumbnails + tighter padding
+  .card-img-top {
+    height: 120px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 0.85rem 1rem;
+  }
+
   .card-title {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 1rem;
+    font-size: 0.92rem;
     font-weight: 600;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.25rem;
     transition: color 0.15s ease;
   }
 
   .card-text {
-    font-size: 0.82rem;
+    font-size: 0.78rem;
     color: var(--global-text-color-light);
-    line-height: 1.5;
+    line-height: 1.45;
     margin-bottom: 0;
   }
 
@@ -483,6 +430,22 @@ code, pre, kbd, samp, .monospace {
     &.status-completed {
       background-color: var(--global-code-bg-color);
       color: var(--global-text-color-light);
+    }
+
+    &.status-deprecated {
+      background-color: transparent;
+      color: var(--global-text-color-light);
+      border: 1px dashed var(--global-divider-color);
+      opacity: 0.85;
+    }
+  }
+
+  // Whole deprecated cards read as "inactive" until hovered
+  .card.hoverable:has(.status-deprecated) {
+    opacity: 0.68;
+
+    &:hover {
+      opacity: 1;
     }
   }
 
@@ -574,12 +537,229 @@ code {
   font-family: 'JetBrains Mono', monospace;
 }
 
+// ─── Home landing sections ────────────────────────────────────────────────────
+
+.home-section {
+  margin: 3rem 0;
+  scroll-margin-top: 5rem; // so anchor jumps clear the fixed navbar
+}
+
+.home-section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid var(--global-divider-color);
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.home-section-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+
+  // code-comment prefix — the "more code" accent
+  &::before {
+    content: '// ';
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8em;
+    font-weight: 500;
+    color: var(--global-theme-color);
+  }
+}
+
+.home-section-link {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--global-text-color-light);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: var(--global-theme-color);
+    text-decoration: none;
+  }
+}
+
+.home-contact-line {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--global-text-color-light);
+  margin-bottom: 0.5rem;
+
+  a {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9em;
+    color: var(--global-theme-color);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s ease;
+
+    &:hover { border-bottom-color: var(--global-theme-color); }
+  }
+}
+
+#contact .social {
+  text-align: left;
+
+  .contact-icons {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+  }
+}
+
+// ─── Beyond work list ─────────────────────────────────────────────────────────
+
+.beyond-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  li {
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--global-text-color-light);
+
+    &::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      top: 0.15rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--global-theme-color);
+    }
+
+    strong {
+      color: var(--global-text-color);
+      font-weight: 600;
+    }
+
+    a {
+      color: var(--global-theme-color);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s ease;
+
+      &:hover { border-bottom-color: var(--global-theme-color); }
+    }
+  }
+}
+
+// ─── CV download buttons ──────────────────────────────────────────────────────
+
+.cv-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+// ─── Contact page (/hablemos/) ────────────────────────────────────────────────
+
+.contact-page {
+  max-width: 640px;
+
+  .contact-intro {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--global-text-color-light);
+    margin-bottom: 2rem;
+
+    strong { color: var(--global-text-color); }
+  }
+
+  .contact-primary {
+    display: inline-flex;
+    align-items: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    background: var(--global-theme-color);
+    color: #fff !important;
+    text-decoration: none !important;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(26, 86, 219, 0.35);
+    }
+  }
+
+  .contact-socials {
+    margin-top: 2.5rem;
+
+    .contact-socials-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--global-text-color-light);
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-icons {
+      font-size: 1.8rem;
+
+      a { margin-right: 0.85rem; }
+    }
+  }
+}
+
+// ─── Code-accent: category headers + callout blockquotes ──────────────────────
+
+.projects h2.category::before {
+  content: '# ';
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--global-theme-color);
+  font-weight: 600;
+}
+
+// Callout note (e.g. deprecated project note) — excludes embedded tweet cards
+blockquote:not(.twitter-tweet) {
+  border-left: 3px solid var(--global-theme-color);
+  background-color: var(--global-code-bg-color);
+  border-radius: 0 6px 6px 0;
+  padding: 0.85rem 1.1rem;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--global-text-color);
+
+  p { margin-bottom: 0; }
+}
+
+// Post metadata in a monospace, terminal-ish tone
+.post-meta,
+.post-tags {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.01em;
+}
+
 // ─── Dark mode adjustments ────────────────────────────────────────────────────
 
 html[data-theme="dark"] {
   .hero-section {
     background-color: var(--global-card-bg-color);
     border-color: var(--global-divider-color);
+  }
+
+  .contact-page .contact-primary:hover {
+    box-shadow: 0 4px 14px rgba(96, 165, 250, 0.3);
   }
 
   .hero-btn-primary {

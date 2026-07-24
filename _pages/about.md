@@ -24,7 +24,7 @@ My projects span economic data pipelines, interactive visualizations, geospatial
   <p class="currently-header">currently</p>
   <ul class="currently-list">
     <li><strong>Decision Analytics Associate</strong> @ ZS — designing data solutions & optimizing ETL pipelines for pharma clients (Python, SQL)</li>
-    <li><strong>Teaching Assistant</strong> @ UBA — Macroeconomics I & II, Quantitative Methods Lab</li>
+    <li><strong>Teaching Assistant</strong> @ UBA — Macroeconomics II, Quantitative Methods Lab</li>
     <li>Working on: <a href="/projects/network_theory/">network theory</a> analysis & real estate data scraping (<a href="/projects/Propiedata/">Propiedata</a>)...and maaaaany other cool things.</li>
   </ul>
 </div>

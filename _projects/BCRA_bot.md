@@ -4,7 +4,7 @@ title: BCRA_bot
 description: a Twitter bot for economists
 img: assets/img/BCRA_image.jpg
 importance: 1
-category: completed
+category: deprecated
 tags: [Python, API, automation, GCP]
 ---
 

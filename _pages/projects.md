@@ -4,7 +4,7 @@ title: projects
 permalink: /projects/
 description: This is my collection of projects. Each of them is linked to its corresponding Github repository. This section combines projects written in English and in Spanish.
 nav: true
-display_categories: [completed, ongoing]
+display_categories: [completed, ongoing, deprecated]
 nav_order: 3
 horizontal: false
 ---

@@ -12,3 +12,14 @@ node_modules/
 vendor
 .idea
 ongoing_projects/
+
+# LaTeX CV sources — compiled to assets/pdf/, but the .tex are not pushed
+assets/resume-tex/
+
+# LaTeX build artifacts (keep only the compiled PDFs in assets/pdf/)
+assets/pdf/*.aux
+assets/pdf/*.log
+assets/pdf/*.out
+assets/pdf/*.fls
+assets/pdf/*.fdb_latexmk
+assets/pdf/*.synctex.gz
