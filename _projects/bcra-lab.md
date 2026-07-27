@@ -3,7 +3,7 @@ layout: page
 title: bcra-lab
 description: una plataforma de datos macro del BCRA (en desarrollo)
 img: assets/img/BCRA_lab_image.jpg
-importance: 1
+importance: 2
 category: ongoing
 tags: [Python, API, DuckDB, Streamlit, economics]
 ---

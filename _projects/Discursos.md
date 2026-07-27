@@ -3,7 +3,7 @@ layout: page
 title: Discursos
 description: NLP analysis of political speeches
 img: assets/img/Discursos_image.jpg
-importance: 1
+importance: 2
 category: ongoing
 tags: [Python, NLP, ML, text analysis]
 ---
