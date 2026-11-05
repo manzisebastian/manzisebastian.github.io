@@ -1,15 +1,16 @@
-/* Hero notebook: a Jupyter-style block whose 2nd cell plots a live Argentine
- * macro series (BCRA / ArgentinaDatos), picked at random on every visit.
- * Falls back to a bundled snapshot if the API is slow or down. No dependencies. */
+/* Home notebook, split in two blocks that share one numbering:
+ *   #hero-nb  In [1]  sebastian.describe()            (types on load)
+ *   #live-nb  In [2]  imports  /  In [3]  fetch + plot (types when scrolled into view)
+ * Cell 3 fetches a live Argentine macro series (BCRA / ArgentinaDatos), a random one
+ * on every visit, and falls back to a bundled snapshot if the API is slow or down.
+ * No dependencies. */
 (function () {
   "use strict";
 
-  const root = document.getElementById("hero-nb");
-  if (!root) return;
-
-  const SNAPSHOT_URL = root.dataset.snapshot;
   const REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const TIMEOUT_MS = 4500;
+  const BCRA = "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias";
+  const AD_RIESGO = "https://api.argentinadatos.com/v1/finanzas/indices/riesgo-pais";
 
   const SERIES = [
     {
@@ -17,7 +18,6 @@
       src: "bcra",
       id: 1,
       days: 180,
-      call: 'bcra.series("reservas", last="6M")',
       title: "International reserves",
       unit: "USD M",
       dec: 0,
@@ -28,7 +28,6 @@
       src: "bcra",
       id: 5,
       days: 180,
-      call: 'bcra.series("tc_mayorista", last="6M")',
       title: "Wholesale FX rate",
       unit: "ARS/USD",
       dec: 1,
@@ -39,7 +38,6 @@
       src: "bcra",
       id: 27,
       days: 1100,
-      call: 'bcra.series("inflacion_mensual", last="3Y")',
       title: "Monthly inflation",
       unit: "% m/m",
       dec: 1,
@@ -50,7 +48,6 @@
       src: "bcra",
       id: 29,
       days: 1100,
-      call: 'bcra.series("rem_12m", last="3Y")',
       title: "Expected inflation, next 12m",
       unit: "% y/y",
       dec: 1,
@@ -61,7 +58,6 @@
       src: "bcra",
       id: 7,
       days: 180,
-      call: 'bcra.series("badlar", last="6M")',
       title: "BADLAR rate",
       unit: "% APR",
       dec: 2,
@@ -72,7 +68,6 @@
       src: "bcra",
       id: 40,
       days: 730,
-      call: 'bcra.series("icl_alquileres", last="2Y")',
       title: "Rental contracts index (ICL)",
       unit: "index",
       dec: 2,
@@ -82,7 +77,6 @@
       key: "riesgo",
       src: "ad",
       days: 365,
-      call: 'argdata.series("riesgo_pais", last="1Y")',
       title: "Country risk",
       unit: "bps",
       dec: 0,
@@ -91,24 +85,77 @@
   ];
 
   // ── helpers ────────────────────────────────────────────────────────────────
-  const $ = (sel) => root.querySelector(sel);
   const iso = (d) => d.toISOString().slice(0, 10);
+  const since = (days) => iso(new Date(Date.now() - days * 864e5));
   const fmt = (v, dec) => v.toLocaleString("en-US", { minimumFractionDigits: dec, maximumFractionDigits: dec });
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+  const esc = (t) => t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
   function withTimeout(promise, ms) {
     return Promise.race([promise, new Promise((_, rej) => setTimeout(() => rej(new Error("timeout")), ms))]);
   }
 
-  async function fetchLive(s) {
-    const today = new Date();
-    const desde = iso(new Date(today.getTime() - s.days * 864e5));
+  // Minimal Python highlighter: comments, strings, a few keywords.
+  function highlight(code) {
+    return esc(code).replace(/(#[^\n]*)|("[^"\n]*"|'[^'\n]*')|\b(import|from|as)\b/g, (m, c, s, k) =>
+      c ? `<span class="nb-c">${c}</span>` : s ? `<span class="nb-s">${s}</span>` : `<span class="nb-k">${k}</span>`
+    );
+  }
+
+  async function type(el, text, speed) {
+    el.classList.remove("is-done");
+    if (!REDUCED) {
+      el.textContent = "";
+      for (const ch of text) {
+        el.textContent += ch;
+        await sleep(speed);
+      }
+    }
+    el.innerHTML = highlight(text);
+    el.classList.add("is-done");
+  }
+
+  // ── block 1: hero ──────────────────────────────────────────────────────────
+  const hero = document.getElementById("hero-nb");
+  if (hero) {
+    type(hero.querySelector(".nb-code1"), "sebastian.describe()", 32).then(() => {
+      hero.querySelector(".nb-out1").classList.add("is-ready");
+    });
+  }
+
+  // ── block 2: live series ───────────────────────────────────────────────────
+  const live = document.getElementById("live-nb");
+  if (!live) return;
+  const $ = (sel) => live.querySelector(sel);
+  const SNAPSHOT_URL = live.dataset.snapshot;
+
+  // The code shown in In [3] is real pandas that fetches the same data.
+  function codeFor(s) {
     if (s.src === "bcra") {
-      const url = `https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/${s.id}?desde=${desde}&hasta=${iso(today)}&limit=3000`;
+      return (
+        `# ${s.title}\n` +
+        `url = "${BCRA}/${s.id}"\n` +
+        `r = requests.get(url, params={"desde": "${since(s.days)}"})\n` +
+        `df = pd.DataFrame(r.json()["results"][0]["detalle"])\n` +
+        `df.plot(x="fecha", y="valor")`
+      );
+    }
+    return (
+      `# ${s.title}\n` +
+      `url = "${AD_RIESGO}"\n` +
+      `df = pd.DataFrame(requests.get(url).json())\n` +
+      `df.query("fecha >= '${since(s.days)}'").plot(x="fecha", y="valor")`
+    );
+  }
+
+  async function fetchLive(s) {
+    const desde = since(s.days);
+    if (s.src === "bcra") {
+      const url = `${BCRA}/${s.id}?desde=${desde}&hasta=${iso(new Date())}&limit=3000`;
       const j = await (await fetch(url)).json();
       return j.results[0].detalle.map((p) => [p.fecha, +p.valor]).sort((a, b) => (a[0] < b[0] ? -1 : 1));
     }
-    const j = await (await fetch("https://api.argentinadatos.com/v1/finanzas/indices/riesgo-pais")).json();
+    const j = await (await fetch(AD_RIESGO)).json();
     return j.filter((p) => p.fecha >= desde).map((p) => [p.fecha, +p.valor]);
   }
 
@@ -127,21 +174,6 @@
       const snap = await fetchSnapshot(s);
       return { pts: snap.pts, live: false, asOf: snap.asOf };
     }
-  }
-
-  async function type(el, text, speed) {
-    el.classList.remove("is-done");
-    if (REDUCED) {
-      el.textContent = text;
-      el.classList.add("is-done");
-      return;
-    }
-    el.textContent = "";
-    for (const ch of text) {
-      el.textContent += ch;
-      await sleep(speed);
-    }
-    el.classList.add("is-done");
   }
 
   // ── chart ──────────────────────────────────────────────────────────────────
@@ -227,12 +259,12 @@
   let current = null,
     busy = false;
 
-  async function runCell2(s) {
+  async function runSeries(s) {
     busy = true;
-    const out = $(".nb-out2");
+    const out = $(".nb-out3");
     out.classList.remove("is-ready");
     $(".nb-status").textContent = "running…";
-    const [data] = await Promise.all([load(s), type($(".nb-code2"), s.call + ".plot()", 18)]);
+    const [data] = await Promise.all([load(s), type($(".nb-code3"), codeFor(s), 9)]);
     const pts = data.pts,
       first = pts[0][1],
       last = pts[pts.length - 1];
@@ -242,7 +274,7 @@
     $(".nb-readout").innerHTML =
       `<span class="nb-val">${fmt(last[1], s.dec)}</span> <span class="nb-unit">${s.unit}</span> ` +
       `<span class="nb-muted">· ${last[0]} · ${chg >= 0 ? "▲" : "▼"} ${fmt(Math.abs(chg), 1)}${isPct ? " pp" : "%"} vs ${pts[0][0]}</span>`;
-    $(".nb-caption").textContent = `Fig. 1 — ${s.caption}`;
+    $(".nb-caption").textContent = `Fig. 1. ${s.caption}`;
     $(".nb-status").textContent = data.live ? "● live" : `○ snapshot ${data.asOf}`;
     $(".nb-status").classList.toggle("is-live", data.live);
     out.classList.add("is-ready");
@@ -254,18 +286,35 @@
     busy = false;
   }
 
+  let started = false;
   async function start() {
-    await type($(".nb-code1"), "sebastian.describe()", 32);
-    $(".nb-out1").classList.add("is-ready");
+    if (started) return;
+    started = true;
+    await type($(".nb-code2"), "import pandas as pd\nimport requests", 22);
     let prev = null;
     try {
       prev = localStorage.getItem("heroNbLast");
     } catch (e) {}
-    await runCell2(pick(prev));
+    await runSeries(pick(prev));
   }
 
   $(".nb-shuffle").addEventListener("click", () => {
-    if (!busy) runCell2(pick(current && current.key));
+    if (started && !busy) runSeries(pick(current && current.key));
   });
-  start();
+
+  // Start typing only when the block scrolls into view.
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          io.disconnect();
+          start();
+        }
+      },
+      { threshold: 0.25 }
+    );
+    io.observe(live);
+  } else {
+    start();
+  }
 })();

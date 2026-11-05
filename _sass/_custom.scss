@@ -5,11 +5,13 @@
 
 // ─── Typography declarations ──────────────────────────────────────────────────
 
-// Display face for headings & names (Fraunces, editorial serif). Inter stays for running text.
-$font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+// Type: IBM Plex superfamily. Sans for headings (600-700) and running text, Mono for code/labels.
+$font-display: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+$font-body: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+$font-mono: 'IBM Plex Mono', ui-monospace, 'Courier New', monospace;
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: $font-body;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -21,7 +23,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 code, pre, kbd, samp, .monospace {
-  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  font-family: $font-mono;
 }
 
 // ─── Hero section ─────────────────────────────────────────────────────────────
@@ -84,7 +86,7 @@ code, pre, kbd, samp, .monospace {
 // ─── Hero greeting ────────────────────────────────────────────────────────────
 
 .hero-greeting {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: $font-mono;
   font-size: 0.8rem;
   font-weight: 400;
   color: var(--global-text-color-light);
@@ -141,7 +143,7 @@ code, pre, kbd, samp, .monospace {
   gap: 0.35rem;
   padding: 0.5rem 1.1rem;
   border-radius: 6px;
-  font-family: 'Inter', sans-serif;
+  font-family: $font-body;
   font-size: 0.825rem;
   font-weight: 500;
   letter-spacing: 0.01em;
@@ -237,7 +239,7 @@ code, pre, kbd, samp, .monospace {
 
 .skill-tag {
   display: inline-block;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: $font-mono;
   font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 0.03em;
@@ -312,7 +314,7 @@ code, pre, kbd, samp, .monospace {
 }
 
 .currently-header {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: $font-mono;
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -339,7 +341,7 @@ code, pre, kbd, samp, .monospace {
       position: absolute;
       left: 0;
       color: var(--global-theme-color);
-      font-family: 'JetBrains Mono', monospace;
+      font-family: $font-mono;
       font-size: 0.75rem;
       top: 0.35rem;
     }
@@ -417,7 +419,7 @@ code, pre, kbd, samp, .monospace {
   }
 
   .project-tag {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: $font-mono;
     font-size: 0.62rem;
     font-weight: 500;
     padding: 0.12rem 0.42rem;
@@ -430,7 +432,7 @@ code, pre, kbd, samp, .monospace {
 
   .project-status {
     display: inline-block;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: $font-mono;
     font-size: 0.6rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -496,7 +498,7 @@ code, pre, kbd, samp, .monospace {
 
 footer.fixed-bottom .container,
 footer.sticky-bottom .container {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: $font-mono;
   font-size: 0.68rem;
   letter-spacing: 0.02em;
 }
@@ -544,12 +546,12 @@ footer.sticky-bottom .container {
 pre {
   border-left: 3px solid var(--global-theme-color);
   border-radius: 6px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: $font-mono;
   font-size: 0.85em;
 }
 
 code {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: $font-mono;
 }
 
 // ─── Home landing sections ────────────────────────────────────────────────────
@@ -579,7 +581,7 @@ code {
   // code-comment prefix — the "more code" accent
   &::before {
     content: '// ';
-    font-family: 'JetBrains Mono', monospace;
+    font-family: $font-mono;
     font-size: 0.8em;
     font-weight: 500;
     color: var(--global-theme-color);
@@ -587,7 +589,7 @@ code {
 }
 
 .home-section-link {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: $font-mono;
   font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -609,7 +611,7 @@ code {
   margin-bottom: 0.5rem;
 
   a {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: $font-mono;
     font-size: 0.9em;
     color: var(--global-theme-color);
     text-decoration: none;
@@ -651,7 +653,7 @@ code {
       position: absolute;
       left: 0;
       top: 0.15rem;
-      font-family: 'JetBrains Mono', monospace;
+      font-family: $font-mono;
       font-size: 0.85rem;
       color: var(--global-theme-color);
     }
@@ -698,7 +700,7 @@ code {
   .contact-primary {
     display: inline-flex;
     align-items: center;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: $font-mono;
     font-size: 0.95rem;
     font-weight: 500;
     padding: 0.7rem 1.2rem;
@@ -718,7 +720,7 @@ code {
     margin-top: 2.5rem;
 
     .contact-socials-label {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: $font-mono;
       font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 0.1em;
@@ -738,7 +740,7 @@ code {
 
 .projects h2.category::before {
   content: '# ';
-  font-family: 'JetBrains Mono', monospace;
+  font-family: $font-mono;
   color: var(--global-theme-color);
   font-weight: 600;
 }
@@ -760,7 +762,7 @@ blockquote:not(.twitter-tweet) {
 // Post metadata in a monospace, terminal-ish tone
 .post-meta,
 .post-tags {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: $font-mono;
   font-size: 0.72rem;
   letter-spacing: 0.01em;
 }
@@ -824,7 +826,7 @@ html[data-theme="dark"] {
 // Markup: _includes/hero_notebook.liquid · Logic: assets/js/hero_notebook.js
 
 .hero-nb {
-  font-family: "JetBrains Mono", monospace;
+  font-family: $font-mono;
   font-size: 0.78rem;
   line-height: 1.55;
   display: grid;
@@ -972,9 +974,7 @@ html[data-theme="dark"] {
   stroke-dasharray: 3 3;
 }
 .nb-tick {
-  font:
-    10px "JetBrains Mono",
-    monospace;
+  font: 10px $font-mono;
   fill: var(--global-text-color-light);
 }
 .nb-foot {
@@ -1017,4 +1017,33 @@ html[data-theme="dark"] {
   .nb-kv {
     column-gap: 0.8em;
   }
+}
+
+// Continuation block (cells 2-3) under "selected projects"
+.nb-lead {
+  font-size: 0.92rem;
+  color: var(--global-text-color-light);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  max-width: 68ch;
+}
+.nb-live {
+  margin-bottom: 0;
+}
+// Minimal syntax colors for typed code
+.nb-k {
+  color: var(--global-theme-color);
+}
+.nb-s {
+  color: var(--global-teal-color);
+}
+.nb-c {
+  color: var(--global-text-color-light);
+  font-style: italic;
+}
+
+// CV: metadata lines (date, company, location, summary) are <p class="cv-meta">, not headings
+.cv-meta {
+  margin: 0 0 0.3rem;
+  line-height: 1.4;
 }

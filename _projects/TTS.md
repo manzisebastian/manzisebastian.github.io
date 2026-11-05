@@ -10,7 +10,7 @@ tags: [Python, TTS, ML, voice cloning]
 
 > "Speak the speech, I pray you, [...] trippingly on the tongue; [...] nor do not saw the air too much with your hand, thus, but use all gently."
 >
-> — *Hamlet*, III.ii
+> *Hamlet*, III.ii
 
 ## TL;DR
 
@@ -63,7 +63,7 @@ Ten numbered scripts, each with one input and one output. I built it this way de
 
 The numbering hides one thing worth spelling out: `07` has to run before `06`, and nothing in the table tells you why.
 
-`07` is the script that executes the notebook, which makes it the script that knows each cell's *type* — code or markdown. `06` needs that map, because its event stream scrolls to every cell but only executes the code ones. Without the map it cannot label the events, so it gives up on sync generation entirely and writes a plain WAV with no `clase_XX_sync.json`. `08` then finds no sync file and falls back to character-count estimates, which are worse. So `07 → 06 → 08` is a hard dependency, and the coupling runs through cell-type metadata rather than through timestamps, which is the opposite of what the script names suggest.
+`07` is the script that executes the notebook, which makes it the script that knows each cell's *type*: code or markdown. `06` needs that map, because its event stream scrolls to every cell but only executes the code ones. Without the map it cannot label the events, so it gives up on sync generation entirely and writes a plain WAV with no `clase_XX_sync.json`. `08` then finds no sync file and falls back to character-count estimates, which are worse. So `07 → 06 → 08` is a hard dependency, and the coupling runs through cell-type metadata rather than through timestamps, which is the opposite of what the script names suggest.
 
 ```
 07_cell_times → 06_synthesize → clase_XX_sync.json → 08_build_manifest → 09b_record → 10_merge
@@ -89,7 +89,7 @@ What comes out is roughly 8,000 pairs. By pretraining standards that is small, a
 
 ### The memory budget
 
-XTTS v2 in FP32 needs about 2 GB just to hold its parameters. The backward pass then has to store intermediate activations for gradient computation, and activation memory scales with sequence length and batch size — for 3–10 second clips at 22kHz, that easily triples the footprint. 8 GB does not accommodate it.
+XTTS v2 in FP32 needs about 2 GB just to hold its parameters. The backward pass then has to store intermediate activations for gradient computation, and activation memory scales with sequence length and batch size. For 3–10 second clips at 22kHz, that easily triples the footprint. 8 GB does not accommodate it.
 
 Four techniques got it to fit, each attacking a different part of the problem:
 
@@ -120,7 +120,7 @@ All four together: peak VRAM around 5.9 GB, average around 4–4.5 GB. It fits, 
 
 ### Learning rate and catastrophic forgetting
 
-My first run used `lr=1e-5`. The result was worse than the base checkpoint I started from — more robotic, and noticeably degraded on sentences outside the training distribution. That was a discouraging way to spend six hours.
+My first run used `lr=1e-5`. The result was worse than the base checkpoint I started from: more robotic, and noticeably degraded on sentences outside the training distribution. That was a discouraging way to spend six hours.
 
 The failure mode is well documented: on a small dataset, too high a learning rate lets the model overwrite the well-calibrated weight distributions it acquired during pretraining in order to fit the idiosyncrasies of my 8,000 clips. It does not memorize my examples so much as it corrodes its own general phonetic representations.
 
@@ -145,7 +145,7 @@ One operational note on `save_n_checkpoints: 3`. XTTS checkpoints run about 1.8 
 
 ### Gibberish artifact and top_p
 
-The fine-tuned model puts noise at the end of some sentences — a 0.3–0.5 second burst of tokens that sound like nothing. My best explanation is XTTS's default `top_p=0.95`, which permits sampling from the tail of the token distribution. In a model pretrained on large diverse data that tail is well-calibrated. In a fine-tune on 8,000 clips, parts of it probably are not.
+The fine-tuned model puts noise at the end of some sentences: a 0.3–0.5 second burst of tokens that sound like nothing. My best explanation is XTTS's default `top_p=0.95`, which permits sampling from the tail of the token distribution. In a model pretrained on large diverse data that tail is well-calibrated. In a fine-tune on 8,000 clips, parts of it probably are not.
 
 Dropping to `top_p=0.85` across all synthesis presets makes the artifact rarer without any quality cost I can hear. It mitigates the problem; it does not solve it. The artifact still shows up. A real fix would need more training data, or checkpoint selection driven by a perceptual quality metric like UTMOS instead of eval loss.
 
@@ -153,13 +153,13 @@ Dropping to `top_p=0.85` across all synthesis presets makes the artifact rarer w
 
 Every quality claim above (that the second run was better, that the artifact became rarer, that the voice carries the right cadence) rests on listening, so what about real metrics?
 
-The numbers that do exist make the point better than the adjectives do. The two runs' best eval losses were **4.347** (run 1, `lr=1e-5`, at step 1665) and **4.328** (run 2, `lr=3e-6`, at step 3330) — a gap of about 0.02 on a quantity that is almost entirely mel cross-entropy, since the text cross-entropy term had already collapsed below 0.001 in both runs. By the only number the trainer produced, the two models are nearly indistinguishable. By ear they were not: run 2 was clearly the one worth keeping. A 0.02 difference in eval loss carrying an audible difference in quality is precisely why the rest of this section is written in adjectives rather than metrics.
+The numbers that do exist make the point better than the adjectives do. The two runs' best eval losses were **4.347** (run 1, `lr=1e-5`, at step 1665) and **4.328** (run 2, `lr=3e-6`, at step 3330), a gap of about 0.02 on a quantity that is almost entirely mel cross-entropy, since the text cross-entropy term had already collapsed below 0.001 in both runs. By the only number the trainer produced, the two models are nearly indistinguishable. By ear they were not: run 2 was clearly the one worth keeping. A 0.02 difference in eval loss carrying an audible difference in quality is precisely why the rest of this section is written in adjectives rather than metrics.
 
-The checkpoint that shipped is `best_model` at step 3330, which is **epoch 10 of the 20-epoch run** (the dataset yields 333 optimizer steps per epoch). Eval loss never improved on that value across the remaining ten epochs — it oscillated between 4.329 and 4.333 — so the second half of the run bought nothing the metric could see. There is also a structural reason the metric was blind: the eval split is drawn from the same recordings as the training split, so it only measures in-distribution reconstruction. The failure mode that motivated lowering the learning rate — degraded prosody on sentences *outside* the training distribution — is exactly what an in-distribution eval set cannot detect. The metric went down while, on out-of-distribution text, the earlier run had gotten worse.
+The checkpoint that shipped is `best_model` at step 3330, which is **epoch 10 of the 20-epoch run** (the dataset yields 333 optimizer steps per epoch). Eval loss never improved on that value across the remaining ten epochs (it oscillated between 4.329 and 4.333), so the second half of the run bought nothing the metric could see. There is also a structural reason the metric was blind: the eval split is drawn from the same recordings as the training split, so it only measures in-distribution reconstruction. The failure mode that motivated lowering the learning rate, degraded prosody on sentences *outside* the training distribution, is exactly what an in-distribution eval set cannot detect. The metric went down while, on out-of-distribution text, the earlier run had gotten worse.
 
 The one number I do not have is the artifact rate. The claim that `top_p=0.85` makes the end-of-utterance noise rarer than `top_p=0.95` was never turned into a count over a fixed sentence set; it rests on repeated listening during synthesis, not on a measurement. I report it as a qualitative observation because that is all it is.
 
-So eval loss was the only automatic signal I had, and it is a bad proxy for perceived quality — I found checkpoints with marginally worse loss that sounded better. Selection came down to sitting and listening, which does not scale and is not reproducible from one session to the next. Replacing that with an objective perceptual metric is the second item in section 12.
+So eval loss was the only automatic signal I had, and it is a bad proxy for perceived quality: I found checkpoints with marginally worse loss that sounded better. Selection came down to sitting and listening, which does not scale and is not reproducible from one session to the next. Replacing that with an objective perceptual metric is the second item in section 12.
 
 ---
 
@@ -172,7 +172,7 @@ Two scripts consume the text format described here:
 
 Everything that ships goes through `06`.
 
-The format is the contract between the LLM that drafts the content and the synthesizer that speaks it. Specify that contract badly and the errors surface during playback, which is the most expensive possible place to find them — you have already spent the GPU time.
+The format is the contract between the LLM that drafts the content and the synthesizer that speaks it. Specify that contract badly and the errors surface during playback, which is the most expensive possible place to find them, because you have already spent the GPU time.
 
 ### Format selection
 
@@ -213,7 +213,7 @@ vectorizadas que una lista no puede hacer.
 [pause 1.0s]
 ```
 
-The bracket markers borrow from stage directions. A direction like `[aside]` or `[enter stage left]` annotates a script without being part of the dialogue: the actor reads it, interprets it, and then speaks without it. The synthesizer does the same thing — it reads `[key_point]`, picks the matching reference clip and synthesis parameters, and speaks the text that follows. When Hamlet tells the players to speak the speech trippingly on the tongue, he is giving them what these markers give the synthesizer: instructions for how to read the words, not words to read.
+The bracket markers borrow from stage directions. A direction like `[aside]` or `[enter stage left]` annotates a script without being part of the dialogue: the actor reads it, interprets it, and then speaks without it. The synthesizer does the same thing: it reads `[key_point]`, picks the matching reference clip and synthesis parameters, and speaks the text that follows. When Hamlet tells the players to speak the speech trippingly on the tongue, he is giving them what these markers give the synthesizer: instructions for how to read the words, not words to read.
 
 ### Section types and synthesis presets
 
@@ -234,7 +234,7 @@ Twelve section types: `introduction`, `key_point`, `explanation`, `example`, `qu
 | `aside` | 0.67 | 1.05 | Tangential, conversational |
 | `quote` | 0.62 | 0.98 | Citations, precise delivery |
 
-These live in code and are not exposed in the config. What the config does control is the reference audio — each section type can point at a different short clip from the training set:
+These live in code and are not exposed in the config. What the config does control is the reference audio. Each section type can point at a different short clip from the training set:
 
 ```yaml
 # lecture_synthesis_config.yaml
@@ -255,7 +255,7 @@ style_references:
   quote:        "data/segments_new/new_2_seg0013.wav"
 ```
 
-This works because XTTS v2 is zero-shot: at inference it conditions on a short reference clip to fix the speaker's characteristics. Feed it different clips for different section types and the delivery changes audibly — slower and more deliberate for `key_point`, natural pace for `explanation`, a slight shift in register for `warning`. Same model underneath, modulated by the reference.
+This works because XTTS v2 is zero-shot: at inference it conditions on a short reference clip to fix the speaker's characteristics. Feed it different clips for different section types and the delivery changes audibly: slower and more deliberate for `key_point`, natural pace for `explanation`, a slight shift in register for `warning`. Same model underneath, modulated by the reference.
 
 Picking those twelve clips took an afternoon of listening through the training segments looking for moments where my own delivery happened to match the character I wanted. It is the least sophisticated part of the system and one of the most effective.
 
@@ -297,14 +297,14 @@ def parse_script(path: str) -> list[Block]:
     return blocks
 ```
 
-I kept the parser deliberately dumb. A malformed marker produces a block with an unrecognized type, which is trivial to detect and report — no silent failure, no corrupted parse state. A richer format would need a defensive parser, and that is more code to maintain and test for a benefit I could not identify.
+I kept the parser deliberately dumb. A malformed marker produces a block with an unrecognized type, which is trivial to detect and report, with no silent failure and no corrupted parse state. A richer format would need a defensive parser, and that is more code to maintain and test for a benefit I could not identify.
 
 ### LLM-assisted generation
 
 Writing 67 lecture scripts by hand was never on the table. The workflow:
 
 1. Read the notebook: cells, markdown, code, structure.
-2. Build a conceptual map — what the class teaches, in what order, which common errors to flag.
+2. Build a conceptual map: what the class teaches, in what order, which common errors to flag.
 3. Review that map myself, before any script exists, to check the topics are the right ones and in the right sequence.
 4. Pass the map to the LLM along with the format specification.
 5. Review the output, fix errors, run QA (next section).
@@ -343,7 +343,7 @@ CHECKS = [
 ]
 ```
 
-`HIGH` blocks synthesis. `MEDIUM` requires me to acknowledge it explicitly before proceeding. `LOW` gets logged and can wait. The split is operational: a `HIGH` problem yields broken audio — truncated sentences, artifact bursts, silence where speech should be. A `LOW` problem yields audio that is merely worse than it could be.
+`HIGH` blocks synthesis. `MEDIUM` requires me to acknowledge it explicitly before proceeding. `LOW` gets logged and can wait. The split is operational: a `HIGH` problem yields broken audio: truncated sentences, artifact bursts, silence where speech should be. A `LOW` problem yields audio that is merely worse than it could be.
 
 ### Long sentence detection
 
@@ -378,7 +378,7 @@ Where `+` shows up as an arithmetic operator in the same block, I review it by h
 
 ### Python literals in narrative text
 
-Leave `"the list [1, 2, 3]"` in a script and the model may read the punctuation aloud: "corchete uno coma dos coma tres corchete". The rule is that code literals get verbalized before they reach narrative text — "the list with values one, two, and three". The check looks for anything resembling a Python container, function call or assignment.
+Leave `"the list [1, 2, 3]"` in a script and the model may read the punctuation aloud: "corchete uno coma dos coma tres corchete". The rule is that code literals get verbalized before they reach narrative text, as in "the list with values one, two, and three". The check looks for anything resembling a Python container, function call or assignment.
 
 ---
 
@@ -394,13 +394,13 @@ There are two ways to get that.
 
 **Option B: inline timestamp accumulation.** During synthesis, keep a running offset counter. Every time the synthesizer hits a `[cell:N]` marker, record `current_offset_s` as that cell's timestamp.
 
-Option A is more accurate — WhisperX gets you to ±0.05s. Option B drifts, because small numerical errors in silence durations accumulate over a long class, and lands around ±1–2s over 30 minutes.
+Option A is more accurate: WhisperX gets you to ±0.05s. Option B drifts, because small numerical errors in silence durations accumulate over a long class, and lands around ±1–2s over 30 minutes.
 
 I went with B anyway, and the reason has nothing to do with accuracy.
 
-Option A introduces a mandatory second step. After every synthesis, alignment has to run again before the manifest is current. Edit a script, re-synthesize, forget to re-align, and the manifest quietly uses stale timestamps — no error, just a video that drifts. Across 67 classes that get re-synthesized individually and often, I did not trust myself to never forget. Option B cannot desynchronize, because the timestamps and the audio come out of the same function call.
+Option A introduces a mandatory second step. After every synthesis, alignment has to run again before the manifest is current. Edit a script, re-synthesize, forget to re-align, and the manifest quietly uses stale timestamps. No error, just a video that drifts. Across 67 classes that get re-synthesized individually and often, I did not trust myself to never forget. Option B cannot desynchronize, because the timestamps and the audio come out of the same function call.
 
-About that ±1–2s: it accumulates from the silence durations and from the fact that `current_offset_s` counts audio samples while the screen recorder runs on its own clock. For a student watching a narrator explain code that is already on screen, I have never found it noticeable. If the target were conference-quality video, or anything where the drift starts to distract, Option A would be the right call — which is why it is still on the roadmap rather than dismissed.
+About that ±1–2s: it accumulates from the silence durations and from the fact that `current_offset_s` counts audio samples while the screen recorder runs on its own clock. For a student watching a narrator explain code that is already on screen, I have never found it noticeable. If the target were conference-quality video, or anything where the drift starts to distract, Option A would be the right call, which is why it is still on the roadmap rather than dismissed.
 
 Here is what the synthesis loop actually does:
 
@@ -449,7 +449,7 @@ def synthesize_lecture_with_sync(script_path, model, config, clase_id, cell_type
 
 Two details in there took me longer to get right than they should have.
 
-The first is placement. The `scroll` event — and the `execute` event for code cells — is emitted when the iterator reaches the `CellMarker`, *before* synthesizing that cell's content. At that moment `current_offset_s` holds the exact audio duration up to where the narration of that cell begins. Record it after synthesizing the content instead and the video scrolls to the cell while the narrator is already halfway through explaining it. I know because that is what my first version did.
+The first is placement. The `scroll` event (and the `execute` event for code cells) is emitted when the iterator reaches the `CellMarker`, *before* synthesizing that cell's content. At that moment `current_offset_s` holds the exact audio duration up to where the narration of that cell begins. Record it after synthesizing the content instead and the video scrolls to the cell while the narrator is already halfway through explaining it. I know because that is what my first version did.
 
 The second is `cell_types`, the only thing `06` takes from `07`. It is the `{cell_index: "code" | "markdown"}` map that lets the synthesizer decide which cells get an execute event. When `07` has not run, the map is empty, `06` cannot build a well-formed event stream, and it declines to write a sync file at all. That is the hard dependency from sections 2 and 8, and it lives entirely in this one argument.
 
@@ -478,7 +478,7 @@ def split_into_chunks(text: str, max_chars: int = 239) -> list[str]:
     return [text[:max_chars]] + split_into_chunks(text[max_chars:], max_chars)
 ```
 
-The order `. ` > `; ` > `, ` > ` ` is about prosody, not about tidiness. Cut at a period and XTTS receives a complete sentence, so it generates correct end-of-sentence intonation — the falling contour Spanish declaratives need. Cut at a comma and it receives an incomplete clause, so it synthesizes with continuation prosody and the audio sounds like it is waiting for the rest of the sentence to arrive. Cutting at a space is a last resort that should never fire in a well-formed script, since the generation instructions and the QA check both cap sentences at 200 characters.
+The order `. ` > `; ` > `, ` > ` ` is about prosody, not about tidiness. Cut at a period and XTTS receives a complete sentence, so it generates correct end-of-sentence intonation: the falling contour Spanish declaratives need. Cut at a comma and it receives an incomplete clause, so it synthesizes with continuation prosody and the audio sounds like it is waiting for the rest of the sentence to arrive. Cutting at a space is a last resort that should never fire in a well-formed script, since the generation instructions and the QA check both cap sentences at 200 characters.
 
 `rfind` searches from the right, which maximizes chunk size, which minimizes the number of inter-chunk silences and how fragmented the prosody ends up sounding.
 
@@ -486,7 +486,7 @@ The order `. ` > `; ` > `, ` > ` ` is about prosody, not about tidiness. Cut at 
 
 ## 8. Cell Types and the Timing Manifest (Scripts 07 + 08)
 
-Script `07_measure_cell_times.py` executes each notebook in a clean kernel and writes one JSON per class. Per cell it records the index, the type, a source preview, an error flag, and the wall-clock execution time — for code cells, taken from the notebook's `metadata["execution"]` timestamps, as the interval between `iopub.execute_input` and `iopub.status.idle`. Plus a top-level `total_time_s`.
+Script `07_measure_cell_times.py` executes each notebook in a clean kernel and writes one JSON per class. Per cell it records the index, the type, a source preview, an error flag, and the wall-clock execution time. For code cells, it is taken from the notebook's `metadata["execution"]` timestamps, as the interval between `iopub.execute_input` and `iopub.status.idle`. Plus a top-level `total_time_s`.
 
 ```json
 {
@@ -503,7 +503,7 @@ Script `07_measure_cell_times.py` executes each notebook in a clean kernel and w
 
 Of everything in that file, exactly one field gets consumed downstream: `type`. `08`'s only read of `07`'s output is a single dictionary comprehension, `{c["index"]: c["type"] for c in data["cells"]}`, and `06` uses the same map to decide which cells get an execute event (section 7). `execution_time_s` and `total_time_s` are never read by anything.
 
-I want to be explicit about that, because the script is called `measure_cell_times` and the natural assumption — mine included, for a while — is that the measured durations drive how long the recording waits on each cell. They do not. They survive as diagnostics, and they are genuinely useful ones: noticing that a cell in class 12 takes forty seconds is a pedagogical problem worth knowing about. But nothing in the pipeline reads them.
+I want to be explicit about that, because the script is called `measure_cell_times` and the natural assumption (mine included, for a while) is that the measured durations drive how long the recording waits on each cell. They do not. They survive as diagnostics, and they are genuinely useful ones: noticing that a cell in class 12 takes forty seconds is a pedagogical problem worth knowing about. But nothing in the pipeline reads them.
 
 Script `08_build_timing_manifest.py` has two paths. When `clase_XX_sync.json` exists, it copies `06`'s event stream into the manifest essentially verbatim, timestamps and all. When it does not, `08` reconstructs an estimated timeline from the script itself: `pause_s` comes from the `[pause Xs]` markers in the guion, and the gap between a cell's scroll and its execute is a hard-coded `EXECUTE_OFFSET_S = 0.5`. No measured duration enters either path.
 
@@ -520,7 +520,7 @@ Script `08_build_timing_manifest.py` has two paths. When `clase_XX_sync.json` ex
 }
 ```
 
-Notice there is no `wait_for_output` event. Waiting for a cell to finish is not scheduled in advance at all — `09b` handles it at record time by blocking on the kernel's `execute_reply` message over the WebSocket (section 9). A real signal from the kernel beats a precomputed guess, especially when the machine is under load, and that is ultimately why measuring execution times up front turned out to be unnecessary.
+Notice there is no `wait_for_output` event. Waiting for a cell to finish is not scheduled in advance at all: `09b` handles it at record time by blocking on the kernel's `execute_reply` message over the WebSocket (section 9). A real signal from the kernel beats a precomputed guess, especially when the machine is under load, and that is ultimately why measuring execution times up front turned out to be unnecessary.
 
 So the `t` values come from `clase_XX_sync.json` whenever it exists, and they are exact. It is missing only when `06` ran without `07`'s cell-type map, in which case `06` silently declines to emit a sync file (section 7) and `08` falls back to character-count estimation. The `07 → 06 → 08` ordering exists to keep that fallback from ever firing in normal operation.
 
@@ -541,7 +541,7 @@ In JupyterLab 4.5.4 running headless under Playwright, `window.jupyterapp` exist
 
 This cost me most of a day, largely because the absence of any error made me look everywhere except at the API itself.
 
-The cause is that JupyterLab's application lifecycle — the part that registers command handlers for kernel interaction — does not complete in headless mode. The frontend object is present and functionally hollow.
+The cause is that JupyterLab's application lifecycle, the part that registers command handlers for kernel interaction, does not complete in headless mode. The frontend object is present and functionally hollow.
 
 ### The replacement approach (09b)
 
@@ -589,7 +589,7 @@ The lesson I took from this is narrower than "avoid browser APIs". It is that br
 
 ## 10. Video Assembly (Script 10)
 
-Script `10_merge_video.py` reads the class metadata — specifically the browser startup duration that `09b` recorded — trims that pre-content initialization off the front of the screen recording, and merges what is left with the TTS audio:
+Script `10_merge_video.py` reads the class metadata (specifically the browser startup duration that `09b` recorded), trims that pre-content initialization off the front of the screen recording, and merges what is left with the TTS audio:
 
 ```bash
 ffmpeg \
@@ -620,7 +620,7 @@ Five things, each of which cost me time. Mechanics are in the sections noted.
 
 **Synthesizing before QA** (section 6). The 239-character truncation turned up in finished audio and cost me a re-synthesis of 20 classes. The QA pipeline exists because of that afternoon.
 
-**Measuring cell execution times** (section 8). `07` computes a per-cell duration nothing reads. The design that needed it — precomputing how long the recording should wait on each cell — got replaced by blocking on `execute_reply`, which is simpler and correct under load. The measurement outlived its purpose, and the script name still advertises the original one.
+**Measuring cell execution times** (section 8). `07` computes a per-cell duration nothing reads. The design that needed it, precomputing how long the recording should wait on each cell, got replaced by blocking on `execute_reply`, which is simpler and correct under load. The measurement outlived its purpose, and the script name still advertises the original one.
 
 ---
 
@@ -628,7 +628,7 @@ Five things, each of which cost me time. Mechanics are in the sections noted.
 
 The pipeline is in production. Every class has been through it end to end.
 
-The bottleneck now is editorial, and I do not want to automate it away. Reviewing 67 lecture scripts for pedagogical correctness, catching the places where the LLM stated something subtly wrong, checking that each script matches what the notebook actually does — that work exists whether or not the technical pipeline is good, and in a course it is the part that matters most.
+The bottleneck now is editorial, and I do not want to automate it away. Reviewing 67 lecture scripts for pedagogical correctness, catching the places where the LLM stated something subtly wrong, checking that each script matches what the notebook actually does: that work exists whether or not the technical pipeline is good, and in a course it is the part that matters most.
 
 Two technical improvements are worth the effort, in order of expected impact:
 

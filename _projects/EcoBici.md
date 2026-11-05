@@ -29,7 +29,7 @@ Below, you can see the general map for the 5000 most popular rides, with no rest
     As can be seen, most of the top 5000 rides have origins and destinations within the northern part of the City of Buenos Aires.
 </div>
 
-Are there significant geographic differences between <i>modes</i> of usage? For instance, how is daily commuting usage different from spare-time recreational usage during weekends? A simple observational analysis, guided by the two maps below, show that the these differences exist. The vast majority of Ecobici rides on weekday's mornings (most common time to commute) are concentrated in Downtown Buenos Aires—<i>microcentro</i>—. On the other hand, rides during weekends (all day) are mostly on recreation-related areas, such as Palermo and San Telmo, neighbourhoods with leisure activities.
+Are there significant geographic differences between <i>modes</i> of usage? For instance, how is daily commuting usage different from spare-time recreational usage during weekends? A simple observational analysis, guided by the two maps below, show that the these differences exist. The vast majority of Ecobici rides on weekday's mornings (most common time to commute) are concentrated in Downtown Buenos Aires (<i>microcentro</i>). On the other hand, rides during weekends (all day) are mostly on recreation-related areas, such as Palermo and San Telmo, neighbourhoods with leisure activities.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

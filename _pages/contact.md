@@ -10,13 +10,13 @@ nav_order: 6
 <div class="contact-page">
 
   <p class="contact-intro">
-    I'm always open to conversations around <strong>data science, economics, applied research, and building products</strong> —
+    I'm always open to conversations around <strong>data science, economics, applied research, and building products</strong>:
     collaborations, roles, or just interesting problems to think through. Pick whatever channel works best for you.
   </p>
 
   <p class="contact-intro">
     I'm also constantly researching <strong>graduate programs</strong> and ways to keep growing academically.
-    So if you'd like to talk about postgrad options — or you have an opening to share — I'd love to hear about it.
+    So if you'd like to talk about postgrad options, or you have an opening to share, I'd love to hear about it.
   </p>
 
   <a class="contact-primary" href="mailto:{{ site.email | encode_email }}">

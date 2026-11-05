@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Syndeo
-description: alquiler con matching bilateral, el contacto se abre sólo si los dos dicen que sí
+description: alquiler con matching bilateral
 img: assets/img/Syndeo_image.jpg
 importance: 1
 category: ongoing
