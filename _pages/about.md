@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Economics · Data Science · Products
+subtitle: Economics / Data Science / Products
 
 profile:
   align: right

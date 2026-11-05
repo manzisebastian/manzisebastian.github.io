@@ -242,7 +242,7 @@
       hdot.setAttribute("cx", x(i));
       hdot.setAttribute("cy", y(pts[i][1]));
       hover.setAttribute("visibility", "visible");
-      readout.innerHTML = `<span class="nb-val">${fmt(pts[i][1], s.dec)}</span> <span class="nb-unit">${s.unit}</span> <span class="nb-muted">· ${pts[i][0]}</span>`;
+      readout.innerHTML = `<span class="nb-val">${fmt(pts[i][1], s.dec)}</span> <span class="nb-unit">${s.unit}</span> <span class="nb-muted">/ ${pts[i][0]}</span>`;
     });
     svg.querySelector(".nb-hit").addEventListener("pointerleave", () => {
       hover.setAttribute("visibility", "hidden");
@@ -273,7 +273,7 @@
     $(".nb-title").textContent = s.title;
     $(".nb-readout").innerHTML =
       `<span class="nb-val">${fmt(last[1], s.dec)}</span> <span class="nb-unit">${s.unit}</span> ` +
-      `<span class="nb-muted">· ${last[0]} · ${chg >= 0 ? "▲" : "▼"} ${fmt(Math.abs(chg), 1)}${isPct ? " pp" : "%"} vs ${pts[0][0]}</span>`;
+      `<span class="nb-muted">/ ${last[0]} / ${chg >= 0 ? "▲" : "▼"} ${fmt(Math.abs(chg), 1)}${isPct ? " pp" : "%"} vs ${pts[0][0]}</span>`;
     $(".nb-caption").textContent = `Fig. 1. ${s.caption}`;
     $(".nb-status").textContent = data.live ? "● live" : `○ snapshot ${data.asOf}`;
     $(".nb-status").classList.toggle("is-live", data.live);
