@@ -37,17 +37,6 @@ code, pre, kbd, samp, .monospace {
   margin-bottom: 3rem;
   overflow: hidden;
 
-  // Gradient top bar — the "signature" stripe
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--global-theme-color) 0%, #4ECDC4 100%);
-  }
-
   // Subtle dot grid — data aesthetic without kitsch
   &::after {
     content: '';
@@ -1025,7 +1014,6 @@ html[data-theme="dark"] {
   color: var(--global-text-color-light);
   line-height: 1.6;
   margin-bottom: 1rem;
-  max-width: 68ch;
 }
 .nb-live {
   margin-bottom: 0;
