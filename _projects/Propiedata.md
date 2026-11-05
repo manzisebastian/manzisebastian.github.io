@@ -8,7 +8,7 @@ category: deprecated
 tags: [Python, web scraping, data analysis]
 ---
 
-> **Nota:** este proyecto ya no está activo. Cambié un proyecto grande por uno mejor: la idea evolucionó (y creció) hasta convertirse en **[APTO](/projects/APTO/)**, en lo que estoy trabajando ahora.
+> **Nota:** este proyecto ya no está activo. Cambié un proyecto grande por uno mejor: la idea evolucionó (y creció) hasta convertirse en **[Syndeo](/projects/Syndeo/)**, en lo que estoy trabajando ahora.
 
 En el ajedrez, *las blancas* mueven primero; siempre se dijo que esto hace que tengan una ventaja inherente a ganar la partida.
 

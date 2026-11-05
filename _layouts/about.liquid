@@ -18,8 +18,8 @@ layout: default
         </h1>
         <p class="hero-subtitle" id="hero-subtitle" data-text="{{ page.subtitle }}"></p>
         <p class="hero-tagline">
-          Working at the intersection of quantitative economics,<br class="d-none d-md-inline">
-          data science, and applied research.
+          Economist by training, builder by habit.<br class="d-none d-md-inline">
+          I turn data, research and ideas into things that work.
         </p>
         <div class="hero-ctas">
           <a href="{{ '/projects/' | relative_url }}" class="hero-btn hero-btn-primary">
@@ -52,17 +52,23 @@ layout: default
 
     </div><!-- /.hero-inner -->
 
+    <!-- Notebook block (describe + live macro chart) -->
+    {% include hero_notebook.liquid %}
+
     <!-- Skill tags -->
     <div class="skill-tags">
       <span class="skill-tag">Python</span>
       <span class="skill-tag">R</span>
       <span class="skill-tag">SQL</span>
+      <span class="skill-tag">TypeScript</span>
+      <span class="skill-tag">Next.js</span>
       <span class="skill-tag">STATA</span>
-      <span class="skill-tag">Plotly</span>
-      <span class="skill-tag">Leaflet</span>
       <span class="skill-tag">Econometrics</span>
+      <span class="skill-tag">Geospatial</span>
+      <span class="skill-tag">Machine Learning</span>
       <span class="skill-tag">NLP</span>
-      <span class="skill-tag">LaTeX</span>
+      <span class="skill-tag">LLMs</span>
+      <span class="skill-tag">Plotly</span>
     </div>
 
   </section><!-- /.hero-section -->
@@ -86,7 +92,7 @@ layout: default
       <h2 class="home-section-title">selected projects</h2>
       <a class="home-section-link" href="{{ '/projects/' | relative_url }}">view all →</a>
     </div>
-    {% assign featured_titles = "TTS,Econ,Ma-py-tas" | split: "," %}
+    {% assign featured_titles = "TTS,Syndeo,Econ" | split: "," %}
     <div class="projects home-projects">
       <div class="row row-cols-1 row-cols-md-3">
         {% for t in featured_titles %}

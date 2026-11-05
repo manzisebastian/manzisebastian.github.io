@@ -10,7 +10,7 @@ nav_order: 6
 <div class="contact-page">
 
   <p class="contact-intro">
-    I'm always open to conversations around <strong>data science, economics, and applied research</strong> —
+    I'm always open to conversations around <strong>data science, economics, applied research, and building products</strong> —
     collaborations, roles, or just interesting problems to think through. Pick whatever channel works best for you.
   </p>
 

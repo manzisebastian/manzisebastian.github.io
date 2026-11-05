@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Economics · Quantitative Analysis · Research
+subtitle: Economics · Data Science · Products
 
 profile:
   align: right
@@ -18,14 +18,14 @@ I'm an economist based in Buenos Aires, working at the intersection of economic 
 
 I hold a BSc in Economics from UBA (GPA 8.45/10), where my thesis examined debt dynamics and pro-cyclicality using sector-disaggregated data. I've contributed to academic research in macroeconomics and machine learning, and I've worked as a data analyst and teaching assistant across different contexts.
 
-My projects span economic data pipelines, interactive visualizations, geospatial analysis, and text analysis, all built with real data and real questions in mind. I'm actively expanding into more data science-oriented work — with new projects in that space currently in progress. You can explore the current collection on the [projects page](/projects/).
+My projects span economic data pipelines, interactive visualizations, geospatial analysis, and text analysis, all built with real data and real questions in mind. Lately I've also been building products end to end — from [TTS](/projects/TTS/), a local voice-cloning pipeline for my lectures, to [Syndeo](/projects/Syndeo/), a rental platform I'm currently developing. Its core idea is matching: tenants and landlords state what they need, and only connect when both say yes. You can explore the current collection on the [projects page](/projects/).
 
 <div class="currently-section">
   <p class="currently-header">currently</p>
   <ul class="currently-list">
-    <li><strong>Decision Analytics Associate</strong> @ ZS — designing data solutions & optimizing ETL pipelines for pharma clients (Python, SQL)</li>
+    <li><strong>Decision Analytics Associate</strong> @ ZS — applied ML for healthcare decision-making, built on de-identified patient-level data (Python, SQL)</li>
     <li><strong>Teaching Assistant</strong> @ UBA — Macroeconomics II, Quantitative Methods Lab</li>
-    <li>Building <strong><a href="/projects/APTO/">APTO</a></strong> — a new way of thinking about the rental market in Buenos Aires. Not even beta yet, but the idea is there. <em>More on this to come.</em></li>
+    <li>Building <strong><a href="/projects/Syndeo/">Syndeo</a></strong> — two-sided matching for long-term rentals in Argentina: contact opens only when both sides say yes. Waitlist live at <a href="https://syndeo.casa">syndeo.casa</a>.</li>
     <li>Also tinkering with <a href="/projects/network_theory/">network theory</a> analysis, NLP on Argentine political speeches (<a href="/projects/Discursos/">Discursos</a>), and maaaaany other cool things.</li>
   </ul>
 </div>

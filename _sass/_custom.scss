@@ -5,6 +5,9 @@
 
 // ─── Typography declarations ──────────────────────────────────────────────────
 
+// Display face for headings & names (Fraunces, editorial serif). Inter stays for running text.
+$font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -12,9 +15,9 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Space Grotesk', -apple-system, sans-serif;
+  font-family: $font-display;
   font-weight: 600;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
 
 code, pre, kbd, samp, .monospace {
@@ -92,10 +95,10 @@ code, pre, kbd, samp, .monospace {
 // ─── Hero name ────────────────────────────────────────────────────────────────
 
 .hero-name {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: $font-display;
   font-size: clamp(2.2rem, 6vw, 3.2rem);
   font-weight: 700;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.02em;
   line-height: 1.05;
   margin-bottom: 0.5rem;
   color: var(--global-text-color);
@@ -104,7 +107,7 @@ code, pre, kbd, samp, .monospace {
 // ─── Hero subtitle ────────────────────────────────────────────────────────────
 
 .hero-subtitle {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: $font-display;
   font-size: clamp(0.9rem, 2.5vw, 1.05rem);
   font-weight: 500;
   color: var(--global-theme-color);
@@ -392,7 +395,7 @@ code, pre, kbd, samp, .monospace {
   }
 
   .card-title {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: $font-display;
     font-size: 0.92rem;
     font-weight: 600;
     margin-bottom: 0.25rem;
@@ -462,7 +465,7 @@ code, pre, kbd, samp, .monospace {
   }
 
   h2.category {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: $font-display;
     font-size: 0.72rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -480,9 +483,9 @@ code, pre, kbd, samp, .monospace {
 // ─── Navbar refinements ────────────────────────────────────────────────────────
 
 .navbar-brand {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: $font-display;
   font-weight: 600;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
 
 .nav-link {
@@ -567,7 +570,7 @@ code {
 }
 
 .home-section-title {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: $font-display;
   font-size: 1.15rem;
   font-weight: 600;
   letter-spacing: -0.01em;
@@ -814,5 +817,204 @@ html[data-theme="dark"] {
 
   .projects .card.hoverable:hover {
     box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
+  }
+}
+
+// ─── Hero notebook (describe + live macro chart) ─────────────────────────────
+// Markup: _includes/hero_notebook.liquid · Logic: assets/js/hero_notebook.js
+
+.hero-nb {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.78rem;
+  line-height: 1.55;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.75rem;
+}
+.hero-nb {
+  container-type: inline-size;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1.5rem;
+}
+.nb-cell {
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--global-bg-color);
+}
+.nb-in,
+.nb-outrow {
+  display: grid;
+  grid-template-columns: 4.6em minmax(0, 1fr);
+  gap: 0.4rem;
+  padding: 0.55rem 0.8rem;
+}
+.nb-in {
+  border-bottom: 1px dashed var(--global-divider-color);
+}
+.nb-prompt {
+  color: var(--global-theme-color);
+  white-space: nowrap;
+}
+.nb-prompt.out {
+  color: var(--global-teal-color);
+}
+.nb-code {
+  white-space: pre-wrap;
+  word-break: break-word;
+  min-height: 1.55em;
+}
+.nb-code::after {
+  content: "▍";
+  color: var(--global-theme-color);
+  animation: nb-blink 1s steps(1) infinite;
+  margin-left: 1px;
+}
+.nb-code.is-done::after {
+  content: none;
+}
+@keyframes nb-blink {
+  50% {
+    opacity: 0;
+  }
+}
+.nb-out {
+  opacity: 0;
+  transform: translateY(3px);
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+.nb-out.is-ready {
+  opacity: 1;
+  transform: none;
+}
+.nb-kv {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 1.1em;
+  margin: 0;
+}
+.nb-kv dt {
+  color: var(--global-text-color-light);
+  font-weight: 400;
+}
+.nb-kv dd {
+  margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.nb-kv a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--global-divider-color);
+  text-underline-offset: 2px;
+}
+.nb-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.nb-title {
+  font-family: $font-display;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.nb-status {
+  font-size: 0.68rem;
+  color: var(--global-text-color-light);
+}
+.nb-status.is-live {
+  color: var(--global-teal-color);
+}
+.nb-readout {
+  margin: 0.1rem 0 0.3rem;
+  min-height: 1.55em;
+}
+.nb-val {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+.nb-unit,
+.nb-muted {
+  color: var(--global-text-color-light);
+}
+.nb-chart {
+  display: block;
+  width: 100%;
+  height: auto;
+  touch-action: none;
+}
+.nb-line {
+  fill: none;
+  stroke: var(--global-theme-color);
+  stroke-width: 1.8;
+  vector-effect: non-scaling-stroke;
+}
+.nb-area {
+  fill: var(--global-theme-color);
+  opacity: 0.08;
+}
+.nb-dot,
+.nb-hdot {
+  fill: var(--global-theme-color);
+}
+.nb-axis,
+.nb-cross {
+  stroke: var(--global-divider-color);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+.nb-cross {
+  stroke-dasharray: 3 3;
+}
+.nb-tick {
+  font:
+    10px "JetBrains Mono",
+    monospace;
+  fill: var(--global-text-color-light);
+}
+.nb-foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.4rem 0.6rem;
+  margin-top: 0.25rem;
+}
+.nb-caption {
+  font-size: 0.66rem;
+  color: var(--global-text-color-light);
+  font-style: italic;
+}
+.nb-shuffle {
+  font: inherit;
+  font-size: 0.68rem;
+  white-space: nowrap;
+  background: none;
+  cursor: pointer;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 4px;
+  padding: 0.15rem 0.5rem;
+  color: var(--global-text-color-light);
+}
+.nb-shuffle:hover {
+  color: var(--global-theme-color);
+  border-color: var(--global-theme-color);
+}
+@container (max-width: 520px) {
+  .nb-cell {
+    font-size: 0.72rem;
+  }
+  .nb-in,
+  .nb-outrow {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.1rem;
+  }
+  .nb-kv {
+    column-gap: 0.8em;
   }
 }

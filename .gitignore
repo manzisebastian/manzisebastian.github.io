@@ -23,3 +23,5 @@ assets/pdf/*.out
 assets/pdf/*.fls
 assets/pdf/*.fdb_latexmk
 assets/pdf/*.synctex.gz
+# private working files (job descriptions, tailored CVs)
+dump/

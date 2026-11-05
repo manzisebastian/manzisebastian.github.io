@@ -1,0 +1,43 @@
+<!--
+  Hero notebook: Jupyter-style block. Cell 2 plots a live Argentine macro series
+  (BCRA / ArgentinaDatos APIs), random on each visit; falls back to a bundled snapshot.
+  Logic in assets/js/hero_notebook.js, styles in _sass/_custom.scss (.hero-nb).
+-->
+<div class="hero-nb" id="hero-nb" data-snapshot="{{ '/assets/json/hero_series.json' | relative_url }}">
+  <div class="nb-cell">
+    <div class="nb-in"><span class="nb-prompt">In [1]:</span><span class="nb-code nb-code1"></span></div>
+    <div class="nb-outrow nb-out nb-out1">
+      <span class="nb-prompt out">Out[1]:</span>
+      <dl class="nb-kv">
+        <dt>role</dt>
+        <dd>Economist · Decision Analytics @ ZS</dd>
+        <dt>education</dt>
+        <dd>BSc Economics (UBA)</dd>
+        <dt>focus</dt>
+        <dd>applied ML · healthcare · patient-level data</dd>
+        <dt>based_in</dt>
+        <dd>-34.60, -58.38 (Buenos Aires)</dd>
+        <dt>stack</dt>
+        <dd>Python · SQL · Snowflake · R · TypeScript</dd>
+        <dt>building</dt>
+        <dd><a href="{{ '/projects/Syndeo/' | relative_url }}">Syndeo</a> (in development)</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="nb-cell">
+    <div class="nb-in"><span class="nb-prompt">In [2]:</span><span class="nb-code nb-code2"></span></div>
+    <div class="nb-outrow nb-out nb-out2">
+      <span class="nb-prompt out">Out[2]:</span>
+      <div>
+        <div class="nb-head"><span class="nb-title"></span><span class="nb-status"></span></div>
+        <div class="nb-readout"></div>
+        <svg class="nb-chart" role="img" aria-label="Live chart of an Argentine macroeconomic series"></svg>
+        <div class="nb-foot">
+          <span class="nb-caption"></span>
+          <button class="nb-shuffle" type="button">↻ another series</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script defer src="{{ '/assets/js/hero_notebook.js' | relative_url }}"></script>

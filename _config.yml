@@ -8,10 +8,10 @@ middle_name: L.
 last_name: Manzi
 email: manzisebastian00@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Economist & Data Scientist based in Buenos Aires. Working at the intersection of quantitative analysis, applied economics, and data science.
+  Economist & Data Scientist based in Buenos Aires. Economist by training, builder by habit: I turn data, research and ideas into things that work.
 footer_text: >
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: economics, data science, data analysis, Python, R, econometrics, geospatial, research, Buenos Aires, portfolio
+keywords: economics, data science, data analysis, Python, R, econometrics, geospatial, research, TypeScript, LLMs, product development, Buenos Aires, portfolio
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 📊 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -487,7 +487,7 @@ third_party_libraries:
     version: "5.5.0"
   google_fonts:
     url:
-      fonts: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      fonts: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
   highlightjs:
     integrity:
       css:
