@@ -218,7 +218,7 @@
       const t0 = performance.now(),
         DUR = 1100;
       const step = (now) => {
-        const k = Math.min(1, (now - t0) / DUR);
+        const k = Math.min(1, Math.max(0, (now - t0) / DUR));
         rect.setAttribute("width", (W + 6) * (1 - Math.pow(1 - k, 3))); // ease-out cubic
         if (k < 1) requestAnimationFrame(step);
       };

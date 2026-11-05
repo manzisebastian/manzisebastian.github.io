@@ -7,7 +7,7 @@
   It all started with a simple <code>import pandas as pd</code>. I still like pulling Argentina's numbers straight from the source, so here is one,
   fetched live from public APIs. Reload the page (or hit the button) for another series.
 </p>
-<div class="hero-nb nb-live" id="live-nb" data-snapshot="{{ '/assets/json/hero_series.json' | relative_url }}">
+<div class="hero-nb nb-live" id="live-nb" data-snapshot="{{ '/assets/json/hero_series.json' | relative_url | bust_file_cache }}">
   <div class="nb-cell">
     <div class="nb-in"><span class="nb-prompt">In [2]:</span><span class="nb-code nb-code2"></span></div>
     <div class="nb-in nb-in-next"><span class="nb-prompt">In [3]:</span><span class="nb-code nb-code3"></span></div>
